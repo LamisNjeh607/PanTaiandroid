@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_focused="true" android:state_enabled="true" android:drawable="@drawable/dummy_ae_4c"/>
+    <item android:state_enabled="true" android:drawable="@drawable/dummy_ae_4c" android:state_activated="true"/>
+    <item android:state_enabled="true" android:drawable="@drawable/dummy_ae_4d"/>
+    <item android:drawable="@drawable/dummy_ae_4d"/>
+</selector>

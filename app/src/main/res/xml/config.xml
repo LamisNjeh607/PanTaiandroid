@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" version="1.0.0">
+    <access origin="*"/>
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions"/>
+    </feature>
+    <feature name="BluetoothClassicSerial">
+        <param name="android-package" value="nz.co.soltius.cordova.BluetoothClassicSerial"/>
+    </feature>
+    <feature name="Chooser">
+        <param name="android-package" value="com.cyph.cordova.Chooser"/>
+    </feature>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener"/>
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener"/>
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils"/>
+        <param name="onload" value="true"/>
+    </feature>
+    <feature name="WifiWizard2">
+        <param name="android-package" value="wifiwizard2.WifiWizard2"/>
+        <param name="onload" value="true"/>
+    </feature>
+    <feature name="ZeroConf">
+        <param name="android-package" value="net.becvert.cordova.ZeroConf"/>
+    </feature>
+    <feature name="SocketsForCordova">
+        <param name="android-package" value="cz.blocshop.socketsforcordova.SocketPlugin"/>
+    </feature>
+</widget>
