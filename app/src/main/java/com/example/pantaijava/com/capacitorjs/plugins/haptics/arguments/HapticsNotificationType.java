@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.haptics.arguments;
+package com.example.pantaijava.com.capacitorjs.plugins.haptics.arguments;
 
 import javax.jmdns.impl.constants.DNSConstants;
 

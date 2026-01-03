@@ -81,7 +81,7 @@ public class CapacitorCookies extends Plugin {
             pluginCall.reject("Must provide value");
         }
         this.cookieManager.setCookie(pluginCall.getString(ImagesContract.URL), string, string2, pluginCall.getString("expires", ""), pluginCall.getString("path", "/"));
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -91,7 +91,7 @@ public class CapacitorCookies extends Plugin {
             pluginCall.reject("Must provide key");
         }
         this.cookieManager.setCookie(pluginCall.getString(ImagesContract.URL), string + "=; Expires=Wed, 31 Dec 2000 23:59:59 GMT");
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -102,12 +102,12 @@ public class CapacitorCookies extends Plugin {
         for (int i = 0; i < length; i++) {
             this.cookieManager.setCookie(string, cookies[i].getName() + "=; Expires=Wed, 31 Dec 2000 23:59:59 GMT");
         }
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
     public void clearAllCookies(PluginCall pluginCall) {
         this.cookieManager.removeAllCookies();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 }

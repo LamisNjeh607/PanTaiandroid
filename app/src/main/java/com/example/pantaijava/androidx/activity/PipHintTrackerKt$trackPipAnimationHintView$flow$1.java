@@ -17,6 +17,7 @@ import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
+import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.channels.ProduceKt;
 import kotlinx.coroutines.channels.ProducerScope;
 
@@ -62,10 +63,11 @@ final class PipHintTrackerKt$trackPipAnimationHintView$flow$1 extends SuspendLam
             final View view = this.$view;
             this.label = 1;
             if (ProduceKt.awaitClose(producerScope, new Function0<Unit>() {
-                public final void invoke() {
+                public final CoroutineScope invoke() {
                     view.getViewTreeObserver().removeOnScrollChangedListener(pipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda1);
                     view.removeOnLayoutChangeListener(pipHintTrackerKt$trackPipAnimationHintView$flow$1$$ExternalSyntheticLambda0);
                     view.removeOnAttachStateChangeListener(pipHintTrackerKt$trackPipAnimationHintView$flow$1$attachStateChangeListener$1);
+                    return null;
                 }
             }, this) == coroutine_suspended) {
                 return coroutine_suspended;

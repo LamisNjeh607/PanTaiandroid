@@ -1,5 +1,6 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
+import com.capacitorjs.plugins.filesystem.FilesystemPlugin;
 import com.getcapacitor.PluginCall;
 import io.ionic.libs.ionfilesystemlib.model.IONFILEUri;
 import kotlin.Metadata;
@@ -21,11 +22,11 @@ final class FilesystemPlugin$getUri$1 extends SuspendLambda implements Function2
     final /* synthetic */ PluginCall $call;
     final /* synthetic */ IONFILEUri.Unresolved $input;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$getUri$1(FilesystemPlugin filesystemPlugin, IONFILEUri.Unresolved unresolved, PluginCall pluginCall, Continuation<? super FilesystemPlugin$getUri$1> continuation) {
-        super(2, continuation);
+    FilesystemPlugin$getUri$1(FilesystemPlugin filesystemPlugin, IONFILEUri.Unresolved unresolved, PluginCall pluginCall, Continuation<?> continuation) {
+        super(2, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$input = unresolved;
         this.$call = pluginCall;
@@ -58,14 +59,14 @@ final class FilesystemPlugin$getUri$1 extends SuspendLambda implements Function2
         }
         PluginCall pluginCall = this.$call;
         if (Result.m197isSuccessimpl(obj2)) {
-            PluginResultExtensionsKt.sendSuccess$default(pluginCall, FilesystemMethodResultsKt.toResultObject((IONFILEUri.Resolved) obj2), false, 2, (Object) null);
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendSuccess$default(pluginCall, com.capacitorjs.plugins.filesystem.FilesystemMethodResultsKt.toResultObject((IONFILEUri.Resolved) obj2), false, 2, (Object) null);
         }
         PluginCall pluginCall2 = this.$call;
         Throwable r6 = Result.m193exceptionOrNullimpl(obj2);
         if (r6 != null) {
             String methodName = pluginCall2.getMethodName();
             Intrinsics.checkNotNullExpressionValue(methodName, "getMethodName(...)");
-            PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r6, methodName));
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r6, methodName));
         }
         return Unit.INSTANCE;
     }

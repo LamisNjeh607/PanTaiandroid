@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.keyboard;
+package com.example.pantaijava.com.capacitorjs.plugins.keyboard;
 
 import com.getcapacitor.PluginCall;
 

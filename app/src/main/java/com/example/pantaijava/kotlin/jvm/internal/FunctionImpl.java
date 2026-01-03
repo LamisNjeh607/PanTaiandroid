@@ -27,6 +27,7 @@ import kotlin.jvm.functions.Function6;
 import kotlin.jvm.functions.Function7;
 import kotlin.jvm.functions.Function8;
 import kotlin.jvm.functions.Function9;
+import kotlinx.coroutines.CoroutineScope;
 
 @Deprecated(level = DeprecationLevel.ERROR, message = "This class is no longer supported, do not use it.")
 @Deprecated
@@ -47,7 +48,7 @@ public abstract class FunctionImpl implements Function, Serializable, Function0,
         throw new IllegalStateException("Wrong function arity, expected: " + i + ", actual: " + getArity());
     }
 
-    public void invoke() {
+    public CoroutineScope invoke() {
         checkArity(0);
         return invokeVararg(new Object[0]);
     }

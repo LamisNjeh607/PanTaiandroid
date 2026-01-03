@@ -1,6 +1,6 @@
-package com.capacitorjs.plugins.keyboard;
+package com.example.pantaijava.com.capacitorjs.plugins.keyboard;
 
-import com.capacitorjs.plugins.keyboard.Keyboard;
+
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class KeyboardPlugin$$ExternalSyntheticLambda1 implements Keyboard.KeyboardEventListener {

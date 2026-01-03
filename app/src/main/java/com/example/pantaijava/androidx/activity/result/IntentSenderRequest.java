@@ -1,9 +1,12 @@
-package androidx.activity.result;
+package com.example.pantaijava.androidx.activity.result;
 
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.activity.result.IntentSenderRequest$Companion$CREATOR$1;
+
 import java.lang.annotation.RetentionPolicy;
 import kotlin.Metadata;
 import kotlin.annotation.AnnotationRetention;

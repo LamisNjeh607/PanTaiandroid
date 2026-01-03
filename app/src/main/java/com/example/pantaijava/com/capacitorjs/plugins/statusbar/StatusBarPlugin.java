@@ -126,7 +126,7 @@ public class StatusBarPlugin extends Plugin {
     /* access modifiers changed from: private */
     public /* synthetic */ void lambda$setStyle$1(String str, PluginCall pluginCall) {
         this.implementation.setStyle(str);
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -143,7 +143,7 @@ public class StatusBarPlugin extends Plugin {
     public /* synthetic */ void lambda$setBackgroundColor$2(String str, PluginCall pluginCall) {
         try {
             this.implementation.setBackgroundColor(WebColor.parseColor(str.toUpperCase(Locale.ROOT)));
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (IllegalArgumentException unused) {
             pluginCall.reject("Invalid color provided. Must be a hex string (ex: #ff0000");
         }
@@ -157,7 +157,7 @@ public class StatusBarPlugin extends Plugin {
     /* access modifiers changed from: private */
     public /* synthetic */ void lambda$hide$3(PluginCall pluginCall) {
         this.implementation.hide();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -168,7 +168,7 @@ public class StatusBarPlugin extends Plugin {
     /* access modifiers changed from: private */
     public /* synthetic */ void lambda$show$4(PluginCall pluginCall) {
         this.implementation.show();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -184,7 +184,7 @@ public class StatusBarPlugin extends Plugin {
     /* access modifiers changed from: private */
     public /* synthetic */ void lambda$setOverlaysWebView$5(Boolean bool, PluginCall pluginCall) {
         this.implementation.setOverlaysWebView(bool);
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     private JSObject toJSObject(StatusBarInfo statusBarInfo) {

@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import android.net.Uri;
 import com.getcapacitor.JSObject;
@@ -21,21 +21,21 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FilesystemPlugin.kt */
 final class FilesystemPlugin$mkdir$1 extends SuspendLambda implements Function2<IONFILEUri.Resolved, Continuation<? super Unit>, Object> {
     final /* synthetic */ PluginCall $call;
-    final /* synthetic */ SingleUriWithRecursiveOptions $input;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.SingleUriWithRecursiveOptions $input;
     /* synthetic */ Object L$0;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$mkdir$1(FilesystemPlugin filesystemPlugin, SingleUriWithRecursiveOptions singleUriWithRecursiveOptions, PluginCall pluginCall, Continuation<? super FilesystemPlugin$mkdir$1> continuation) {
-        super(2, continuation);
+    FilesystemPlugin$mkdir$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, com.capacitorjs.plugins.filesystem.SingleUriWithRecursiveOptions singleUriWithRecursiveOptions, PluginCall pluginCall, Continuation<? super FilesystemPlugin$mkdir$1> continuation) {
+        super(2, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$input = singleUriWithRecursiveOptions;
         this.$call = pluginCall;
     }
 
     public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-        FilesystemPlugin$mkdir$1 filesystemPlugin$mkdir$1 = new FilesystemPlugin$mkdir$1(this.this$0, this.$input, this.$call, continuation);
+        FilesystemPlugin$mkdir$1 filesystemPlugin$mkdir$1 = new FilesystemPlugin$mkdir$1(this.this$0, this.$input, this.$call, (Continuation<? super FilesystemPlugin$mkdir$1>) continuation );
         filesystemPlugin$mkdir$1.L$0 = obj;
         return filesystemPlugin$mkdir$1;
     }
@@ -64,14 +64,14 @@ final class FilesystemPlugin$mkdir$1 extends SuspendLambda implements Function2<
         PluginCall pluginCall = this.$call;
         if (Result.m197isSuccessimpl(obj2)) {
             Uri uri = (Uri) obj2;
-            PluginResultExtensionsKt.sendSuccess$default(pluginCall, (JSObject) null, false, 3, (Object) null);
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendSuccess$default(pluginCall, (JSObject) null, false, 3, (Object) null);
         }
         PluginCall pluginCall2 = this.$call;
         Throwable r6 = Result.m193exceptionOrNullimpl(obj2);
         if (r6 != null) {
             String methodName = pluginCall2.getMethodName();
             Intrinsics.checkNotNullExpressionValue(methodName, "getMethodName(...)");
-            PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r6, methodName));
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r6, methodName));
         }
         return Unit.INSTANCE;
     }

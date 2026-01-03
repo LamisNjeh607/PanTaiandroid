@@ -38,7 +38,7 @@ public class TextToSpeechPlugin extends Plugin {
         try {
             this.implementation.speak(string, string2, floatValue, floatValue2, floatValue3, intValue, pluginCall.getCallbackId(), new SpeakResultCallback() {
                 public void onDone() {
-                    pluginCall.resolve();
+                    pluginCall.resolve( jSObject );
                 }
 
                 public void onError() {
@@ -66,7 +66,7 @@ public class TextToSpeechPlugin extends Plugin {
         }
         try {
             this.implementation.stop();
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (Exception e) {
             pluginCall.reject(e.getLocalizedMessage());
         }
@@ -112,7 +112,7 @@ public class TextToSpeechPlugin extends Plugin {
     public void openInstall(PluginCall pluginCall) {
         try {
             this.implementation.openInstall();
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (Exception e) {
             pluginCall.reject(e.getLocalizedMessage());
         }

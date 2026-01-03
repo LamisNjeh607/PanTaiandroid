@@ -1,5 +1,10 @@
-package androidx.activity.result;
+package com.example.pantaijava.androidx.activity.result;
 
+import androidx.activity.result.ActivityResultCallerKt$$ExternalSyntheticLambda0;
+import androidx.activity.result.ActivityResultCallerKt$$ExternalSyntheticLambda1;
+import androidx.activity.result.ActivityResultCallerLauncher;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.ActivityResultRegistry;
 import androidx.activity.result.contract.ActivityResultContract;
 import com.getcapacitor.PluginMethod;
 import kotlin.Metadata;

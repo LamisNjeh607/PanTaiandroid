@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import android.media.MediaScannerConnection;
 import com.capacitorjs.plugins.filesystem.LegacyFilesystemImplementation;
@@ -12,9 +12,9 @@ import kotlin.jvm.internal.Intrinsics;
 public final class FilesystemPlugin$downloadFile$1 implements LegacyFilesystemImplementation.FilesystemDownloadCallback {
     final /* synthetic */ PluginCall $call;
     final /* synthetic */ String $directory;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
-    FilesystemPlugin$downloadFile$1(FilesystemPlugin filesystemPlugin, String str, PluginCall pluginCall) {
+    FilesystemPlugin$downloadFile$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, String str, PluginCall pluginCall) {
         this.this$0 = filesystemPlugin;
         this.$directory = str;
         this.$call = pluginCall;

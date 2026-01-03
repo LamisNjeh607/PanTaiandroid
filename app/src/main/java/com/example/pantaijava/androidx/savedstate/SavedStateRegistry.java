@@ -1,11 +1,17 @@
-package androidx.savedstate;
+package com.example.pantaijava.androidx.savedstate;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.arch.core.internal.SafeIterableMap;
 import androidx.core.app.NotificationCompat;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.savedstate.Recreator;
+import androidx.savedstate.SavedStateRegistry$$ExternalSyntheticLambda0;
+import androidx.savedstate.SavedStateRegistryOwner;
+
+import org.checkerframework.checker.units.qual.K;
+
 import java.util.Iterator;
 import java.util.Map;
 import kotlin.Metadata;
@@ -19,6 +25,7 @@ public final class SavedStateRegistry {
     @Deprecated
     private static final String SAVED_COMPONENTS_KEY = "androidx.lifecycle.BundlableSavedStateRegistry.key";
     private boolean attached;
+    @SuppressLint("RestrictedApi")
     private final SafeIterableMap<String, SavedStateProvider> components = new SafeIterableMap<>();
     private boolean isAllowingSavingState = true;
     private boolean isRestored;
@@ -70,6 +77,7 @@ public final class SavedStateRegistry {
         throw new IllegalStateException("You can consumeRestoredStateForKey only after super.onCreate of corresponding component".toString());
     }
 
+    @SuppressLint("RestrictedApi")
     public final void registerSavedStateProvider(String str, SavedStateProvider savedStateProvider) {
         Intrinsics.checkNotNullParameter(str, "key");
         Intrinsics.checkNotNullParameter(savedStateProvider, "provider");
@@ -80,7 +88,7 @@ public final class SavedStateRegistry {
 
     public final SavedStateProvider getSavedStateProvider(String str) {
         Intrinsics.checkNotNullParameter(str, "key");
-        Iterator<Map.Entry<String, SavedStateProvider>> it = this.components.iterator();
+        @SuppressLint("RestrictedApi") Iterator<Map.Entry<String, SavedStateProvider>> it = this.components.iterator();
         while (it.hasNext()) {
             Map.Entry next = it.next();
             Intrinsics.checkNotNullExpressionValue(next, "components");
@@ -92,6 +100,7 @@ public final class SavedStateRegistry {
         return null;
     }
 
+    @SuppressLint("RestrictedApi")
     public final void unregisterSavedStateProvider(String str) {
         Intrinsics.checkNotNullParameter(str, "key");
         this.components.remove(str);
@@ -161,7 +170,7 @@ public final class SavedStateRegistry {
         if (bundle3 != null) {
             bundle2.putAll(bundle3);
         }
-        SafeIterableMap<K, V>.IteratorWithAdditions iteratorWithAdditions = this.components.iteratorWithAdditions();
+        @SuppressLint("RestrictedApi") SafeIterableMap<K, V>.IteratorWithAdditions iteratorWithAdditions = this.components.iteratorWithAdditions();
         Intrinsics.checkNotNullExpressionValue(iteratorWithAdditions, "this.components.iteratorWithAdditions()");
         Iterator it = iteratorWithAdditions;
         while (it.hasNext()) {

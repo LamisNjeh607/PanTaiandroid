@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import com.getcapacitor.PluginCall;
 import io.ionic.libs.ionfilesystemlib.model.IONFILEUri;
@@ -21,16 +21,16 @@ final class FilesystemPlugin$readdir$1 extends SuspendLambda implements Function
     final /* synthetic */ PluginCall $call;
     /* synthetic */ Object L$0;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$readdir$1(FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$readdir$1> continuation) {
-        super(2, continuation);
+    FilesystemPlugin$readdir$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$readdir$1> continuation) {
+        super(2, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$call = pluginCall;
     }
 
-    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+    public final FilesystemPlugin$readdir$1 create(Object obj, Continuation<?> continuation) {
         FilesystemPlugin$readdir$1 filesystemPlugin$readdir$1 = new FilesystemPlugin$readdir$1(this.this$0, this.$call, continuation);
         filesystemPlugin$readdir$1.L$0 = obj;
         return filesystemPlugin$readdir$1;

@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.device;
+package com.example.pantaijava.com.capacitorjs.plugins.device;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.provider.Settings;
 import android.webkit.WebView;
+
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import nz.co.soltius.cordova.BluetoothClassicSerial;
 
@@ -66,6 +68,7 @@ public class Device {
         return Settings.Global.getString(this.context.getContentResolver(), BluetoothClassicSerial.DEVICE_NAME);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getWebViewVersion() {
         PackageInfo currentWebViewPackage = WebView.getCurrentWebViewPackage();
         if (currentWebViewPackage != null) {

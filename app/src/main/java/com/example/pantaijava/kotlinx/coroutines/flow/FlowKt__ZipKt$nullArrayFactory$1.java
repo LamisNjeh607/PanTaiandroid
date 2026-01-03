@@ -2,6 +2,7 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
+import kotlinx.coroutines.CoroutineScope;
 
 @Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
 /* compiled from: Zip.kt */
@@ -11,7 +12,7 @@ final class FlowKt__ZipKt$nullArrayFactory$1 implements Function0 {
     FlowKt__ZipKt$nullArrayFactory$1() {
     }
 
-    public final void invoke() {
+    public final CoroutineScope invoke() {
         return null;
     }
 }

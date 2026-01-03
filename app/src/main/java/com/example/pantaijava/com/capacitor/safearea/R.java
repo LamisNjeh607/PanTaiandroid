@@ -1,4 +1,4 @@
-package com.capacitor.safearea;
+package com.example.pantaijava.com.capacitor.safearea;
 
 public final class R {
     private R() {

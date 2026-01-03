@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -16,7 +16,7 @@ final class FilesystemPlugin$coroutineScope$2 extends Lambda implements Function
         super(0);
     }
 
-    public final void invoke() {
+    public final CoroutineScope invoke() {
         return CoroutineScopeKt.CoroutineScope(Dispatchers.getMain());
     }
 }

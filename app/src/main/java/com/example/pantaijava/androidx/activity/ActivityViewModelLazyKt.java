@@ -1,10 +1,6 @@
 package com.example.pantaijava.androidx.activity;
 
-import androidx.activity.ActivityViewModelLazyKt$viewModels$2;
-import androidx.activity.ActivityViewModelLazyKt$viewModels$3;
-import androidx.activity.ActivityViewModelLazyKt$viewModels$4;
-import androidx.activity.ActivityViewModelLazyKt$viewModels$factoryPromise$1;
-import androidx.activity.ActivityViewModelLazyKt$viewModels$factoryPromise$2;
+
 import androidx.activity.ComponentActivity;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelLazy;

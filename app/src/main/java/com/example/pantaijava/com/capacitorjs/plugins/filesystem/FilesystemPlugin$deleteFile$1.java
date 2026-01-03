@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
@@ -22,16 +22,16 @@ final class FilesystemPlugin$deleteFile$1 extends SuspendLambda implements Funct
     final /* synthetic */ PluginCall $call;
     /* synthetic */ Object L$0;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$deleteFile$1(FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$deleteFile$1> continuation) {
-        super(2, continuation);
+    FilesystemPlugin$deleteFile$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$deleteFile$1> continuation) {
+        super(2, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$call = pluginCall;
     }
 
-    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+    public final FilesystemPlugin$deleteFile$1 create(Object obj, Continuation<?> continuation) {
         FilesystemPlugin$deleteFile$1 filesystemPlugin$deleteFile$1 = new FilesystemPlugin$deleteFile$1(this.this$0, this.$call, continuation);
         filesystemPlugin$deleteFile$1.L$0 = obj;
         return filesystemPlugin$deleteFile$1;
@@ -68,7 +68,7 @@ final class FilesystemPlugin$deleteFile$1 extends SuspendLambda implements Funct
         if (r7 != null) {
             String methodName = pluginCall2.getMethodName();
             Intrinsics.checkNotNullExpressionValue(methodName, "getMethodName(...)");
-            PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r7, methodName));
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r7, methodName));
         }
         return Unit.INSTANCE;
     }

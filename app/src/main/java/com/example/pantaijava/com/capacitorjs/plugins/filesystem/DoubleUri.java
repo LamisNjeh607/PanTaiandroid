@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import io.ionic.libs.ionfilesystemlib.model.IONFILEUri;
 import kotlin.Metadata;

@@ -12,6 +12,7 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.InlineMarker;
 import kotlin.jvm.internal.Intrinsics;
+import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.flow.internal.CombineKt;
 
 @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002*\b\u0012\u0004\u0012\u0002H\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "R", "Lkotlinx/coroutines/flow/FlowCollector;"}, k = 3, mv = {2, 0, 0}, xi = 176)
@@ -94,7 +95,7 @@ public final class FlowKt__ZipKt$combineTransform$6 extends SuspendLambda implem
             final Function3<FlowCollector<? super R>, T[], Continuation<? super Unit>, Object> function3 = this.$transform;
             this.label = 1;
             if (CombineKt.combineInternal((FlowCollector) this.L$0, flowArr, new Function0<T[]>() {
-                public final void invoke() {
+                public final CoroutineScope invoke() {
                     int length = r2.length;
                     Intrinsics.reifiedOperationMarker(0, "T?");
                     return new Object[length];
@@ -118,7 +119,7 @@ public final class FlowKt__ZipKt$combineTransform$6 extends SuspendLambda implem
         final Function3<FlowCollector<? super R>, T[], Continuation<? super Unit>, Object> function3 = this.$transform;
         InlineMarker.mark(0);
         CombineKt.combineInternal((FlowCollector) this.L$0, flowArr, new Function0<T[]>() {
-            public final void invoke() {
+            public final CoroutineScope invoke() {
                 int length = flowArr2.length;
                 Intrinsics.reifiedOperationMarker(0, "T?");
                 return new Object[length];

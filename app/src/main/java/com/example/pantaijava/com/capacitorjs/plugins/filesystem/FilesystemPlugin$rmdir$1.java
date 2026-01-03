@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
@@ -20,21 +20,21 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FilesystemPlugin.kt */
 final class FilesystemPlugin$rmdir$1 extends SuspendLambda implements Function2<IONFILEUri.Resolved, Continuation<? super Unit>, Object> {
     final /* synthetic */ PluginCall $call;
-    final /* synthetic */ SingleUriWithRecursiveOptions $input;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.SingleUriWithRecursiveOptions $input;
     /* synthetic */ Object L$0;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$rmdir$1(FilesystemPlugin filesystemPlugin, SingleUriWithRecursiveOptions singleUriWithRecursiveOptions, PluginCall pluginCall, Continuation<? super FilesystemPlugin$rmdir$1> continuation) {
-        super(2, continuation);
+    FilesystemPlugin$rmdir$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, com.capacitorjs.plugins.filesystem.SingleUriWithRecursiveOptions singleUriWithRecursiveOptions, PluginCall pluginCall, Continuation<? super FilesystemPlugin$rmdir$1> continuation) {
+        super(2, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$input = singleUriWithRecursiveOptions;
         this.$call = pluginCall;
     }
 
     public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-        FilesystemPlugin$rmdir$1 filesystemPlugin$rmdir$1 = new FilesystemPlugin$rmdir$1(this.this$0, this.$input, this.$call, continuation);
+        FilesystemPlugin$rmdir$1 filesystemPlugin$rmdir$1 = new FilesystemPlugin$rmdir$1(this.this$0, this.$input, this.$call, (Continuation<? super FilesystemPlugin$rmdir$1>) continuation );
         filesystemPlugin$rmdir$1.L$0 = obj;
         return filesystemPlugin$rmdir$1;
     }

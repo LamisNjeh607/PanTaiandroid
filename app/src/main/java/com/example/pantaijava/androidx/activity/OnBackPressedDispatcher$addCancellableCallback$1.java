@@ -4,6 +4,7 @@ import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlinx.coroutines.CoroutineScope;
 
 @Metadata(k = 3, mv = {1, 8, 0}, xi = 48)
 /* compiled from: OnBackPressedDispatcher.kt */
@@ -12,7 +13,8 @@ import kotlin.jvm.internal.FunctionReferenceImpl;
         super(0, obj, OnBackPressedDispatcher.class, "updateEnabledCallbacks", "updateEnabledCallbacks()V", 0);
     }
 
-    public final void invoke() {
+    public final CoroutineScope invoke() {
         ((OnBackPressedDispatcher) this.receiver).updateEnabledCallbacks();
+        return null;
     }
 }

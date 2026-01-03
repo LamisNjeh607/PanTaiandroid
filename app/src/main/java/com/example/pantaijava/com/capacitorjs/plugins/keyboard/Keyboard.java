@@ -1,5 +1,6 @@
-package com.capacitorjs.plugins.keyboard;
+package com.example.pantaijava.com.capacitorjs.plugins.keyboard;
 
+import android.annotation.SuppressLint;
 import android.graphics.Rect;
 import android.os.Build;
 import android.util.TypedValue;
@@ -44,10 +45,10 @@ public class Keyboard {
 
     public Keyboard(final AppCompatActivity appCompatActivity, final boolean z) {
         this.activity = appCompatActivity;
-        FrameLayout frameLayout = (FrameLayout) appCompatActivity.getWindow().getDecorView().findViewById(16908290);
+        @SuppressLint("ResourceType") FrameLayout frameLayout = (FrameLayout) appCompatActivity.getWindow().getDecorView().findViewById(16908290);
         View rootView2 = frameLayout.getRootView();
         this.rootView = rootView2;
-        ViewCompat.setWindowInsetsAnimationCallback(rootView2, new WindowInsetsAnimationCompat.Callback(0) {
+        ViewCompat.setWindowInsetsAnimationCallback(rootView2, new WindowInsetsAnimationCompat.Callback( WindowInsetsAnimationCompat.Callback.DISPATCH_MODE_STOP) {
             public WindowInsetsCompat onProgress(WindowInsetsCompat windowInsetsCompat, List<WindowInsetsAnimationCompat> list) {
                 return windowInsetsCompat;
             }
@@ -84,12 +85,14 @@ public class Keyboard {
         this.frameLayoutParams = (FrameLayout.LayoutParams) childAt.getLayoutParams();
     }
 
+    @SuppressLint("WrongConstant")
     public void show() {
         ((InputMethodManager) this.activity.getSystemService("input_method")).showSoftInput(this.activity.getCurrentFocus(), 0);
     }
 
+    @SuppressLint("WrongConstant")
     public boolean hide() {
-        InputMethodManager inputMethodManager = (InputMethodManager) this.activity.getSystemService("input_method");
+        @SuppressLint("WrongConstant") InputMethodManager inputMethodManager = (InputMethodManager) this.activity.getSystemService("input_method");
         View currentFocus = this.activity.getCurrentFocus();
         if (currentFocus == null) {
             return false;

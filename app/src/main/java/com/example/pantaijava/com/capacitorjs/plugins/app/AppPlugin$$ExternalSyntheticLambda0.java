@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.app;
+package com.example.pantaijava.com.capacitorjs.plugins.app;
 
 import com.getcapacitor.App;
 

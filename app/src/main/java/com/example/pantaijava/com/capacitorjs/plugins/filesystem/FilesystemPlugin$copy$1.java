@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import android.net.Uri;
 import com.getcapacitor.PluginCall;
@@ -22,17 +22,17 @@ final class FilesystemPlugin$copy$1 extends SuspendLambda implements Function3<I
     /* synthetic */ Object L$0;
     /* synthetic */ Object L$1;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$copy$1(FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$copy$1> continuation) {
-        super(3, continuation);
+    FilesystemPlugin$copy$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$copy$1> continuation) {
+        super(3, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$call = pluginCall;
     }
 
     public final Object invoke(IONFILEUri.Resolved resolved, IONFILEUri.Resolved resolved2, Continuation<? super Unit> continuation) {
-        FilesystemPlugin$copy$1 filesystemPlugin$copy$1 = new FilesystemPlugin$copy$1(this.this$0, this.$call, continuation);
+        FilesystemPlugin$copy$1 filesystemPlugin$copy$1 = new FilesystemPlugin$copy$1(this.this$0, this.$call, (Continuation<? super FilesystemPlugin$copy$1>) continuation );
         filesystemPlugin$copy$1.L$0 = resolved;
         filesystemPlugin$copy$1.L$1 = resolved2;
         return filesystemPlugin$copy$1.invokeSuspend(Unit.INSTANCE);
@@ -58,14 +58,14 @@ final class FilesystemPlugin$copy$1 extends SuspendLambda implements Function3<I
         }
         PluginCall pluginCall = this.$call;
         if (Result.m197isSuccessimpl(obj2)) {
-            PluginResultExtensionsKt.sendSuccess$default(pluginCall, FilesystemMethodResultsKt.createUriResultObject((Uri) obj2), false, 2, (Object) null);
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendSuccess$default(pluginCall, com.capacitorjs.plugins.filesystem.FilesystemMethodResultsKt.createUriResultObject((Uri) obj2), false, 2, (Object) null);
         }
         PluginCall pluginCall2 = this.$call;
         Throwable r7 = Result.m193exceptionOrNullimpl(obj2);
         if (r7 != null) {
             String methodName = pluginCall2.getMethodName();
             Intrinsics.checkNotNullExpressionValue(methodName, "getMethodName(...)");
-            PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r7, methodName));
+            com.capacitorjs.plugins.filesystem.PluginResultExtensionsKt.sendError(pluginCall2, FilesystemErrorsKt.toFilesystemError(r7, methodName));
         }
         return Unit.INSTANCE;
     }

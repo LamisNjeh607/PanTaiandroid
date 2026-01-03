@@ -1,4 +1,4 @@
-package androidx.activity.result;
+package com.example.pantaijava.androidx.activity.result;
 
 import androidx.activity.result.contract.ActivityResultContract;
 import androidx.core.app.ActivityOptionsCompat;
@@ -11,7 +11,7 @@ public final class ActivityResultRegistry$register$2 extends ActivityResultLaunc
     final /* synthetic */ String $key;
     final /* synthetic */ ActivityResultRegistry this$0;
 
-    ActivityResultRegistry$register$2(ActivityResultRegistry activityResultRegistry, String str, ActivityResultContract<I, O> activityResultContract) {
+    public ActivityResultRegistry$register$2(ActivityResultRegistry activityResultRegistry, String str, ActivityResultContract<I, O> activityResultContract) {
         this.this$0 = activityResultRegistry;
         this.$key = str;
         this.$contract = activityResultContract;

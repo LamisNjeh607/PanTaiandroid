@@ -1,4 +1,4 @@
-package androidx.activity.result;
+package com.example.pantaijava.androidx.activity.result;
 
 import androidx.activity.result.contract.ActivityResultContract;
 import androidx.lifecycle.Lifecycle;

@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 public @interface CapacitorPlugin {
     String name() default "";
 
-    Permission[] permissions() default {};
+    com.getcapacitor.annotation.Permission permissions() default;
 
     int[] requestCodes() default {};
 }

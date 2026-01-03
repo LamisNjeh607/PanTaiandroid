@@ -34,7 +34,7 @@ public class PluginCall {
         this.msgHandler.sendResponseMessage(this, new PluginResult(jSObject), (PluginResult) null);
     }
 
-    public void resolve() {
+    public void resolve(com.getcapacitor.JSObject jSObject) {
         this.msgHandler.sendResponseMessage(this, (PluginResult) null, (PluginResult) null);
     }
 

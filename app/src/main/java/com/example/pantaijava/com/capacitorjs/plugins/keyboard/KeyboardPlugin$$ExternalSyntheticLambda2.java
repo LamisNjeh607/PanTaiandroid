@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.keyboard;
+package com.example.pantaijava.com.capacitorjs.plugins.keyboard;
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class KeyboardPlugin$$ExternalSyntheticLambda2 implements Runnable {

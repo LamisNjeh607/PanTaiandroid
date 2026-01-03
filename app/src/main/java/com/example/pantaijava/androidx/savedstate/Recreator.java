@@ -1,4 +1,4 @@
-package androidx.savedstate;
+package com.example.pantaijava.androidx.savedstate;
 
 import android.os.Bundle;
 import androidx.core.app.NotificationCompat;
@@ -6,6 +6,8 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleEventObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.savedstate.SavedStateRegistry;
+import androidx.savedstate.SavedStateRegistryOwner;
+
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -50,7 +52,7 @@ public final class Recreator implements LifecycleEventObserver {
 
     private final void reflectiveNew(String str) {
         try {
-            Class<? extends U> asSubclass = Class.forName(str, false, Recreator.class.getClassLoader()).asSubclass(SavedStateRegistry.AutoRecreated.class);
+            Class<? extends SavedStateRegistry.AutoRecreated> asSubclass = Class.forName(str, false, Recreator.class.getClassLoader()).asSubclass(SavedStateRegistry.AutoRecreated.class);
             Intrinsics.checkNotNullExpressionValue(asSubclass, "{\n                Class.…class.java)\n            }");
             try {
                 Constructor<? extends U> declaredConstructor = asSubclass.getDeclaredConstructor(new Class[0]);

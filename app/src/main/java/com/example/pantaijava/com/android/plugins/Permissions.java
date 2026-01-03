@@ -1,4 +1,4 @@
-package com.android.plugins;
+package com.example.pantaijava.com.android.plugins;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -153,7 +153,11 @@ public class Permissions extends CordovaPlugin {
             } catch (JSONException unused) {
             }
         } else {
-            jSONObject.put(str, obj);
+            try {
+                jSONObject.put(str, obj);
+            } catch (JSONException e) {
+                throw new RuntimeException( e );
+            }
         }
     }
 }

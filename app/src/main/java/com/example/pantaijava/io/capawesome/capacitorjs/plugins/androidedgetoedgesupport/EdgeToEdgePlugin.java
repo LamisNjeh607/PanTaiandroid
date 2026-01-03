@@ -28,7 +28,7 @@ public class EdgeToEdgePlugin extends Plugin {
     public /* synthetic */ void lambda$enable$0(PluginCall pluginCall) {
         try {
             this.implementation.enable();
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (Exception e) {
             pluginCall.reject(e.getMessage());
         }
@@ -43,7 +43,7 @@ public class EdgeToEdgePlugin extends Plugin {
     public /* synthetic */ void lambda$disable$1(PluginCall pluginCall) {
         try {
             this.implementation.disable();
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (Exception e) {
             pluginCall.reject(e.getMessage());
         }
@@ -78,7 +78,7 @@ public class EdgeToEdgePlugin extends Plugin {
     public /* synthetic */ void lambda$setBackgroundColor$2(String str, PluginCall pluginCall) {
         try {
             this.implementation.setBackgroundColor(str);
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (Exception e) {
             pluginCall.reject(e.getMessage());
         }

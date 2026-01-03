@@ -1,4 +1,4 @@
-package com.capacitor.safearea;
+package com.example.pantaijava.com.capacitor.safearea;
 
 import android.util.Log;
 import android.view.DisplayCutout;

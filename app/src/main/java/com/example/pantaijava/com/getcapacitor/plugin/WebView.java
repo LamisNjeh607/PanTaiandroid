@@ -15,13 +15,13 @@ public class WebView extends Plugin {
     @PluginMethod
     public void setServerAssetPath(PluginCall pluginCall) {
         this.bridge.setServerAssetPath(pluginCall.getString("path"));
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
     public void setServerBasePath(PluginCall pluginCall) {
         this.bridge.setServerBasePath(pluginCall.getString("path"));
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -38,6 +38,6 @@ public class WebView extends Plugin {
         SharedPreferences.Editor edit = getContext().getSharedPreferences(WEBVIEW_PREFS_NAME, 0).edit();
         edit.putString(CAP_SERVER_PATH, serverBasePath);
         edit.apply();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 }

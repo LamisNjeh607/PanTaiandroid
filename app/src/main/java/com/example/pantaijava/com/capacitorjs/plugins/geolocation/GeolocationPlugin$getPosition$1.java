@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.geolocation;
+package com.example.pantaijava.com.capacitorjs.plugins.geolocation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.getcapacitor.PluginCall;
@@ -20,13 +20,13 @@ import kotlinx.coroutines.CoroutineScope;
 @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H@"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 9, 0}, xi = 48)
 @DebugMetadata(c = "com.capacitorjs.plugins.geolocation.GeolocationPlugin$getPosition$1", f = "GeolocationPlugin.kt", i = {}, l = {209}, m = "invokeSuspend", n = {}, s = {})
 /* compiled from: GeolocationPlugin.kt */
-final class GeolocationPlugin$getPosition$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+public final class GeolocationPlugin$getPosition$1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     final /* synthetic */ PluginCall $call;
     int label;
     final /* synthetic */ GeolocationPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    GeolocationPlugin$getPosition$1(GeolocationPlugin geolocationPlugin, PluginCall pluginCall, Continuation<? super GeolocationPlugin$getPosition$1> continuation) {
+    public GeolocationPlugin$getPosition$1(GeolocationPlugin geolocationPlugin, PluginCall pluginCall, Continuation<? super GeolocationPlugin$getPosition$1> continuation) {
         super(2, continuation);
         this.this$0 = geolocationPlugin;
         this.$call = pluginCall;

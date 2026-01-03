@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.haptics.arguments;
+package com.example.pantaijava.com.capacitorjs.plugins.haptics.arguments;
 
 public class HapticsSelectionType implements HapticsVibrationType {
     private static final int[] amplitudes = {0, 100};

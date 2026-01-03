@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import com.getcapacitor.PluginCall;
 import io.ionic.libs.ionfilesystemlib.model.IONFILEEncoding;
@@ -26,16 +26,16 @@ public final class FilesystemMethodOptionsKt {
     private static final String INPUT_TO = "to";
     private static final String INPUT_TO_DIRECTORY = "toDirectory";
 
-    public static final ReadFileOptions getReadFileOptions(PluginCall pluginCall) {
+    public static final com.capacitorjs.plugins.filesystem.ReadFileOptions getReadFileOptions(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, "<this>");
         IONFILEUri.Unresolved singleIONFILEUri = getSingleIONFILEUri(pluginCall);
         if (singleIONFILEUri == null) {
             return null;
         }
-        return new ReadFileOptions(singleIONFILEUri, new IONFILEReadOptions(IONFILEEncoding.Companion.fromEncodingName(pluginCall.getString(INPUT_ENCODING))));
+        return new com.capacitorjs.plugins.filesystem.ReadFileOptions(singleIONFILEUri, new IONFILEReadOptions(IONFILEEncoding.Companion.fromEncodingName(pluginCall.getString(INPUT_ENCODING))));
     }
 
-    public static final ReadFileInChunksOptions getReadFileInChunksOptions(PluginCall pluginCall) {
+    public static final com.capacitorjs.plugins.filesystem.ReadFileInChunksOptions getReadFileInChunksOptions(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, "<this>");
         IONFILEUri.Unresolved singleIONFILEUri = getSingleIONFILEUri(pluginCall);
         if (singleIONFILEUri == null) {
@@ -52,10 +52,10 @@ public final class FilesystemMethodOptionsKt {
         if (num == null) {
             return null;
         }
-        return new ReadFileInChunksOptions(singleIONFILEUri, new IONFILEReadInChunksOptions(fromEncodingName, num.intValue()));
+        return new com.capacitorjs.plugins.filesystem.ReadFileInChunksOptions(singleIONFILEUri, new IONFILEReadInChunksOptions(fromEncodingName, num.intValue()));
     }
 
-    public static final WriteFileOptions getWriteFileOptions(PluginCall pluginCall) {
+    public static final com.capacitorjs.plugins.filesystem.WriteFileOptions getWriteFileOptions(PluginCall pluginCall) {
         String string;
         Intrinsics.checkNotNullParameter(pluginCall, "<this>");
         IONFILEUri.Unresolved singleIONFILEUri = getSingleIONFILEUri(pluginCall);
@@ -71,10 +71,10 @@ public final class FilesystemMethodOptionsKt {
         if (bool2 == null) {
             bool2 = false;
         }
-        return new WriteFileOptions(singleIONFILEUri, new IONFILESaveOptions(string, IONFILEEncoding.Companion.fromEncodingName(pluginCall.getString(INPUT_ENCODING)), bool2.booleanValue() ? IONFILESaveMode.APPEND : IONFILESaveMode.WRITE, booleanValue));
+        return new com.capacitorjs.plugins.filesystem.WriteFileOptions(singleIONFILEUri, new IONFILESaveOptions(string, IONFILEEncoding.Companion.fromEncodingName(pluginCall.getString(INPUT_ENCODING)), bool2.booleanValue() ? IONFILESaveMode.APPEND : IONFILESaveMode.WRITE, booleanValue));
     }
 
-    public static final SingleUriWithRecursiveOptions getSingleUriWithRecursiveOptions(PluginCall pluginCall) {
+    public static final com.capacitorjs.plugins.filesystem.SingleUriWithRecursiveOptions getSingleUriWithRecursiveOptions(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, "<this>");
         IONFILEUri.Unresolved singleIONFILEUri = getSingleIONFILEUri(pluginCall);
         if (singleIONFILEUri == null) {
@@ -84,7 +84,7 @@ public final class FilesystemMethodOptionsKt {
         if (bool == null) {
             bool = false;
         }
-        return new SingleUriWithRecursiveOptions(singleIONFILEUri, bool.booleanValue());
+        return new com.capacitorjs.plugins.filesystem.SingleUriWithRecursiveOptions(singleIONFILEUri, bool.booleanValue());
     }
 
     public static final DoubleUri getDoubleIONFILEUri(PluginCall pluginCall) {

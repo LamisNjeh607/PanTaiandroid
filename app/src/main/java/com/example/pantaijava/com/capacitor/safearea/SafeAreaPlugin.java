@@ -1,4 +1,4 @@
-package com.capacitor.safearea;
+package com.example.pantaijava.com.capacitor.safearea;
 
 import android.os.Build;
 import android.view.OrientationEventListener;
@@ -49,7 +49,7 @@ public class SafeAreaPlugin extends Plugin {
         } else {
             this.bridge.getActivity().runOnUiThread(new SafeAreaPlugin$$ExternalSyntheticLambda1(window));
         }
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     static /* synthetic */ void lambda$setImmersiveNavigationBar$0(Window window) {
@@ -67,7 +67,7 @@ public class SafeAreaPlugin extends Plugin {
     @PluginMethod
     public void startListeningForSafeAreaChanges(PluginCall pluginCall) {
         startListeningForSafeAreaChanges();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -76,7 +76,7 @@ public class SafeAreaPlugin extends Plugin {
             this.orientationEventListener.disable();
             this.isListening = false;
         }
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     /* access modifiers changed from: private */

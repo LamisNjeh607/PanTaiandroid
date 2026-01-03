@@ -1,8 +1,12 @@
-package androidx.activity.result;
+package com.example.pantaijava.androidx.activity.result;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
+import androidx.activity.result.ActivityResultRegistry$$ExternalSyntheticLambda0;
+import androidx.activity.result.ActivityResultRegistry$generateRandomNumber$1;
+import androidx.activity.result.ActivityResultRegistry$register$2;
 import androidx.activity.result.contract.ActivityResultContract;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.app.NotificationCompat;
@@ -218,7 +222,7 @@ public abstract class ActivityResultRegistry {
     }
 
     private final int generateRandomNumber() {
-        for (Number number : SequencesKt.generateSequence(ActivityResultRegistry$generateRandomNumber$1.INSTANCE)) {
+        for (Number number : SequencesKt.generateSequence( ActivityResultRegistry$generateRandomNumber$1.INSTANCE)) {
             if (!this.rcToKey.containsKey(Integer.valueOf(number.intValue()))) {
                 return number.intValue();
             }

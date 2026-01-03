@@ -1,6 +1,6 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
-import com.capacitorjs.plugins.filesystem.FilesystemErrors;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
 import kotlin.Metadata;
@@ -25,7 +25,7 @@ public final class PluginResultExtensionsKt {
         if (jSObject != null) {
             pluginCall.resolve(jSObject);
         } else {
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         }
     }
 

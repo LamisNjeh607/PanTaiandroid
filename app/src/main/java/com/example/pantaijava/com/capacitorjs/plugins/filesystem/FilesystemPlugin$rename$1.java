@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.filesystem;
+package com.example.pantaijava.com.capacitorjs.plugins.filesystem;
 
 import android.net.Uri;
 import com.getcapacitor.JSObject;
@@ -23,17 +23,17 @@ final class FilesystemPlugin$rename$1 extends SuspendLambda implements Function3
     /* synthetic */ Object L$0;
     /* synthetic */ Object L$1;
     int label;
-    final /* synthetic */ FilesystemPlugin this$0;
+    final /* synthetic */ com.capacitorjs.plugins.filesystem.FilesystemPlugin this$0;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    FilesystemPlugin$rename$1(FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$rename$1> continuation) {
-        super(3, continuation);
+    FilesystemPlugin$rename$1(com.capacitorjs.plugins.filesystem.FilesystemPlugin filesystemPlugin, PluginCall pluginCall, Continuation<? super FilesystemPlugin$rename$1> continuation) {
+        super(3, (Continuation<Object>) continuation );
         this.this$0 = filesystemPlugin;
         this.$call = pluginCall;
     }
 
     public final Object invoke(IONFILEUri.Resolved resolved, IONFILEUri.Resolved resolved2, Continuation<? super Unit> continuation) {
-        FilesystemPlugin$rename$1 filesystemPlugin$rename$1 = new FilesystemPlugin$rename$1(this.this$0, this.$call, continuation);
+        FilesystemPlugin$rename$1 filesystemPlugin$rename$1 = new FilesystemPlugin$rename$1(this.this$0, this.$call, (Continuation<? super FilesystemPlugin$rename$1>) continuation );
         filesystemPlugin$rename$1.L$0 = resolved;
         filesystemPlugin$rename$1.L$1 = resolved2;
         return filesystemPlugin$rename$1.invokeSuspend(Unit.INSTANCE);

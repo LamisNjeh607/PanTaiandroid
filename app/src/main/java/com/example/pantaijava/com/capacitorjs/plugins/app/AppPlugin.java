@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.app;
+package com.example.pantaijava.com.capacitorjs.plugins.app;
 
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -29,7 +29,7 @@ public class AppPlugin extends Plugin {
 
     public void load() {
         this.bridge.getApp().setStatusChangeListener(new AppPlugin$$ExternalSyntheticLambda0(this));
-        this.bridge.getApp().setAppRestoredListener(new AppPlugin$$ExternalSyntheticLambda1(this));
+        this.bridge.getApp().setAppRestoredListener(new com.capacitorjs.plugins.app.AppPlugin$$ExternalSyntheticLambda1(this));
         getActivity().getOnBackPressedDispatcher().addCallback(getActivity(), new OnBackPressedCallback(true) {
             public void handleOnBackPressed() {
                 if (AppPlugin.this.hasListeners(AppPlugin.EVENT_BACK_BUTTON)) {
@@ -61,7 +61,7 @@ public class AppPlugin extends Plugin {
     @PluginMethod
     public void exitApp(PluginCall pluginCall) {
         unsetAppListeners();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
         getBridge().getActivity().finish();
     }
 
@@ -88,10 +88,10 @@ public class AppPlugin extends Plugin {
         if (intentUri != null) {
             JSObject jSObject = new JSObject();
             jSObject.put(ImagesContract.URL, intentUri.toString());
-            pluginCall.resolve(jSObject);
+            pluginCall.resolve( jSObject );
             return;
         }
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -104,7 +104,7 @@ public class AppPlugin extends Plugin {
     @PluginMethod
     public void minimizeApp(PluginCall pluginCall) {
         getActivity().moveTaskToBack(true);
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     /* access modifiers changed from: protected */

@@ -1,4 +1,4 @@
-package androidx.activity.result.contract;
+package com.example.pantaijava.androidx.activity.result.contract;
 
 import android.content.ClipData;
 import android.content.Context;
@@ -14,6 +14,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.PickVisualMediaRequest;
 import androidx.activity.result.contract.ActivityResultContract;
+import androidx.annotation.RequiresExtension;
 import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -927,6 +928,7 @@ public final class ActivityResultContracts {
             private Companion() {
             }
 
+            @RequiresExtension(extension = Build.VERSION_CODES.R, version = 2)
             public final int getMaxItems$activity_release() {
                 if (PickVisualMedia.Companion.isSystemPickerAvailable$activity_release()) {
                     return MediaStore.getPickImagesMaxLimit();

@@ -49,7 +49,7 @@ public class NavigationBarPlugin extends Plugin {
                 int systemUiVisibility = getActivity().getWindow().getDecorView().getSystemUiVisibility();
                 getActivity().getWindow().getDecorView().setSystemUiVisibility(z ? systemUiVisibility | 16 : systemUiVisibility & -17);
             }
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         } catch (IllegalArgumentException unused) {
             pluginCall.reject("Invalid color provided. Must be a hex color (#RRGGBB) or 'transparent'");
         }

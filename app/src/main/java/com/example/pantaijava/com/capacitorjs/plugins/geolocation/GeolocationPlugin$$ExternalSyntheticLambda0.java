@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.geolocation;
+package com.example.pantaijava.com.capacitorjs.plugins.geolocation;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;

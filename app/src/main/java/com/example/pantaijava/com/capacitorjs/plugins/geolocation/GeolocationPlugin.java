@@ -1,12 +1,13 @@
-package com.capacitorjs.plugins.geolocation;
+package com.example.pantaijava.com.capacitorjs.plugins.geolocation;
 
 import android.content.Context;
 import android.os.Build;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.app.NotificationCompat;
-import com.capacitorjs.plugins.geolocation.GeolocationErrors;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PermissionState;
 import com.getcapacitor.Plugin;
@@ -18,14 +19,16 @@ import com.getcapacitor.annotation.PermissionCallback;
 import com.google.android.gms.location.DeviceOrientationRequest;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.concurrent.CancellationException;
+
 import io.ionic.libs.iongeolocationlib.controller.IONGLOCController;
 import io.ionic.libs.iongeolocationlib.controller.IONGLOCServiceHelper;
 import io.ionic.libs.iongeolocationlib.model.IONGLOCException;
 import io.ionic.libs.iongeolocationlib.model.IONGLOCLocationOptions;
 import io.ionic.libs.iongeolocationlib.model.IONGLOCLocationResult;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.concurrent.CancellationException;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
@@ -34,6 +37,7 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
+import kotlinx.coroutines.BuildersKt__Builders_commonKt;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.CoroutineScopeKt;
 import kotlinx.coroutines.CoroutineStart;
@@ -66,7 +70,7 @@ public final class GeolocationPlugin extends Plugin {
     public void load() {
         super.load();
         this.coroutineScope = CoroutineScopeKt.CoroutineScope(Dispatchers.getMain());
-        ActivityResultLauncher registerForActivityResult = getActivity().registerForActivityResult(new ActivityResultContracts.StartIntentSenderForResult(), new GeolocationPlugin$$ExternalSyntheticLambda0(this));
+        ActivityResultLauncher registerForActivityResult = getActivity().registerForActivityResult(new ActivityResultContracts.StartIntentSenderForResult(), new com.capacitorjs.plugins.geolocation.GeolocationPlugin$$ExternalSyntheticLambda0(this));
         FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
         Intrinsics.checkNotNullExpressionValue(fusedLocationProviderClient, "getFusedLocationProviderClient(...)");
         this.controller = new IONGLOCController(fusedLocationProviderClient, registerForActivityResult, (IONGLOCServiceHelper) null, 4, (DefaultConstructorMarker) null);
@@ -76,7 +80,7 @@ public final class GeolocationPlugin extends Plugin {
     public static final void load$lambda$0(GeolocationPlugin geolocationPlugin, ActivityResult activityResult) {
         Intrinsics.checkNotNullParameter(geolocationPlugin, "this$0");
         Intrinsics.checkNotNullParameter(activityResult, "result");
-        Job unused = BuildersKt__Builders_commonKt.launch$default(CoroutineScopeKt.CoroutineScope(Dispatchers.getMain()), (CoroutineContext) null, (CoroutineStart) null, new GeolocationPlugin$load$activityLauncher$1$1(geolocationPlugin, activityResult, (Continuation<? super GeolocationPlugin$load$activityLauncher$1$1>) null), 3, (Object) null);
+        Job unused = BuildersKt__Builders_commonKt.launch$default(CoroutineScopeKt.CoroutineScope(Dispatchers.getMain()), (CoroutineContext) null, (CoroutineStart) null, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$load$activityLauncher$1$1(geolocationPlugin, activityResult, (Continuation<? super com.capacitorjs.plugins.geolocation.GeolocationPlugin$load$activityLauncher$1$1>) null), 3, (Object) null);
     }
 
     /* access modifiers changed from: protected */
@@ -93,13 +97,13 @@ public final class GeolocationPlugin extends Plugin {
     @PluginMethod
     public void checkPermissions(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, NotificationCompat.CATEGORY_CALL);
-        checkLocationState(pluginCall, new GeolocationPlugin$checkPermissions$1(this, pluginCall));
+        checkLocationState(pluginCall, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$checkPermissions$1(this, pluginCall));
     }
 
     @PluginMethod
     public void requestPermissions(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, NotificationCompat.CATEGORY_CALL);
-        checkLocationState(pluginCall, new GeolocationPlugin$requestPermissions$1(this, pluginCall));
+        checkLocationState(pluginCall, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$requestPermissions$1(this, pluginCall));
     }
 
     private final void checkLocationState(PluginCall pluginCall, Function0<Unit> function0) {
@@ -120,13 +124,13 @@ public final class GeolocationPlugin extends Plugin {
     @PluginMethod
     public final void getCurrentPosition(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, NotificationCompat.CATEGORY_CALL);
-        handlePermissionRequest(pluginCall, "completeCurrentPosition", new GeolocationPlugin$getCurrentPosition$1(this, pluginCall));
+        handlePermissionRequest(pluginCall, "completeCurrentPosition", new com.capacitorjs.plugins.geolocation.GeolocationPlugin$getCurrentPosition$1(this, pluginCall));
     }
 
     @PluginMethod(returnType = "callback")
     public final void watchPosition(PluginCall pluginCall) {
         Intrinsics.checkNotNullParameter(pluginCall, NotificationCompat.CATEGORY_CALL);
-        handlePermissionRequest(pluginCall, "completeWatchPosition", new GeolocationPlugin$watchPosition$1(this, pluginCall));
+        handlePermissionRequest(pluginCall, "completeWatchPosition", new com.capacitorjs.plugins.geolocation.GeolocationPlugin$watchPosition$1(this, pluginCall));
     }
 
     private final void handlePermissionRequest(PluginCall pluginCall, String str, Function0<Unit> function0) {
@@ -140,12 +144,12 @@ public final class GeolocationPlugin extends Plugin {
 
     @PermissionCallback
     private final void completeCurrentPosition(PluginCall pluginCall) {
-        handlePermissionResult(pluginCall, new GeolocationPlugin$completeCurrentPosition$1(this, pluginCall));
+        handlePermissionResult(pluginCall, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$completeCurrentPosition$1(this, pluginCall));
     }
 
     @PermissionCallback
     private final void completeWatchPosition(PluginCall pluginCall) {
-        handlePermissionResult(pluginCall, new GeolocationPlugin$completeWatchPosition$1(this, pluginCall));
+        handlePermissionResult(pluginCall, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$completeWatchPosition$1(this, pluginCall));
     }
 
     private final void handlePermissionResult(PluginCall pluginCall, Function0<Unit> function0) {
@@ -204,7 +208,7 @@ public final class GeolocationPlugin extends Plugin {
         } else {
             coroutineScope2 = coroutineScope3;
         }
-        Job unused = BuildersKt__Builders_commonKt.launch$default(coroutineScope2, (CoroutineContext) null, (CoroutineStart) null, new GeolocationPlugin$getPosition$1(this, pluginCall, (Continuation<? super GeolocationPlugin$getPosition$1>) null), 3, (Object) null);
+        Job unused = BuildersKt__Builders_commonKt.launch$default(coroutineScope2, (CoroutineContext) null, (CoroutineStart) null, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$getPosition$1(this, pluginCall, (Continuation<? super com.capacitorjs.plugins.geolocation.GeolocationPlugin$getPosition$1>) null), 3, (Object) null);
     }
 
     /* access modifiers changed from: private */
@@ -217,7 +221,7 @@ public final class GeolocationPlugin extends Plugin {
         } else {
             coroutineScope2 = coroutineScope3;
         }
-        Job unused = BuildersKt__Builders_commonKt.launch$default(coroutineScope2, (CoroutineContext) null, (CoroutineStart) null, new GeolocationPlugin$startWatch$1(pluginCall, this, (Continuation<? super GeolocationPlugin$startWatch$1>) null), 3, (Object) null);
+        Job unused = BuildersKt__Builders_commonKt.launch$default(coroutineScope2, (CoroutineContext) null, (CoroutineStart) null, new com.capacitorjs.plugins.geolocation.GeolocationPlugin$startWatch$1(pluginCall, this, (Continuation<? super com.capacitorjs.plugins.geolocation.GeolocationPlugin$startWatch$1>) null), 3, (Object) null);
         Map<String, PluginCall> map = this.watchingCalls;
         String callbackId = pluginCall.getCallbackId();
         Intrinsics.checkNotNullExpressionValue(callbackId, "getCallbackId(...)");
@@ -280,7 +284,7 @@ public final class GeolocationPlugin extends Plugin {
         if (jSObject != null) {
             pluginCall.resolve(jSObject);
         } else {
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         }
     }
 

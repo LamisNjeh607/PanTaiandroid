@@ -30,13 +30,13 @@ public class ScreenOrientationPlugin extends Plugin {
             return;
         }
         this.implementation.lock(string);
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
     public void unlock(PluginCall pluginCall) {
         this.implementation.unlock();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     public void handleOnConfigurationChanged(Configuration configuration) {

@@ -1,8 +1,11 @@
-package androidx.activity.result;
+package com.example.pantaijava.androidx.activity.result;
 
 import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.activity.result.ActivityResult$Companion$CREATOR$1;
+
 import kotlin.Metadata;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.DefaultConstructorMarker;

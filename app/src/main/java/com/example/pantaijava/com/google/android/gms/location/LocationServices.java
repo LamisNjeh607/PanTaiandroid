@@ -41,7 +41,7 @@ public class LocationServices {
         return new zzda(activity);
     }
 
-    public static FusedLocationProviderClient getFusedLocationProviderClient(Context context) {
+    public static com.google.android.gms.location.FusedLocationProviderClient getFusedLocationProviderClient(Context context) {
         return new zzbi(context);
     }
 

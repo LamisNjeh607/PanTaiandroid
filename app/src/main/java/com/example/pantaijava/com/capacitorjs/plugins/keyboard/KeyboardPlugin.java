@@ -1,15 +1,15 @@
-package com.capacitorjs.plugins.keyboard;
+package com.example.pantaijava.com.capacitorjs.plugins.keyboard;
 
 import android.os.Handler;
 import android.os.Looper;
-import com.capacitorjs.plugins.keyboard.Keyboard;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "Keyboard")
+@CapacitorPlugin(name = "Keyboard", permissions = null)
 public class KeyboardPlugin extends Plugin {
     private Keyboard implementation;
 
@@ -37,7 +37,7 @@ public class KeyboardPlugin extends Plugin {
     /* access modifiers changed from: private */
     public /* synthetic */ void lambda$show$1(PluginCall pluginCall) {
         this.implementation.show();
-        pluginCall.resolve();
+        pluginCall.resolve( jSObject );
     }
 
     @PluginMethod
@@ -50,7 +50,7 @@ public class KeyboardPlugin extends Plugin {
         if (!this.implementation.hide()) {
             pluginCall.reject("Can't close keyboard, not currently focused");
         } else {
-            pluginCall.resolve();
+            pluginCall.resolve( jSObject );
         }
     }
 
