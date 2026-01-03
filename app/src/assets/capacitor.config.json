@@ -1,0 +1,8 @@
+{
+	"appId": "com.nakramicrotek.pantai",
+	"appName": "Pantai RTK",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "http"
+	}
+}

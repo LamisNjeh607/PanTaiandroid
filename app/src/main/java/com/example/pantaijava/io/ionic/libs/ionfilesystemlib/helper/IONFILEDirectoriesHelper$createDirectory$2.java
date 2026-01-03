@@ -1,0 +1,47 @@
+package io.ionic.libs.ionfilesystemlib.helper;
+
+import io.ionic.libs.ionfilesystemlib.helper.common.IONFILECommonKt;
+import io.ionic.libs.ionfilesystemlib.model.IONFILECreateOptions;
+import kotlin.Metadata;
+import kotlin.Result;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+@Metadata(d1 = {"\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\b\u0012\u0004\u0012\u00020\u00020\u0001*\u00020\u0003H@"}, d2 = {"<anonymous>", "Lkotlin/Result;", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 9, 0}, xi = 48)
+@DebugMetadata(c = "io.ionic.libs.ionfilesystemlib.helper.IONFILEDirectoriesHelper$createDirectory$2", f = "IONFILEDirectoriesHelper.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, s = {})
+/* compiled from: IONFILEDirectoriesHelper.kt */
+final class IONFILEDirectoriesHelper$createDirectory$2 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Result<? extends Unit>>, Object> {
+    final /* synthetic */ String $fullPath;
+    final /* synthetic */ IONFILECreateOptions $options;
+    int label;
+
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    IONFILEDirectoriesHelper$createDirectory$2(String str, IONFILECreateOptions iONFILECreateOptions, Continuation<? super IONFILEDirectoriesHelper$createDirectory$2> continuation) {
+        super(2, continuation);
+        this.$fullPath = str;
+        this.$options = iONFILECreateOptions;
+    }
+
+    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+        return new IONFILEDirectoriesHelper$createDirectory$2(this.$fullPath, this.$options, continuation);
+    }
+
+    public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Result<Unit>> continuation) {
+        return ((IONFILEDirectoriesHelper$createDirectory$2) create(coroutineScope, continuation)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    public final Object invokeSuspend(Object obj) {
+        IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        if (this.label == 0) {
+            ResultKt.throwOnFailure(obj);
+            return Result.m189boximpl(IONFILECommonKt.createDirOrFile(this.$fullPath, this.$options, true));
+        }
+        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+    }
+}
