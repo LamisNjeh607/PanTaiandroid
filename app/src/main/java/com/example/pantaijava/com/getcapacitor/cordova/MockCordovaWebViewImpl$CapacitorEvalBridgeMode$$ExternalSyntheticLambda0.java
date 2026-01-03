@@ -1,6 +1,6 @@
-package com.getcapacitor.cordova;
+package com.example.pantaijava.com.getcapacitor.cordova;
 
-import com.getcapacitor.cordova.MockCordovaWebViewImpl;
+
 import org.apache.cordova.NativeToJsMessageQueue;
 
 /* compiled from: D8$$SyntheticClass */

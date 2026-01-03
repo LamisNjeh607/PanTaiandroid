@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.statusbar;
+package com.example.pantaijava.com.capacitorjs.plugins.statusbar;
 
 import com.getcapacitor.util.WebColor;
 

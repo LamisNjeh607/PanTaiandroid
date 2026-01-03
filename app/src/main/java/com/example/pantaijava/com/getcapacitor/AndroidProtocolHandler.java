@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Context;
 import android.net.Uri;
@@ -33,10 +33,10 @@ public class AndroidProtocolHandler {
             if (getValueType(this.context, fieldId) == 3) {
                 return this.context.getResources().openRawResource(fieldId);
             }
-            Logger.error("Asset not of type string: " + uri);
+            com.getcapacitor.Logger.error("Asset not of type string: " + uri);
             return null;
         } catch (ClassNotFoundException | IllegalAccessException | NoSuchFieldException e) {
-            Logger.error("Unable to open resource URL: " + uri, e);
+            com.getcapacitor.Logger.error("Unable to open resource URL: " + uri, e);
             return null;
         }
     }
@@ -46,7 +46,7 @@ public class AndroidProtocolHandler {
     }
 
     public InputStream openFile(String str) throws IOException {
-        return new FileInputStream(new File(str.replace(Bridge.CAPACITOR_FILE_START, "")));
+        return new FileInputStream(new File(str.replace( com.getcapacitor.Bridge.CAPACITOR_FILE_START, "")));
     }
 
     public InputStream openContentUrl(Uri uri) throws IOException {
@@ -56,9 +56,9 @@ public class AndroidProtocolHandler {
             str = str + ":" + valueOf;
         }
         try {
-            return this.context.getContentResolver().openInputStream(Uri.parse(uri.toString().replace(str + Bridge.CAPACITOR_CONTENT_START, "content:/")));
+            return this.context.getContentResolver().openInputStream(Uri.parse(uri.toString().replace(str + com.getcapacitor.Bridge.CAPACITOR_CONTENT_START, "content:/")));
         } catch (SecurityException e) {
-            Logger.error("Unable to open content URL: " + uri, e);
+            com.getcapacitor.Logger.error("Unable to open content URL: " + uri, e);
             return null;
         }
     }

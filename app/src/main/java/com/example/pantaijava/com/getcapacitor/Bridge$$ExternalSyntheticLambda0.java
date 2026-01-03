@@ -1,13 +1,13 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class Bridge$$ExternalSyntheticLambda0 implements Runnable {
     public final /* synthetic */ Bridge f$0;
-    public final /* synthetic */ PluginHandle f$1;
+    public final /* synthetic */ com.getcapacitor.PluginHandle f$1;
     public final /* synthetic */ String f$2;
-    public final /* synthetic */ PluginCall f$3;
+    public final /* synthetic */ com.getcapacitor.PluginCall f$3;
 
-    public /* synthetic */ Bridge$$ExternalSyntheticLambda0(Bridge bridge, PluginHandle pluginHandle, String str, PluginCall pluginCall) {
+    public /* synthetic */ Bridge$$ExternalSyntheticLambda0(Bridge bridge, com.getcapacitor.PluginHandle pluginHandle, String str, com.getcapacitor.PluginCall pluginCall) {
         this.f$0 = bridge;
         this.f$1 = pluginHandle;
         this.f$2 = str;

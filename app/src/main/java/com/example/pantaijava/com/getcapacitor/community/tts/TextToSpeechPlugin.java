@@ -1,11 +1,12 @@
-package com.getcapacitor.community.tts;
+package com.example.pantaijava.com.getcapacitor.community.tts;
 
+import com.example.pantaijava.com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
+
 
 @CapacitorPlugin(name = "TextToSpeech")
 public class TextToSpeechPlugin extends Plugin {

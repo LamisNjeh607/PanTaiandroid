@@ -1,4 +1,4 @@
-package com.getcapacitor.plugin;
+package com.example.pantaijava.com.getcapacitor.plugin;
 
 import android.webkit.ValueCallback;
 import com.getcapacitor.Bridge;
@@ -141,7 +141,7 @@ public class CapacitorCookieManager extends CookieManager {
         if (uri != null && map != null) {
             for (String next : map.keySet()) {
                 if (next != null && (next.equalsIgnoreCase("Set-Cookie2") || next.equalsIgnoreCase("Set-Cookie"))) {
-                    for (String str : (List) Objects.requireNonNull(map.get(next))) {
+                    for (Object str : (List) Objects.requireNonNull(map.get(next))) {
                         try {
                             setCookie(uri.toString(), str);
                             setCookie(getDomainFromCookieString(str), str);

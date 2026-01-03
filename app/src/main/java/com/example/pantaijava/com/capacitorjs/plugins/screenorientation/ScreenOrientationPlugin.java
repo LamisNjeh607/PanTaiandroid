@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.screenorientation;
+package com.example.pantaijava.com.capacitorjs.plugins.screenorientation;
 
 import android.content.res.Configuration;
 import com.getcapacitor.JSObject;
@@ -7,7 +7,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "ScreenOrientation")
+@CapacitorPlugin(name = "ScreenOrientation", permissions = null)
 public class ScreenOrientationPlugin extends Plugin {
     private ScreenOrientation implementation;
 

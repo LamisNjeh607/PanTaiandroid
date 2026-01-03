@@ -1,9 +1,9 @@
-package com.capacitorjs.plugins.statusbar;
+package com.example.pantaijava.com.capacitorjs.plugins.statusbar;
 
-import com.capacitorjs.plugins.statusbar.StatusBar;
+import com.example.pantaijava.com.capacitorjs.plugins.statusbar.StatusBar;
 
 /* compiled from: D8$$SyntheticClass */
-public final /* synthetic */ class StatusBarPlugin$$ExternalSyntheticLambda5 implements StatusBar.ChangeListener {
+public final /* synthetic */ class StatusBarPlugin$$ExternalSyntheticLambda5  {
     public final /* synthetic */ StatusBarPlugin f$0;
 
     public /* synthetic */ StatusBarPlugin$$ExternalSyntheticLambda5(StatusBarPlugin statusBarPlugin) {

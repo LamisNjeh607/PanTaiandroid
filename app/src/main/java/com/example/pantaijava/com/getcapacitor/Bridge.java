@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -20,17 +20,10 @@ import androidx.activity.result.contract.ActivityResultContract;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-import com.getcapacitor.android.R;
-import com.getcapacitor.annotation.CapacitorPlugin;
-import com.getcapacitor.annotation.Permission;
-import com.getcapacitor.cordova.MockCordovaInterfaceImpl;
-import com.getcapacitor.cordova.MockCordovaWebViewImpl;
-import com.getcapacitor.plugin.CapacitorCookies;
-import com.getcapacitor.plugin.CapacitorHttp;
-import com.getcapacitor.util.HostMask;
-import com.getcapacitor.util.InternalUtils;
-import com.getcapacitor.util.PermissionHelper;
-import com.getcapacitor.util.WebColor;
+
+import com.example.pantaijava.com.getcapacitor.cordova.MockCordovaInterfaceImpl;
+import com.example.pantaijava.com.getcapacitor.util.HostMask;
+
 import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -79,30 +72,30 @@ public class Bridge {
     private String appUrlConfig;
     private ArrayList<String> authorities;
     private Boolean canInjectJS;
-    private CapConfig config;
+    private com.getcapacitor.CapConfig config;
     private final AppCompatActivity context;
     public final MockCordovaInterfaceImpl cordovaInterface;
     private CordovaWebView cordovaWebView;
     private final Fragment fragment;
     private final HandlerThread handlerThread;
-    private final List<Class<? extends Plugin>> initialPlugins;
+    private final List<Class<? extends com.getcapacitor.Plugin>> initialPlugins;
     private Uri intentUri;
-    private WebViewLocalServer localServer;
+    private com.getcapacitor.WebViewLocalServer localServer;
     private String localUrl;
     private ArrayList<String> miscJSFileInjections;
-    private final MessageHandler msgHandler;
-    private PluginCall pluginCallForLastActivity;
-    private final List<Plugin> pluginInstances;
-    private Map<String, PluginHandle> plugins;
+    private final com.getcapacitor.MessageHandler msgHandler;
+    private com.getcapacitor.PluginCall pluginCallForLastActivity;
+    private final List<com.getcapacitor.Plugin> pluginInstances;
+    private Map<String, com.getcapacitor.PluginHandle> plugins;
     private CordovaPreferences preferences;
-    private RouteProcessor routeProcessor;
-    private Map<String, PluginCall> savedCalls;
+    private com.getcapacitor.RouteProcessor routeProcessor;
+    private Map<String, com.getcapacitor.PluginCall> savedCalls;
     private Map<String, LinkedList<String>> savedPermissionCallIds;
-    private ServerPath serverPath;
+    private com.getcapacitor.ServerPath serverPath;
     private Handler taskHandler;
     private final WebView webView;
-    private BridgeWebViewClient webViewClient;
-    private List<WebViewListener> webViewListeners;
+    private com.getcapacitor.BridgeWebViewClient webViewClient;
+    private List<com.getcapacitor.WebViewListener> webViewListeners;
 
     static /* synthetic */ void lambda$triggerJSEvent$2(String str) {
     }
@@ -111,11 +104,11 @@ public class Bridge {
     }
 
     @Deprecated
-    public Bridge(AppCompatActivity appCompatActivity, WebView webView2, List<Class<? extends Plugin>> list, MockCordovaInterfaceImpl mockCordovaInterfaceImpl, PluginManager pluginManager, CordovaPreferences cordovaPreferences, CapConfig capConfig) {
-        this(appCompatActivity, (ServerPath) null, (Fragment) null, webView2, list, new ArrayList(), mockCordovaInterfaceImpl, pluginManager, cordovaPreferences, capConfig);
+    public Bridge(AppCompatActivity appCompatActivity, WebView webView2, List<Class<? extends com.getcapacitor.Plugin>> list, MockCordovaInterfaceImpl mockCordovaInterfaceImpl, PluginManager pluginManager, CordovaPreferences cordovaPreferences, com.getcapacitor.CapConfig capConfig) {
+        this(appCompatActivity, null, (Fragment) null, webView2, list, new ArrayList(), mockCordovaInterfaceImpl, pluginManager, cordovaPreferences, capConfig);
     }
 
-    private Bridge(AppCompatActivity appCompatActivity, ServerPath serverPath2, Fragment fragment2, WebView webView2, List<Class<? extends Plugin>> list, List<Plugin> list2, MockCordovaInterfaceImpl mockCordovaInterfaceImpl, PluginManager pluginManager, CordovaPreferences cordovaPreferences, CapConfig capConfig) {
+    private Bridge(AppCompatActivity appCompatActivity, com.getcapacitor.ServerPath serverPath2, Fragment fragment2, WebView webView2, List<Class<? extends com.getcapacitor.Plugin>> list, List<com.getcapacitor.Plugin> list2, MockCordovaInterfaceImpl mockCordovaInterfaceImpl, PluginManager pluginManager, CordovaPreferences cordovaPreferences, com.getcapacitor.CapConfig capConfig) {
         this.allowedOriginRules = new HashSet();
         this.authorities = new ArrayList<>();
         this.miscJSFileInjections = new ArrayList<>();
@@ -132,7 +125,7 @@ public class Bridge {
         this.context = appCompatActivity;
         this.fragment = fragment2;
         this.webView = webView2;
-        this.webViewClient = new BridgeWebViewClient(this);
+        this.webViewClient = new com.getcapacitor.BridgeWebViewClient(this);
         this.initialPlugins = list;
         this.pluginInstances = list2;
         this.cordovaInterface = mockCordovaInterfaceImpl;

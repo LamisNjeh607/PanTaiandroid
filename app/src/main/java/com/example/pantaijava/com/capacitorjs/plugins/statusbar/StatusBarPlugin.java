@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.statusbar;
+package com.example.pantaijava.com.capacitorjs.plugins.statusbar;
 
 import android.content.res.Configuration;
 import com.getcapacitor.JSObject;

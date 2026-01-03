@@ -1,13 +1,15 @@
-package com.getcapacitor.plugin;
+package com.example.pantaijava.com.getcapacitor.plugin;
 
 import android.content.SharedPreferences;
+
+import com.example.pantaijava.com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin
+
+@CapacitorPlugin(permissions = null)
 public class WebView extends Plugin {
     public static final String CAP_SERVER_PATH = "serverBasePath";
     public static final String WEBVIEW_PREFS_NAME = "CapWebViewSettings";

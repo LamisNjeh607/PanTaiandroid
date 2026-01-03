@@ -1,17 +1,21 @@
-package com.getcapacitor.plugin;
+package com.example.pantaijava.com.getcapacitor.plugin;
 
 import android.webkit.JavascriptInterface;
+
+import com.example.pantaijava.com.getcapacitor.annotation.CapacitorPlugin;
+import com.example.pantaijava.com.getcapacitor.annotation.Permission;
+import com.example.pantaijava.com.getcapacitor.plugin.util.CapacitorHttpUrlConnection;
+import com.example.pantaijava.com.getcapacitor.plugin.util.HttpRequestHandler;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
-import com.getcapacitor.annotation.Permission;
-import com.getcapacitor.plugin.util.CapacitorHttpUrlConnection;
-import com.getcapacitor.plugin.util.HttpRequestHandler;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import javax.jmdns.impl.NameRegister;
 
 @CapacitorPlugin(permissions = {@Permission(alias = "HttpWrite", strings = {"android.permission.WRITE_EXTERNAL_STORAGE"}), @Permission(alias = "HttpRead", strings = {"android.permission.READ_EXTERNAL_STORAGE"})})
 public class CapacitorHttp extends Plugin {
@@ -44,10 +48,10 @@ public class CapacitorHttp extends Plugin {
     }
 
     private void http(final PluginCall pluginCall, final String str) {
-        AnonymousClass1 r0 = new Runnable() {
+        NameRegister.AnonymousClass1 r0 = new Runnable() {
             public void run() {
                 try {
-                    pluginCall.resolve(HttpRequestHandler.request(pluginCall, str, CapacitorHttp.this.getBridge()));
+                    pluginCall.resolve( HttpRequestHandler.request(pluginCall, str, CapacitorHttp.this.getBridge()));
                 } catch (Exception e) {
                     pluginCall.reject(e.getLocalizedMessage(), e.getClass().getSimpleName(), e);
                 } catch (Throwable th) {

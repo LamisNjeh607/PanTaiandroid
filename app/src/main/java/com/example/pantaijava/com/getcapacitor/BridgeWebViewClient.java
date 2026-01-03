@@ -8,6 +8,9 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.pantaijava.com.getcapacitor.Bridge;
+
 import java.util.Iterator;
 
 public class BridgeWebViewClient extends WebViewClient {
@@ -33,7 +36,7 @@ public class BridgeWebViewClient extends WebViewClient {
     public void onPageFinished(WebView webView, String str) {
         super.onPageFinished(webView, str);
         if (this.bridge.getWebViewListeners() != null && webView.getProgress() == 100) {
-            for (WebViewListener onPageLoaded : this.bridge.getWebViewListeners()) {
+            for (com.getcapacitor.WebViewListener onPageLoaded : this.bridge.getWebViewListeners()) {
                 onPageLoaded.onPageLoaded(webView);
             }
         }
@@ -42,7 +45,7 @@ public class BridgeWebViewClient extends WebViewClient {
     public void onReceivedError(WebView webView, WebResourceRequest webResourceRequest, WebResourceError webResourceError) {
         super.onReceivedError(webView, webResourceRequest, webResourceError);
         if (this.bridge.getWebViewListeners() != null) {
-            for (WebViewListener onReceivedError : this.bridge.getWebViewListeners()) {
+            for (com.getcapacitor.WebViewListener onReceivedError : this.bridge.getWebViewListeners()) {
                 onReceivedError.onReceivedError(webView);
             }
         }
@@ -56,7 +59,7 @@ public class BridgeWebViewClient extends WebViewClient {
         super.onPageStarted(webView, str, bitmap);
         this.bridge.reset();
         if (this.bridge.getWebViewListeners() != null) {
-            for (WebViewListener onPageStarted : this.bridge.getWebViewListeners()) {
+            for (com.getcapacitor.WebViewListener onPageStarted : this.bridge.getWebViewListeners()) {
                 onPageStarted.onPageStarted(webView);
             }
         }
@@ -65,7 +68,7 @@ public class BridgeWebViewClient extends WebViewClient {
     public void onReceivedHttpError(WebView webView, WebResourceRequest webResourceRequest, WebResourceResponse webResourceResponse) {
         super.onReceivedHttpError(webView, webResourceRequest, webResourceResponse);
         if (this.bridge.getWebViewListeners() != null) {
-            for (WebViewListener onReceivedHttpError : this.bridge.getWebViewListeners()) {
+            for (com.getcapacitor.WebViewListener onReceivedHttpError : this.bridge.getWebViewListeners()) {
                 onReceivedHttpError.onReceivedHttpError(webView);
             }
         }
@@ -80,7 +83,7 @@ public class BridgeWebViewClient extends WebViewClient {
         if (this.bridge.getWebViewListeners() == null) {
             return false;
         }
-        Iterator<WebViewListener> it = this.bridge.getWebViewListeners().iterator();
+        Iterator<com.getcapacitor.WebViewListener> it = this.bridge.getWebViewListeners().iterator();
         while (true) {
             boolean z = false;
             while (true) {

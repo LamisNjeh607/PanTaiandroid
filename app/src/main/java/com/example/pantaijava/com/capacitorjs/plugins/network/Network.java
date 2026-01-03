@@ -1,5 +1,6 @@
-package com.capacitorjs.plugins.network;
+package com.example.pantaijava.com.capacitorjs.plugins.network;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
@@ -36,6 +37,7 @@ public class Network {
         }
     }
 
+    @SuppressLint("WrongConstant")
     public Network(Context context2) {
         this.context = context2;
         this.connectivityManager = (ConnectivityManager) context2.getSystemService("connectivity");
@@ -49,13 +51,14 @@ public class Network {
         return this.statusChangeListener;
     }
 
+    @SuppressLint("WrongConstant")
     public NetworkStatus getNetworkStatus() {
         NetworkStatus networkStatus = new NetworkStatus();
         ConnectivityManager connectivityManager2 = this.connectivityManager;
         if (connectivityManager2 != null) {
-            android.net.Network activeNetwork = connectivityManager2.getActiveNetwork();
+            @SuppressLint("MissingPermission") android.net.Network activeNetwork = connectivityManager2.getActiveNetwork();
             ConnectivityManager connectivityManager3 = this.connectivityManager;
-            NetworkCapabilities networkCapabilities = connectivityManager3.getNetworkCapabilities(connectivityManager3.getActiveNetwork());
+            @SuppressLint("MissingPermission") NetworkCapabilities networkCapabilities = connectivityManager3.getNetworkCapabilities(connectivityManager3.getActiveNetwork());
             if (!(activeNetwork == null || networkCapabilities == null)) {
                 networkStatus.connected = networkCapabilities.hasCapability(16) && networkCapabilities.hasCapability(12);
                 if (networkCapabilities.hasTransport(1)) {
@@ -72,7 +75,7 @@ public class Network {
 
     private NetworkStatus getAndParseNetworkInfo() {
         NetworkStatus networkStatus = new NetworkStatus();
-        NetworkInfo activeNetworkInfo = this.connectivityManager.getActiveNetworkInfo();
+        @SuppressLint("MissingPermission") NetworkInfo activeNetworkInfo = this.connectivityManager.getActiveNetworkInfo();
         if (activeNetworkInfo != null) {
             networkStatus.connected = activeNetworkInfo.isConnected();
             String typeName = activeNetworkInfo.getTypeName();
@@ -85,6 +88,7 @@ public class Network {
         return networkStatus;
     }
 
+    @SuppressLint("MissingPermission")
     public void startMonitoring() {
         this.connectivityManager.registerDefaultNetworkCallback(this.connectivityCallback);
     }

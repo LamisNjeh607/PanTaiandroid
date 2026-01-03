@@ -1,4 +1,4 @@
-package com.getcapacitor.util;
+package com.example.pantaijava.com.getcapacitor.util;
 
 import org.json.JSONArray;
 import org.json.JSONException;

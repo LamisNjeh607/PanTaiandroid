@@ -1,4 +1,4 @@
-package com.getcapacitor.plugin.util;
+package com.example.pantaijava.com.getcapacitor.plugin.util;
 
 import android.text.TextUtils;
 import android.util.Base64;

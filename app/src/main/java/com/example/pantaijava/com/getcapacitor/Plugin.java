@@ -646,7 +646,7 @@ public class Plugin {
 
     /* access modifiers changed from: protected */
     @Deprecated
-    public void startActivityForResult(PluginCall pluginCall, Intent intent, int i) {
+    public void startActivityForResult(PluginCall pluginCall, Intent intent, String i) {
         this.bridge.startActivityForPluginWithResult(pluginCall, intent, i);
     }
 

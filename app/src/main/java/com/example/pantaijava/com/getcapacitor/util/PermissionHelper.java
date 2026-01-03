@@ -1,4 +1,4 @@
-package com.getcapacitor.util;
+package com.example.pantaijava.com.getcapacitor.util;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

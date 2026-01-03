@@ -1,7 +1,11 @@
-package com.getcapacitor.plugin.util;
+package com.example.pantaijava.com.getcapacitor.plugin.util;
 
+import android.os.Build;
 import android.os.LocaleList;
 import android.text.TextUtils;
+
+import androidx.annotation.RequiresApi;
+
 import com.getcapacitor.Bridge;
 import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
@@ -26,7 +30,7 @@ import javax.net.ssl.SSLSocketFactory;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CapacitorHttpUrlConnection implements ICapacitorHttpUrlConnection {
+public class CapacitorHttpUrlConnection implements com.getcapacitor.plugin.util.ICapacitorHttpUrlConnection {
     private final HttpURLConnection connection;
 
     public CapacitorHttpUrlConnection(HttpURLConnection httpURLConnection) {
@@ -86,6 +90,7 @@ public class CapacitorHttpUrlConnection implements ICapacitorHttpUrlConnection {
         setRequestBody(pluginCall, jSValue, (String) null);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void setRequestBody(PluginCall pluginCall, JSValue jSValue, String str) throws JSONException, IOException {
         String str2;
         String requestProperty = this.connection.getRequestProperty("Content-Type");
@@ -176,6 +181,7 @@ public class CapacitorHttpUrlConnection implements ICapacitorHttpUrlConnection {
         throw th;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void writeFormDataRequestBody(String str, JSArray jSArray) throws IOException, JSONException {
         DataOutputStream dataOutputStream = new DataOutputStream(this.connection.getOutputStream());
         try {

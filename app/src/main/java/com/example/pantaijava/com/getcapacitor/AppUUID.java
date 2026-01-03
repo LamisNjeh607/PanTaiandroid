@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.statusbar;
+package com.example.pantaijava.com.capacitorjs.plugins.statusbar;
 
 import android.os.Build;
 import android.util.DisplayMetrics;
@@ -11,6 +11,8 @@ import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.accessibility.AccessibilityEventCompat;
 
+import com.capacitorjs.plugins.statusbar.StatusBarInfo;
+
 public class StatusBar {
     public static final String statusBarOverlayChanged = "statusBarOverlayChanged";
     public static final String statusBarVisibilityChanged = "statusBarVisibilityChanged";
@@ -20,17 +22,17 @@ public class StatusBar {
     private final ChangeListener listener;
 
     public interface ChangeListener {
-        void onChange(String str, StatusBarInfo statusBarInfo);
+        void onChange(String str, com.capacitorjs.plugins.statusbar.StatusBarInfo statusBarInfo);
     }
 
-    public StatusBar(AppCompatActivity appCompatActivity, StatusBarConfig statusBarConfig, ChangeListener changeListener) {
+    public StatusBar(AppCompatActivity appCompatActivity, com.capacitorjs.plugins.statusbar.StatusBarConfig statusBarConfig, ChangeListener changeListener) {
         this.activity = appCompatActivity;
         this.currentStatusBarColor = appCompatActivity.getWindow().getStatusBarColor();
         this.listener = changeListener;
         setBackgroundColor(statusBarConfig.getBackgroundColor().intValue());
         setStyle(statusBarConfig.getStyle());
         setOverlaysWebView(Boolean.valueOf(statusBarConfig.isOverlaysWebView()));
-        StatusBarInfo info = getInfo();
+        com.capacitorjs.plugins.statusbar.StatusBarInfo info = getInfo();
         info.setVisible(true);
         changeListener.onChange(statusBarOverlayChanged, info);
     }
@@ -66,14 +68,14 @@ public class StatusBar {
 
     public void hide() {
         WindowCompat.getInsetsController(this.activity.getWindow(), this.activity.getWindow().getDecorView()).hide(WindowInsetsCompat.Type.statusBars());
-        StatusBarInfo info = getInfo();
+        com.capacitorjs.plugins.statusbar.StatusBarInfo info = getInfo();
         info.setVisible(false);
         this.listener.onChange(statusBarVisibilityChanged, info);
     }
 
     public void show() {
         WindowCompat.getInsetsController(this.activity.getWindow(), this.activity.getWindow().getDecorView()).show(WindowInsetsCompat.Type.statusBars());
-        StatusBarInfo info = getInfo();
+        com.capacitorjs.plugins.statusbar.StatusBarInfo info = getInfo();
         info.setVisible(true);
         this.listener.onChange(statusBarVisibilityChanged, info);
     }

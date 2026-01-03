@@ -1,5 +1,6 @@
-package com.capacitorjs.plugins.screenorientation;
+package com.example.pantaijava.com.capacitorjs.plugins.screenorientation;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ public class ScreenOrientation {
         this.activity.setRequestedOrientation(fromOrientationTypeToEnum(str));
     }
 
+    @SuppressLint("WrongConstant")
     public void unlock() {
         this.activity.setRequestedOrientation(-1);
     }

@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,7 +24,9 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
-import com.getcapacitor.util.PermissionHelper;
+
+import com.example.pantaijava.com.getcapacitor.util.PermissionHelper;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -41,11 +43,11 @@ public class BridgeWebChromeClient extends WebChromeClient {
     private ActivityResultLauncher permissionLauncher;
     private PermissionListener permissionListener;
 
-    private interface ActivityResultListener {
+    public interface ActivityResultListener {
         void onActivityResult(ActivityResult activityResult);
     }
 
-    private interface PermissionListener {
+    public interface PermissionListener {
         void onPermissionSelect(Boolean bool);
     }
 
@@ -95,7 +97,7 @@ public class BridgeWebChromeClient extends WebChromeClient {
             arrayList.add("android.permission.RECORD_AUDIO");
         }
         if (!arrayList.isEmpty()) {
-            this.permissionListener = new BridgeWebChromeClient$$ExternalSyntheticLambda11(permissionRequest);
+            this.permissionListener = new com.getcapacitor.BridgeWebChromeClient$$ExternalSyntheticLambda11(permissionRequest);
             this.permissionLauncher.launch((String[]) arrayList.toArray(new String[0]));
             return;
         }
@@ -115,7 +117,7 @@ public class BridgeWebChromeClient extends WebChromeClient {
             return true;
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(webView.getContext());
-        builder.setMessage(str2).setPositiveButton("OK", new BridgeWebChromeClient$$ExternalSyntheticLambda1(jsResult)).setOnCancelListener(new BridgeWebChromeClient$$ExternalSyntheticLambda2(jsResult));
+        builder.setMessage(str2).setPositiveButton("OK", new com.getcapacitor.BridgeWebChromeClient$$ExternalSyntheticLambda1(jsResult)).setOnCancelListener(new BridgeWebChromeClient$$ExternalSyntheticLambda2(jsResult));
         builder.create().show();
         return true;
     }
@@ -135,7 +137,7 @@ public class BridgeWebChromeClient extends WebChromeClient {
             return true;
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(webView.getContext());
-        builder.setMessage(str2).setPositiveButton("OK", new BridgeWebChromeClient$$ExternalSyntheticLambda12(jsResult)).setNegativeButton("Cancel", new BridgeWebChromeClient$$ExternalSyntheticLambda13(jsResult)).setOnCancelListener(new BridgeWebChromeClient$$ExternalSyntheticLambda14(jsResult));
+        builder.setMessage(str2).setPositiveButton("OK", new com.getcapacitor.BridgeWebChromeClient$$ExternalSyntheticLambda12(jsResult)).setNegativeButton("Cancel", new BridgeWebChromeClient$$ExternalSyntheticLambda13(jsResult)).setOnCancelListener(new BridgeWebChromeClient$$ExternalSyntheticLambda14(jsResult));
         builder.create().show();
         return true;
     }
@@ -161,7 +163,7 @@ public class BridgeWebChromeClient extends WebChromeClient {
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(webView.getContext());
         EditText editText = new EditText(webView.getContext());
-        builder.setMessage(str2).setView(editText).setPositiveButton("OK", new BridgeWebChromeClient$$ExternalSyntheticLambda8(editText, jsPromptResult)).setNegativeButton("Cancel", new BridgeWebChromeClient$$ExternalSyntheticLambda9(jsPromptResult)).setOnCancelListener(new BridgeWebChromeClient$$ExternalSyntheticLambda10(jsPromptResult));
+        builder.setMessage(str2).setView(editText).setPositiveButton("OK", new com.getcapacitor.BridgeWebChromeClient$$ExternalSyntheticLambda8(editText, jsPromptResult)).setNegativeButton("Cancel", new BridgeWebChromeClient$$ExternalSyntheticLambda9(jsPromptResult)).setOnCancelListener(new BridgeWebChromeClient$$ExternalSyntheticLambda10(jsPromptResult));
         builder.create().show();
         return true;
     }
@@ -183,15 +185,15 @@ public class BridgeWebChromeClient extends WebChromeClient {
 
     public void onGeolocationPermissionsShowPrompt(String str, GeolocationPermissions.Callback callback) {
         super.onGeolocationPermissionsShowPrompt(str, callback);
-        Logger.debug("onGeolocationPermissionsShowPrompt: DOING IT HERE FOR ORIGIN: " + str);
+        com.getcapacitor.Logger.debug("onGeolocationPermissionsShowPrompt: DOING IT HERE FOR ORIGIN: " + str);
         String[] strArr = {"android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"};
         if (!PermissionHelper.hasPermissions(this.bridge.getContext(), strArr)) {
-            this.permissionListener = new BridgeWebChromeClient$$ExternalSyntheticLambda4(this, callback, str);
+            this.permissionListener = new com.getcapacitor.BridgeWebChromeClient$$ExternalSyntheticLambda4(this, callback, str);
             this.permissionLauncher.launch(strArr);
             return;
         }
         callback.invoke(str, true, false);
-        Logger.debug("onGeolocationPermissionsShowPrompt: has required permission");
+        com.getcapacitor.Logger.debug("onGeolocationPermissionsShowPrompt: has required permission");
     }
 
     /* access modifiers changed from: private */
@@ -218,7 +220,7 @@ public class BridgeWebChromeClient extends WebChromeClient {
         } else if (isMediaCaptureSupported()) {
             showMediaCaptureOrFilePicker(valueCallback, fileChooserParams, z2);
         } else {
-            this.permissionListener = new BridgeWebChromeClient$$ExternalSyntheticLambda3(this, valueCallback, fileChooserParams, z2);
+            this.permissionListener = new com.getcapacitor.BridgeWebChromeClient$$ExternalSyntheticLambda3(this, valueCallback, fileChooserParams, z2);
             this.permissionLauncher.launch(new String[]{"android.permission.CAMERA"});
         }
         return true;
@@ -230,7 +232,7 @@ public class BridgeWebChromeClient extends WebChromeClient {
             showMediaCaptureOrFilePicker(valueCallback, fileChooserParams, z);
             return;
         }
-        Logger.warn(Logger.tags("FileChooser"), "Camera permission not granted");
+        com.getcapacitor.Logger.warn( com.getcapacitor.Logger.tags("FileChooser"), "Camera permission not granted");
         valueCallback.onReceiveValue((Object) null);
     }
 
@@ -262,11 +264,11 @@ public class BridgeWebChromeClient extends WebChromeClient {
         try {
             Uri createImageFileUri = createImageFileUri();
             intent.putExtra("output", createImageFileUri);
-            this.activityListener = new BridgeWebChromeClient$$ExternalSyntheticLambda7(createImageFileUri, valueCallback);
+            this.activityListener = new ActivityResultListener(createImageFileUri, valueCallback);
             this.activityLauncher.launch(intent);
             return true;
         } catch (Exception e) {
-            Logger.error("Unable to create temporary media capture file: " + e.getMessage());
+            com.getcapacitor.Logger.error("Unable to create temporary media capture file: " + e.getMessage());
             return false;
         }
     }
@@ -347,13 +349,13 @@ public class BridgeWebChromeClient extends WebChromeClient {
             String format = String.format("File: %s - Line %d - Msg: %s", new Object[]{consoleMessage.sourceId(), Integer.valueOf(consoleMessage.lineNumber()), consoleMessage.message()});
             String name = consoleMessage.messageLevel().name();
             if ("ERROR".equalsIgnoreCase(name)) {
-                Logger.error(tags, format, (Throwable) null);
+                com.getcapacitor.Logger.error(tags, format, (Throwable) null);
             } else if ("WARNING".equalsIgnoreCase(name)) {
-                Logger.warn(tags, format);
+                com.getcapacitor.Logger.warn(tags, format);
             } else if ("TIP".equalsIgnoreCase(name)) {
-                Logger.debug(tags, format);
+                com.getcapacitor.Logger.debug(tags, format);
             } else {
-                Logger.info(tags, format);
+                com.getcapacitor.Logger.info(tags, format);
             }
         }
         return true;

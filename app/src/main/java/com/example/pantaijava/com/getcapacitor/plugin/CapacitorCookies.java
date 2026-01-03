@@ -1,11 +1,11 @@
-package com.getcapacitor.plugin;
+package com.example.pantaijava.com.getcapacitor.plugin;
 
 import android.webkit.JavascriptInterface;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
+
 import com.google.android.gms.common.internal.ImagesContract;
 import java.io.UnsupportedEncodingException;
 import java.net.CookieHandler;
@@ -15,7 +15,7 @@ import java.net.HttpCookie;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
-@CapacitorPlugin
+
 public class CapacitorCookies extends Plugin {
     CapacitorCookieManager cookieManager;
 
@@ -46,7 +46,7 @@ public class CapacitorCookies extends Plugin {
 
     @PluginMethod
     public void getCookies(PluginCall pluginCall) {
-        this.bridge.eval("document.cookie", new CapacitorCookies$$ExternalSyntheticLambda0(pluginCall));
+        this.bridge.eval("document.cookie", new com.getcapacitor.plugin.CapacitorCookies$$ExternalSyntheticLambda0(pluginCall));
     }
 
     static /* synthetic */ void lambda$getCookies$0(PluginCall pluginCall, String str) {

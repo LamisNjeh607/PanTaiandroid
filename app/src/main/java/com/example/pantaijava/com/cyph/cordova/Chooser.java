@@ -1,5 +1,6 @@
-package com.cyph.cordova;
+package com.example.pantaijava.com.cyph.cordova;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
@@ -25,7 +26,7 @@ public class Chooser extends CordovaPlugin {
 
     public static byte[] getBytesFromInputStream(InputStream inputStream) throws IOException {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        byte[] bArr = new byte[SupportMenu.USER_MASK];
+        @SuppressLint("RestrictedApi") byte[] bArr = new byte[SupportMenu.USER_MASK];
         while (true) {
             int read = inputStream.read(bArr);
             if (read == -1) {

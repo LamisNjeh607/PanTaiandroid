@@ -1,4 +1,4 @@
-package com.getcapacitor.android;
+package com.example.pantaijava.com.getcapacitor.android;
 
 public final class R {
 

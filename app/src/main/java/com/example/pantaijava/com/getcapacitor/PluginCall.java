@@ -212,7 +212,7 @@ public class PluginCall {
         return jSObject;
     }
 
-    public JSArray getArray(String str) {
+    public JSArray getArray(String str, com.getcapacitor.JSArray jsArray) {
         return getArray(str, (JSArray) null);
     }
 

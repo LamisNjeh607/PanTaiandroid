@@ -1,4 +1,4 @@
-package com.capacitorjs.plugins.network;
+package com.example.pantaijava.com.capacitorjs.plugins.network;
 
 import androidx.core.os.EnvironmentCompat;
 import com.getcapacitor.PluginMethod;

@@ -1,4 +1,4 @@
-package com.getcapacitor.annotation;
+package com.example.pantaijava.com.getcapacitor.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,11 +1,10 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import com.getcapacitor.Bridge;
-import com.getcapacitor.android.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +12,8 @@ public class BridgeActivity extends AppCompatActivity {
     protected int activityDepth = 0;
     protected Bridge bridge;
     protected final Bridge.Builder bridgeBuilder = new Bridge.Builder((AppCompatActivity) this);
-    protected CapConfig config;
-    protected List<Class<? extends Plugin>> initialPlugins = new ArrayList();
+    protected com.getcapacitor.CapConfig config;
+    protected List<Class<? extends com.getcapacitor.Plugin>> initialPlugins = new ArrayList();
     protected boolean keepRunning = true;
 
     /* access modifiers changed from: protected */
@@ -25,11 +24,7 @@ public class BridgeActivity extends AppCompatActivity {
         setTheme(R.style.AppTheme_NoActionBar);
         try {
             setContentView(R.layout.capacitor_bridge_layout_main);
-            try {
-                this.bridgeBuilder.addPlugins(new PluginManager(getAssets()).loadPluginClasses());
-            } catch (PluginLoadException e) {
-                Logger.error("Error loading plugins.", e);
-            }
+            this.bridgeBuilder.addPlugins(new com.getcapacitor.PluginManager(getAssets()).loadPluginClasses());
             load();
         } catch (Exception unused) {
             setContentView(R.layout.no_webview);
@@ -38,18 +33,18 @@ public class BridgeActivity extends AppCompatActivity {
 
     /* access modifiers changed from: protected */
     public void load() {
-        Logger.debug("Starting BridgeActivity");
+        com.getcapacitor.Logger.debug("Starting BridgeActivity");
         Bridge create = this.bridgeBuilder.addPlugins(this.initialPlugins).setConfig(this.config).create();
         this.bridge = create;
         this.keepRunning = create.shouldKeepRunning();
         onNewIntent(getIntent());
     }
 
-    public void registerPlugin(Class<? extends Plugin> cls) {
+    public void registerPlugin(Class<? extends com.getcapacitor.Plugin> cls) {
         this.bridgeBuilder.addPlugin(cls);
     }
 
-    public void registerPlugins(List<Class<? extends Plugin>> list) {
+    public void registerPlugins(List<Class<? extends com.getcapacitor.Plugin>> list) {
         this.bridgeBuilder.addPlugins(list);
     }
 
@@ -68,14 +63,14 @@ public class BridgeActivity extends AppCompatActivity {
         Bridge bridge2 = this.bridge;
         if (bridge2 != null) {
             bridge2.onStart();
-            Logger.debug("App started");
+            com.getcapacitor.Logger.debug("App started");
         }
     }
 
     public void onRestart() {
         super.onRestart();
         this.bridge.onRestart();
-        Logger.debug("App restarted");
+        com.getcapacitor.Logger.debug("App restarted");
     }
 
     public void onResume() {
@@ -84,7 +79,7 @@ public class BridgeActivity extends AppCompatActivity {
         if (bridge2 != null) {
             bridge2.getApp().fireStatusChange(true);
             this.bridge.onResume();
-            Logger.debug("App resumed");
+            com.getcapacitor.Logger.debug("App resumed");
         }
     }
 
@@ -93,7 +88,7 @@ public class BridgeActivity extends AppCompatActivity {
         Bridge bridge2 = this.bridge;
         if (bridge2 != null) {
             bridge2.onPause();
-            Logger.debug("App paused");
+            com.getcapacitor.Logger.debug("App paused");
         }
     }
 
@@ -106,7 +101,7 @@ public class BridgeActivity extends AppCompatActivity {
                 this.bridge.getApp().fireStatusChange(false);
             }
             this.bridge.onStop();
-            Logger.debug("App stopped");
+            com.getcapacitor.Logger.debug("App stopped");
         }
     }
 
@@ -115,7 +110,7 @@ public class BridgeActivity extends AppCompatActivity {
         Bridge bridge2 = this.bridge;
         if (bridge2 != null) {
             bridge2.onDestroy();
-            Logger.debug("App destroyed");
+            com.getcapacitor.Logger.debug("App destroyed");
         }
     }
 

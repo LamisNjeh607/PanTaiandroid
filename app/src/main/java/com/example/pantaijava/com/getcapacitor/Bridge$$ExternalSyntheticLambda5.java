@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class Bridge$$ExternalSyntheticLambda5 implements Runnable {

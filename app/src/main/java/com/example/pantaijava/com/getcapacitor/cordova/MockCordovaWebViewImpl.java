@@ -1,4 +1,4 @@
-package com.getcapacitor.cordova;
+package com.example.pantaijava.com.getcapacitor.cordova;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,7 +20,7 @@ import org.apache.cordova.PluginEntry;
 import org.apache.cordova.PluginManager;
 import org.apache.cordova.PluginResult;
 
-public class MockCordovaWebViewImpl implements CordovaWebView {
+public class MockCordovaWebViewImpl {
     private Context context;
     private CapacitorCordovaCookieManager cookieManager;
     private CordovaInterface cordova;
@@ -118,7 +118,7 @@ public class MockCordovaWebViewImpl implements CordovaWebView {
         }
 
         public void onNativeToJsMessageAvailable(NativeToJsMessageQueue nativeToJsMessageQueue) {
-            this.cordova.getActivity().runOnUiThread(new MockCordovaWebViewImpl$CapacitorEvalBridgeMode$$ExternalSyntheticLambda0(this, nativeToJsMessageQueue));
+            this.cordova.getActivity().runOnUiThread(new com.getcapacitor.cordova.MockCordovaWebViewImpl$CapacitorEvalBridgeMode$$ExternalSyntheticLambda0(this, nativeToJsMessageQueue));
         }
 
         /* access modifiers changed from: private */

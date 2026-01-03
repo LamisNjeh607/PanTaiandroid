@@ -1,4 +1,4 @@
-package com.getcapacitor.plugin;
+package com.example.pantaijava.com.getcapacitor.plugin;
 
 import android.webkit.ValueCallback;
 import com.getcapacitor.PluginCall;

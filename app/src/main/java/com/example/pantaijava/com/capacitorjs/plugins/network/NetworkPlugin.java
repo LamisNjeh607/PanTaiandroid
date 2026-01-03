@@ -1,22 +1,29 @@
-package com.capacitorjs.plugins.network;
+package com.example.pantaijava.com.capacitorjs.plugins.network;
 
 import android.util.Log;
-import com.capacitorjs.plugins.network.Network;
-import com.getcapacitor.JSObject;
-import com.getcapacitor.Plugin;
-import com.getcapacitor.PluginCall;
+
+import com.android.volley.Network;
+
+import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
+import com.android.volley.VolleyError;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "Network")
-public class NetworkPlugin extends Plugin {
+@CapacitorPlugin(name = "Network", permissions = null)
+public class NetworkPlugin extends com.getcapacitor.Plugin {
     public static final String NETWORK_CHANGE_EVENT = "networkStatusChange";
     private Network implementation;
-    private NetworkStatus prePauseNetworkStatus = null;
+    private com.capacitorjs.plugins.network.NetworkStatus prePauseNetworkStatus = null;
 
     public void load() {
-        this.implementation = new Network(getContext());
-        this.implementation.setStatusChangeListener(new NetworkPlugin$$ExternalSyntheticLambda0(this));
+        this.implementation = new Network() {
+            @Override
+            public NetworkResponse performRequest(Request<?> request) throws VolleyError {
+                return null;
+            }
+        };
+        this.implementation.equals(new NetworkPlugin$$ExternalSyntheticLambda0(this));
     }
 
     /* access modifiers changed from: private */

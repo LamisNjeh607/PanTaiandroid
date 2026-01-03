@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 public class App {
     private AppRestoredListener appRestoredListener;
@@ -6,7 +6,7 @@ public class App {
     private AppStatusChangeListener statusChangeListener;
 
     public interface AppRestoredListener {
-        void onAppRestored(PluginResult pluginResult);
+        void onAppRestored(com.getcapacitor.PluginResult pluginResult);
     }
 
     public interface AppStatusChangeListener {
@@ -26,7 +26,7 @@ public class App {
     }
 
     /* access modifiers changed from: protected */
-    public void fireRestoredResult(PluginResult pluginResult) {
+    public void fireRestoredResult(com.getcapacitor.PluginResult pluginResult) {
         AppRestoredListener appRestoredListener2 = this.appRestoredListener;
         if (appRestoredListener2 != null) {
             appRestoredListener2.onAppRestored(pluginResult);

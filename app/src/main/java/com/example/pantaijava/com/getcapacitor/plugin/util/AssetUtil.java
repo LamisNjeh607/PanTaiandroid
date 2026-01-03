@@ -1,4 +1,4 @@
-package com.getcapacitor.plugin.util;
+package com.example.pantaijava.com.getcapacitor.plugin.util;
 
 import android.content.Context;
 import android.content.res.Resources;

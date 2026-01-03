@@ -1,5 +1,6 @@
-package com.capacitorjs.plugins.share;
+package com.example.pantaijava.com.capacitorjs.plugins.share;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
@@ -27,7 +28,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-@CapacitorPlugin(name = "Share")
+@CapacitorPlugin(name = "Share", permissions = null)
 public class SharePlugin extends Plugin {
     private BroadcastReceiver broadcastReceiver;
     /* access modifiers changed from: private */
@@ -46,7 +47,7 @@ public class SharePlugin extends Plugin {
                 sharePlugin.chosenComponent = sharePlugin.getParcelableExtraLegacy(intent, "android.intent.extra.CHOSEN_COMPONENT");
             }
         };
-        ContextCompat.registerReceiver(getContext(), this.broadcastReceiver, new IntentFilter("android.intent.extra.CHOSEN_COMPONENT"), 2);
+        ContextCompat.registerReceiver(getContext(), this.broadcastReceiver, new IntentFilter("android.intent.extra.CHOSEN_COMPONENT"), ContextCompat.RECEIVER_EXPORTED);
     }
 
     /* access modifiers changed from: private */
@@ -74,13 +75,14 @@ public class SharePlugin extends Plugin {
         pluginCall.resolve(jSObject);
     }
 
+    @SuppressLint("RestrictedApi")
     @PluginMethod
     public void share(PluginCall pluginCall) {
         if (!this.isPresenting) {
             String string = pluginCall.getString("title", "");
             String string2 = pluginCall.getString("text");
             String string3 = pluginCall.getString(ImagesContract.URL);
-            JSArray array = pluginCall.getArray("files");
+            JSArray array = pluginCall.getArray("files", (JSArray) null );
             String string4 = pluginCall.getString("dialogTitle", "Share");
             if (string2 == null && string3 == null && (array == null || array.length() == 0)) {
                 pluginCall.reject("Must provide a URL or Message or files");
@@ -111,7 +113,7 @@ public class SharePlugin extends Plugin {
                 if (Build.VERSION.SDK_INT >= 34) {
                     i |= 16777216;
                 }
-                Intent createChooser = Intent.createChooser(intent, string4, PendingIntent.getBroadcast(getContext(), 0, new Intent("android.intent.extra.CHOSEN_COMPONENT"), i).getIntentSender());
+                @SuppressLint("WrongConstant") Intent createChooser = Intent.createChooser(intent, string4, PendingIntent.getBroadcast(getContext(), 0, new Intent("android.intent.extra.CHOSEN_COMPONENT"), i).getIntentSender());
                 this.chosenComponent = null;
                 createChooser.addCategory("android.intent.category.DEFAULT");
                 this.stopped = false;
@@ -153,7 +155,7 @@ public class SharePlugin extends Plugin {
                 }
                 intent.putExtra("android.intent.extra.STREAM", (Parcelable) arrayList.get(0));
             }
-            intent.setFlags(1);
+            intent.setFlags( Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } catch (Exception e) {
             pluginCall.reject(e.getLocalizedMessage());
         }

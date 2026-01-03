@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.tracing)
     implementation(libs.ads.mobile.sdk)
+    implementation(libs.volley)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

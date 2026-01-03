@@ -1,6 +1,6 @@
-package com.capacitorjs.plugins.network;
+package com.example.pantaijava.com.capacitorjs.plugins.network;
 
-import com.capacitorjs.plugins.network.Network;
+
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class NetworkPlugin$$ExternalSyntheticLambda0 implements Network.NetworkStatusChangeListener {

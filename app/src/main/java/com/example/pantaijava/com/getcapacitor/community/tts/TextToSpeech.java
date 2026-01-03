@@ -1,4 +1,4 @@
-package com.getcapacitor.community.tts;
+package com.example.pantaijava.com.getcapacitor.community.tts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -130,7 +130,7 @@ public class TextToSpeech implements TextToSpeech.OnInitListener {
         Intent intent = new Intent();
         intent.setAction("android.speech.tts.engine.CHECK_TTS_DATA");
         if (packageManager.resolveActivity(intent, 65536) != null) {
-            intent.setFlags(268435456);
+            intent.setFlags( Intent.FLAG_ACTIVITY_NEW_TASK);
             this.context.startActivity(intent);
         }
     }
