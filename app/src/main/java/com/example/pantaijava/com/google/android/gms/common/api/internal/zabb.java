@@ -1,10 +1,11 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Result;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.zabe;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 final class zabb implements ResultCallback {

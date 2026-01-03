@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 class PluginInvocationException extends Exception {
     public PluginInvocationException(String str) {

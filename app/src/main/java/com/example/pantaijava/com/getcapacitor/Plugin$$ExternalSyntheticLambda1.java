@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import androidx.activity.result.ActivityResultCallback;
 import java.lang.reflect.Method;

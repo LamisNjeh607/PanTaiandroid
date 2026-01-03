@@ -1,6 +1,9 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Bundle;
+
+import com.google.android.gms.common.internal.Preconditions;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +17,7 @@ public final class Objects {
         private final List zza = new ArrayList();
         private final Object zzb;
 
-        /* synthetic */ ToStringHelper(Object obj, zzai zzai) {
+        /* synthetic */ ToStringHelper(Object obj, com.google.android.gms.location.zzai zzai) {
             Preconditions.checkNotNull(obj);
             this.zzb = obj;
         }
@@ -80,6 +83,6 @@ public final class Objects {
     }
 
     public static ToStringHelper toStringHelper(Object obj) {
-        return new ToStringHelper(obj, (zzai) null);
+        return new ToStringHelper(obj, (com.google.android.gms.location.zzai) null);
     }
 }

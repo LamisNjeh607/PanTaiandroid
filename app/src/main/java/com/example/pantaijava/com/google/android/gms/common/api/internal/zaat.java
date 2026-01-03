@@ -1,8 +1,10 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.os.Bundle;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.internal.zaas;
+import com.google.android.gms.common.api.internal.zaaw;
 import com.google.android.gms.common.internal.ClientSettings;
 import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.signin.zae;

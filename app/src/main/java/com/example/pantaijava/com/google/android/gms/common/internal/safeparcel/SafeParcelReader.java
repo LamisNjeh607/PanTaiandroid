@@ -1,5 +1,6 @@
-package com.google.android.gms.common.internal.safeparcel;
+package com.example.pantaijava.com.google.android.gms.common.internal.safeparcel;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -452,9 +453,9 @@ public class SafeParcelReader {
         if (readSize == 0) {
             return null;
         }
-        T t = (Parcelable) creator.createFromParcel(parcel);
+        Parcelable t = (Parcelable) creator.createFromParcel(parcel);
         parcel.setDataPosition(dataPosition + readSize);
-        return t;
+        return (T) t;
     }
 
     public static SparseBooleanArray createSparseBooleanArray(Parcel parcel, int i) {
@@ -713,6 +714,7 @@ public class SafeParcelReader {
         return (short) parcel.readInt();
     }
 
+    @SuppressLint("RestrictedApi")
     public static int readSize(Parcel parcel, int i) {
         return (i & SupportMenu.CATEGORY_MASK) != -65536 ? (char) (i >> 16) : parcel.readInt();
     }

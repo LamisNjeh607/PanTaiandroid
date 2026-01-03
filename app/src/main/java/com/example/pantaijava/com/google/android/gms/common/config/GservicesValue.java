@@ -1,6 +1,11 @@
-package com.google.android.gms.common.config;
+package com.example.pantaijava.com.google.android.gms.common.config;
 
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
+import com.google.android.gms.common.api.internal.zzd;
+import com.google.android.gms.common.internal.zzc;
+import com.google.android.gms.common.internal.zze;
+import com.google.android.gms.common.zza;
+import com.google.android.gms.common.zzb;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public abstract class GservicesValue<T> {
@@ -14,7 +19,7 @@ public abstract class GservicesValue<T> {
         this.zzb = obj;
     }
 
-    @ResultIgnorabilityUnspecified
+
     public static boolean isInitialized() {
         synchronized (zzc) {
         }
@@ -38,7 +43,7 @@ public abstract class GservicesValue<T> {
     }
 
     public static GservicesValue<Boolean> value(String str, boolean z) {
-        return new zza(str, Boolean.valueOf(z));
+        return new zza();
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0016, code lost:

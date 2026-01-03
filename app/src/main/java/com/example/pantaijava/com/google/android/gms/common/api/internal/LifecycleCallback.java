@@ -1,9 +1,13 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.Activity;
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.google.android.gms.common.api.internal.LifecycleFragment;
+import com.google.android.gms.common.api.internal.zzb;
+import com.google.android.gms.common.api.internal.zzd;
 import com.google.android.gms.common.internal.Preconditions;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;

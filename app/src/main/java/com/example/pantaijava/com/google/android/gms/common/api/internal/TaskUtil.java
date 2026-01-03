@@ -1,10 +1,11 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.zacx;
 import com.google.android.gms.common.internal.ApiExceptionUtil;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public class TaskUtil {
@@ -17,7 +18,7 @@ public class TaskUtil {
         return task.continueWith(new zacx());
     }
 
-    @ResultIgnorabilityUnspecified
+
     public static <ResultT> boolean trySetResultOrApiException(Status status, ResultT resultt, TaskCompletionSource<ResultT> taskCompletionSource) {
         if (status.isSuccess()) {
             return taskCompletionSource.trySetResult(resultt);

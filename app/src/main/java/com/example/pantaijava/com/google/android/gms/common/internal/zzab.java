@@ -1,15 +1,17 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
+
+import com.google.android.gms.common.internal.zzk;
 import com.google.android.gms.internal.common.zza;
 import com.google.android.gms.internal.common.zzc;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public final class zzab extends zza implements IGmsCallbacks {
-    zzab(IBinder iBinder) {
+    public zzab(IBinder iBinder) {
         super(iBinder, "com.google.android.gms.common.internal.IGmsCallbacks");
     }
 
@@ -23,6 +25,10 @@ public final class zzab extends zza implements IGmsCallbacks {
 
     public final void zzb(int i, Bundle bundle) throws RemoteException {
         throw null;
+    }
+
+    public void zzc(int i, IBinder iBinder, com.google.android.gms.internal.location.zzj zzj) throws RemoteException {
+
     }
 
     public final void zzc(int i, IBinder iBinder, zzk zzk) throws RemoteException {

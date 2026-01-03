@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -26,7 +26,7 @@ public class JSExport {
             try {
                 arrayList2.add(FileUtils.readFileFromAssets(context.getAssets(), "public/" + next));
             } catch (IOException unused) {
-                Logger.error("Unable to read public/" + next);
+                com.getcapacitor.Logger.error("Unable to read public/" + next);
             }
         }
         return TextUtils.join("\n", arrayList2);
@@ -36,7 +36,7 @@ public class JSExport {
         try {
             return FileUtils.readFileFromAssets(context.getAssets(), "public/cordova.js");
         } catch (IOException unused) {
-            Logger.error("Unable to read public/cordova.js file, Cordova plugins will not work");
+            com.getcapacitor.Logger.error("Unable to read public/cordova.js file, Cordova plugins will not work");
             return "";
         }
     }
@@ -45,18 +45,18 @@ public class JSExport {
         try {
             return FileUtils.readFileFromAssets(context.getAssets(), "public/cordova_plugins.js");
         } catch (IOException unused) {
-            Logger.error("Unable to read public/cordova_plugins.js file, Cordova plugins will not work");
+            com.getcapacitor.Logger.error("Unable to read public/cordova_plugins.js file, Cordova plugins will not work");
             return "";
         }
     }
 
-    public static String getPluginJS(Collection<PluginHandle> collection) {
+    public static String getPluginJS(Collection<com.getcapacitor.PluginHandle> collection) {
         ArrayList arrayList = new ArrayList();
         JSONArray jSONArray = new JSONArray();
         arrayList.add("// Begin: Capacitor Plugin JS");
-        for (PluginHandle next : collection) {
+        for (com.getcapacitor.PluginHandle next : collection) {
             arrayList.add("(function(w) {\nvar a = (w.Capacitor = w.Capacitor || {});\nvar p = (a.Plugins = a.Plugins || {});\nvar t = (p['" + next.getId() + "'] = {});\nt.addListener = function(eventName, callback) {\n  return w.Capacitor.addListener('" + next.getId() + "', eventName, callback);\n}");
-            for (PluginMethodHandle next2 : next.getMethods()) {
+            for (com.getcapacitor.PluginMethodHandle next2 : next.getMethods()) {
                 if (!next2.getName().equals("addListener") && !next2.getName().equals("removeListener")) {
                     arrayList.add(generateMethodJS(next, next2));
                 }
@@ -85,18 +85,19 @@ public class JSExport {
             }
             return sb.toString();
         } catch (IOException unused) {
-            Logger.warn("Unable to read file at path " + str);
+            com.getcapacitor.Logger.warn("Unable to read file at path " + str);
         }
+        return str;
     }
 
-    private static JSONObject createPluginHeader(PluginHandle pluginHandle) {
+    private static JSONObject createPluginHeader(com.getcapacitor.PluginHandle pluginHandle) {
         JSONObject jSONObject = new JSONObject();
-        Collection<PluginMethodHandle> methods = pluginHandle.getMethods();
+        Collection<com.getcapacitor.PluginMethodHandle> methods = pluginHandle.getMethods();
         try {
             String id = pluginHandle.getId();
             JSONArray jSONArray = new JSONArray();
             jSONObject.put("name", id);
-            for (PluginMethodHandle createPluginMethodHeader : methods) {
+            for (com.getcapacitor.PluginMethodHandle createPluginMethodHeader : methods) {
                 jSONArray.put(createPluginMethodHeader(createPluginMethodHeader));
             }
             jSONObject.put("methods", jSONArray);
@@ -105,11 +106,11 @@ public class JSExport {
         return jSONObject;
     }
 
-    private static JSONObject createPluginMethodHeader(PluginMethodHandle pluginMethodHandle) {
+    private static JSONObject createPluginMethodHeader(com.getcapacitor.PluginMethodHandle pluginMethodHandle) {
         JSONObject jSONObject = new JSONObject();
         try {
             jSONObject.put("name", pluginMethodHandle.getName());
-            if (!pluginMethodHandle.getReturnType().equals(PluginMethod.RETURN_NONE)) {
+            if (!pluginMethodHandle.getReturnType().equals( com.getcapacitor.PluginMethod.RETURN_NONE)) {
                 jSONObject.put("rtype", pluginMethodHandle.getReturnType());
             }
         } catch (JSONException unused) {
@@ -117,16 +118,16 @@ public class JSExport {
         return jSONObject;
     }
 
-    public static String getBridgeJS(Context context) throws JSExportException {
+    public static String getBridgeJS(Context context) throws com.getcapacitor.JSExportException {
         return getFilesContent(context, "native-bridge.js");
     }
 
-    private static String generateMethodJS(PluginHandle pluginHandle, PluginMethodHandle pluginMethodHandle) {
+    private static String generateMethodJS(com.getcapacitor.PluginHandle pluginHandle, com.getcapacitor.PluginMethodHandle pluginMethodHandle) {
         ArrayList arrayList = new ArrayList();
         ArrayList arrayList2 = new ArrayList();
         arrayList2.add(CATCHALL_OPTIONS_PARAM);
         String returnType = pluginMethodHandle.getReturnType();
-        if (returnType.equals(PluginMethod.RETURN_CALLBACK)) {
+        if (returnType.equals( com.getcapacitor.PluginMethod.RETURN_CALLBACK)) {
             arrayList2.add(CALLBACK_PARAM);
         }
         arrayList.add("t['" + pluginMethodHandle.getName() + "'] = function(" + TextUtils.join(", ", arrayList2) + ") {");
@@ -134,19 +135,19 @@ public class JSExport {
         char c = 65535;
         switch (returnType.hashCode()) {
             case -309216997:
-                if (returnType.equals(PluginMethod.RETURN_PROMISE)) {
+                if (returnType.equals( com.getcapacitor.PluginMethod.RETURN_PROMISE)) {
                     c = 0;
                     break;
                 }
                 break;
             case -172220347:
-                if (returnType.equals(PluginMethod.RETURN_CALLBACK)) {
+                if (returnType.equals( com.getcapacitor.PluginMethod.RETURN_CALLBACK)) {
                     c = 1;
                     break;
                 }
                 break;
             case 3387192:
-                if (returnType.equals(PluginMethod.RETURN_NONE)) {
+                if (returnType.equals( com.getcapacitor.PluginMethod.RETURN_NONE)) {
                     c = 2;
                     break;
                 }

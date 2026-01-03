@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -12,14 +12,14 @@ import com.google.android.gms.dynamic.RemoteCreator;
 public final class zaz extends RemoteCreator {
     private static final zaz zaa = new zaz();
 
-    private zaz() {
+    public zaz() {
         super("com.google.android.gms.common.ui.SignInButtonCreatorImpl");
     }
 
     public static View zaa(Context context, int i, int i2) throws RemoteCreator.RemoteCreatorException {
         zaz zaz = zaa;
         try {
-            zax zax = new zax(1, i, i2, (Scope[]) null);
+            com.google.android.gms.common.internal.zax zax = new com.google.android.gms.common.internal.zax(1, i, i2, (Scope[]) null);
             return (View) ObjectWrapper.unwrap(((zam) zaz.getRemoteCreatorInstance(context)).zae(ObjectWrapper.wrap(context), zax));
         } catch (Exception e) {
             throw new RemoteCreator.RemoteCreatorException("Could not get button with size " + i + " and color " + i2, e);

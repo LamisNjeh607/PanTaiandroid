@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.net.Uri;
 import android.webkit.WebView;

@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal.safeparcel;
+package com.example.pantaijava.com.google.android.gms.common.internal.safeparcel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,9 +19,9 @@ public final class SafeParcelableSerializer {
         Parcel obtain = Parcel.obtain();
         obtain.unmarshall(bArr, 0, bArr.length);
         obtain.setDataPosition(0);
-        T t = (SafeParcelable) creator.createFromParcel(obtain);
+        SafeParcelable t = (SafeParcelable) creator.createFromParcel(obtain);
         obtain.recycle();
-        return t;
+        return (T) t;
     }
 
     public static <T extends SafeParcelable> T deserializeFromIntentExtra(Intent intent, String str, Parcelable.Creator<T> creator) {

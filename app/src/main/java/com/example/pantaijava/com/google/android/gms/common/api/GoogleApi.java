@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.accounts.Account;
 import android.app.Activity;
@@ -8,8 +8,11 @@ import android.os.Handler;
 import android.os.Looper;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.common.api.Api;
-import com.google.android.gms.common.api.Api.ApiOptions;
+import com.google.android.gms.common.api.GoogleApiActivity;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.HasApiKey;
+import com.google.android.gms.common.api.Result;
+import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.common.api.internal.ApiExceptionMapper;
 import com.google.android.gms.common.api.internal.ApiKey;
 import com.google.android.gms.common.api.internal.BaseImplementation;
@@ -32,7 +35,7 @@ import com.google.android.gms.common.internal.Objects;
 import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 import java.util.Collections;
 import java.util.Set;
 import org.checkerframework.checker.initialization.qual.NotOnlyInitialized;
@@ -85,7 +88,7 @@ public abstract class GoogleApi<O extends Api.ApiOptions> implements HasApiKey<O
             }
         }
 
-        private Settings(StatusExceptionMapper statusExceptionMapper, Account account, Looper looper) {
+        private Settings(StatusExceptionMapper statusExceptionMapper, Looper looper) {
             this.zaa = statusExceptionMapper;
             this.zab = looper;
         }
@@ -157,7 +160,6 @@ public abstract class GoogleApi<O extends Api.ApiOptions> implements HasApiKey<O
         return t;
     }
 
-    @ResultIgnorabilityUnspecified
     @Deprecated
     public <A extends Api.AnyClient, T extends RegisterListenerMethod<A, ?>, U extends UnregisterListenerMethod<A, ?>> Task<Void> doRegisterEventListener(T t, U u) {
         Preconditions.checkNotNull(t);
@@ -168,7 +170,7 @@ public abstract class GoogleApi<O extends Api.ApiOptions> implements HasApiKey<O
         return this.zaa.zao(this, t, u, zad.zaa);
     }
 
-    @ResultIgnorabilityUnspecified
+
     public Task<Boolean> doUnregisterEventListener(ListenerHolder.ListenerKey<?> listenerKey) {
         return doUnregisterEventListener(listenerKey, 0);
     }

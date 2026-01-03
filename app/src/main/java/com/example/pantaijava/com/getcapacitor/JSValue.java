@@ -1,4 +1,6 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
+
+import com.getcapacitor.PluginCall;
 
 import org.json.JSONException;
 

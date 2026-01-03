@@ -27,7 +27,7 @@ public class FastParser<T extends FastJsonResponse> {
     private static final char[] zaf = {10};
     private static final zai zag = new zaa();
     private static final zai zah = new zab();
-    private static final zai zai = new zac();
+    public static final zai zai = new zac();
     private static final zai zaj = new zad();
     private static final zai zak = new zae();
     private static final zai zal = new zaf();

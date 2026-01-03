@@ -1,8 +1,10 @@
-package com.google.android.gms.common.images;
+package com.example.pantaijava.com.google.android.gms.common.images;
 
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.example.pantaijava.com.google.android.gms.common.api.internal.zah;
 import com.google.android.gms.common.internal.ImagesContract;
 import com.google.android.gms.common.internal.Objects;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -34,6 +36,7 @@ public final class WebImage extends AbstractSafeParcelable {
             WebImage webImage = (WebImage) obj;
             return Objects.equal(this.zab, webImage.zab) && this.zac == webImage.zac && this.zad == webImage.zad;
         }
+        return false;
     }
 
     public int getHeight() {

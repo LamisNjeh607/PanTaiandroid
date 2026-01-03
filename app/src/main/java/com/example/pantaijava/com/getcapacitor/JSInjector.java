@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -46,7 +46,7 @@ class JSInjector {
             sb.insert(readAssetStream.indexOf("</head>"), "\n" + str + "\n");
             readAssetStream = sb.toString();
         } else {
-            Logger.error("Unable to inject Capacitor, Plugins won't work");
+            com.getcapacitor.Logger.error("Unable to inject Capacitor, Plugins won't work");
         }
         return new ByteArrayInputStream(readAssetStream.getBytes(StandardCharsets.UTF_8));
     }
@@ -64,7 +64,7 @@ class JSInjector {
                 sb.append(cArr, 0, read);
             }
         } catch (Exception e) {
-            Logger.error("Unable to process HTML asset file. This is a fatal error", e);
+            com.getcapacitor.Logger.error("Unable to process HTML asset file. This is a fatal error", e);
             return "";
         }
     }

@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -22,14 +22,14 @@ import org.checkerframework.checker.initialization.qual.NotOnlyInitialized;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zabi implements zaca, zau {
-    final Map zaa;
-    final Map zab = new HashMap();
+    public final Map zaa;
+    public final Map zab = new HashMap();
     final ClientSettings zac;
     final Map zad;
     final Api.AbstractClientBuilder zae;
-    int zaf;
-    final zabe zag;
-    final zabz zah;
+    public int zaf;
+    public final zabe zag;
+    public final zabz zah;
     /* access modifiers changed from: private */
     public final Lock zai;
     private final Condition zaj;

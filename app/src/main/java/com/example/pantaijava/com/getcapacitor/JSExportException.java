@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 public class JSExportException extends Exception {
     public JSExportException(String str) {

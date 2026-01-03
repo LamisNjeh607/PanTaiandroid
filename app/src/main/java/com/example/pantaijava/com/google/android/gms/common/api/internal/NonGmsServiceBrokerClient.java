@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -12,6 +12,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.Feature;
 import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.api.internal.OnConnectionFailedListener;
 import com.google.android.gms.common.internal.BaseGmsClient;
 import com.google.android.gms.common.internal.GmsClientSupervisor;
 import com.google.android.gms.common.internal.IAccountAccessor;

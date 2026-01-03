@@ -1,4 +1,4 @@
-package com.google.android.gms.common.images;
+package com.example.pantaijava.com.google.android.gms.common.images;
 
 import javax.jmdns.impl.constants.DNSConstants;
 
@@ -27,6 +27,7 @@ public final class Size {
             Size size = (Size) obj;
             return this.zaa == size.zaa && this.zab == size.zab;
         }
+        return false;
     }
 
     public int getHeight() {

@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,7 +8,7 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.StringResourceValueReader;
 import com.google.android.gms.common.internal.zzah;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 
 @Deprecated
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
@@ -103,7 +103,7 @@ public final class GoogleServices {
         return new Status(10, "Initialize was called with two different Google App IDs.  Only the first app ID will be used: '" + str3 + "'.");
     }
 
-    @ResultIgnorabilityUnspecified
+
     public static Status initialize(Context context, String str, boolean z) {
         Preconditions.checkNotNull(context, "Context must not be null.");
         Preconditions.checkNotEmpty(str, "App ID must be nonempty.");

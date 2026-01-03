@@ -1,15 +1,16 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.util.Log;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.internal.zacs;
 import com.google.android.gms.common.internal.BaseGmsClient;
 import com.google.android.gms.common.internal.IAccountAccessor;
 import java.util.Set;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zabu implements BaseGmsClient.ConnectionProgressReportCallbacks, zacs {
-    final /* synthetic */ GoogleApiManager zaa;
+public final class zabu implements BaseGmsClient.ConnectionProgressReportCallbacks, zacs {
+    public final /* synthetic */ GoogleApiManager zaa;
     /* access modifiers changed from: private */
     public final Api.Client zab;
     /* access modifiers changed from: private */

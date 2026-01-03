@@ -1,4 +1,6 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
+
+import static com.google.android.gms.common.server.response.FastParser.zai;
 
 import android.os.DeadObjectException;
 import android.os.RemoteException;
@@ -7,7 +9,7 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.TaskCompletionSource;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-public final class zag extends zac {
+public class zag extends zac {
     private final TaskApiCall zaa;
     private final TaskCompletionSource zab;
     private final StatusExceptionMapper zad;
@@ -22,23 +24,33 @@ public final class zag extends zac {
         }
     }
 
-    public final boolean zaa(zabq zabq) {
+    public boolean zaa(zabq zabq) {
         return this.zaa.shouldAutoResolveMissingFeatures();
     }
 
-    public final Feature[] zab(zabq zabq) {
+    public Feature[] zab(zabq zabq) {
         return this.zaa.zab();
     }
 
-    public final void zad(Status status) {
+    public void zad(Status status) {
         this.zab.trySetException(this.zad.getException(status));
     }
 
-    public final void zae(Exception exc) {
+    public void zae(Exception exc) {
         this.zab.trySetException(exc);
     }
 
-    public final void zaf(zabq zabq) throws DeadObjectException {
+    @Override
+    public void zaf(com.google.android.gms.common.api.internal.zabq zabq) throws DeadObjectException {
+
+    }
+
+    @Override
+    public void zag(com.google.android.gms.common.api.internal.zaad zaad, boolean z) {
+
+    }
+
+    public void zaf(zabq zabq) throws DeadObjectException {
         try {
             this.zaa.doExecute(zabq.zaf(), this.zab);
         } catch (DeadObjectException e) {
@@ -50,7 +62,7 @@ public final class zag extends zac {
         }
     }
 
-    public final void zag(zaad zaad, boolean z) {
+    public void zag(zaad zaad, boolean z) {
         zaad.zad(this.zab, z);
     }
 }

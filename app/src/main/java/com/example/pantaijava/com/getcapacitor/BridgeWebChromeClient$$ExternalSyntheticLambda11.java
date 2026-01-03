@@ -1,7 +1,7 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.webkit.PermissionRequest;
-import com.getcapacitor.BridgeWebChromeClient;
+
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class BridgeWebChromeClient$$ExternalSyntheticLambda11 implements BridgeWebChromeClient.PermissionListener {

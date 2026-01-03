@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.PendingIntent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.os.Message;
 import android.os.RemoteException;
 import android.util.Log;
 import androidx.collection.ArrayMap;
+import androidx.webkit.internal.ApiFeature;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.Feature;
 import com.google.android.gms.common.api.Api;
@@ -16,12 +18,20 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.UnsupportedApiCallException;
 import com.google.android.gms.common.api.internal.ListenerHolder;
+import com.google.android.gms.common.api.internal.zabs;
+import com.google.android.gms.common.api.internal.zac;
+import com.google.android.gms.common.api.internal.zaci;
+import com.google.android.gms.common.api.internal.zact;
+import com.google.android.gms.common.api.internal.zah;
+import com.google.android.gms.common.api.internal.zai;
+import com.google.android.gms.common.api.internal.zal;
+import com.google.android.gms.common.api.internal.zau;
 import com.google.android.gms.common.internal.Objects;
 import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.service.zap;
 import com.google.android.gms.common.util.ArrayUtils;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -35,7 +45,7 @@ import org.checkerframework.checker.initialization.qual.NotOnlyInitialized;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zabq implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, zau {
-    final /* synthetic */ GoogleApiManager zaa;
+    public final /* synthetic */ GoogleApiManager zaa;
     private final Queue zab = new LinkedList();
     /* access modifiers changed from: private */
     @NotOnlyInitialized
@@ -304,7 +314,7 @@ public final class zabq implements GoogleApiClient.ConnectionCallbacks, GoogleAp
         }
     }
 
-    static /* bridge */ /* synthetic */ void zal(zabq zabq, zabs zabs) {
+    public static /* bridge */ /* synthetic */ void zal(zabq zabq, zabs zabs) {
         if (!zabq.zak.contains(zabs) || zabq.zaj) {
             return;
         }
@@ -315,7 +325,7 @@ public final class zabq implements GoogleApiClient.ConnectionCallbacks, GoogleAp
         }
     }
 
-    static /* bridge */ /* synthetic */ void zam(zabq zabq, zabs zabs) {
+    public /* bridge */ /* synthetic */ void zam(zabq zabq, zabs zabs) {
         Feature[] zab2;
         if (zabq.zak.remove(zabs)) {
             zabq.zaa.zar.removeMessages(15, zabs);
@@ -323,7 +333,7 @@ public final class zabq implements GoogleApiClient.ConnectionCallbacks, GoogleAp
             Feature zaa2 = zabs.zab;
             ArrayList arrayList = new ArrayList(zabq.zab.size());
             for (zai zai2 : zabq.zab) {
-                if ((zai2 instanceof zac) && (zab2 = ((zac) zai2).zab(zabq)) != null && ArrayUtils.contains((T[]) zab2, zaa2)) {
+                if ((zai2 instanceof zac) && (zab2 = ((zac) zai2).zab(zabq)) != null && ArrayUtils.contains((ApiFeature.T[]) zab2, zaa2)) {
                     arrayList.add(zai2);
                 }
             }

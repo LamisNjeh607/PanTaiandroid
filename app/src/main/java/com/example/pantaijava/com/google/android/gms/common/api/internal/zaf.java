@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.os.RemoteException;
 import com.google.android.gms.common.Feature;
@@ -6,7 +6,7 @@ import com.google.android.gms.common.api.internal.ListenerHolder;
 import com.google.android.gms.tasks.TaskCompletionSource;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-public final class zaf extends zad {
+public final class zaf extends com.google.android.gms.common.moduleinstall.internal.zad {
     public final zaci zab;
 
     public zaf(zaci zaci, TaskCompletionSource taskCompletionSource) {

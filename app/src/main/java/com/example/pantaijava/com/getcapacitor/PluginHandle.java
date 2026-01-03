@@ -1,6 +1,8 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
-import com.getcapacitor.annotation.CapacitorPlugin;
+
+import com.example.pantaijava.com.getcapacitor.annotation.CapacitorPlugin;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -14,7 +16,7 @@ public class PluginHandle {
     private CapacitorPlugin pluginAnnotation;
     private final Class<? extends Plugin> pluginClass;
     private final String pluginId;
-    private final Map<String, PluginMethodHandle> pluginMethods;
+    private final Map<String, com.getcapacitor.PluginMethodHandle> pluginMethods;
 
     private PluginHandle(Class<? extends Plugin> cls, Bridge bridge2) throws InvalidPluginException {
         this.pluginMethods = new HashMap();
@@ -44,7 +46,7 @@ public class PluginHandle {
         indexMethods(cls);
     }
 
-    public PluginHandle(Bridge bridge2, Class<? extends Plugin> cls) throws InvalidPluginException, PluginLoadException {
+    public PluginHandle(Bridge bridge2, Class<? extends Plugin> cls) throws InvalidPluginException, com.getcapacitor.PluginLoadException {
         this(cls, bridge2);
         load();
     }
@@ -74,11 +76,11 @@ public class PluginHandle {
         return this.instance;
     }
 
-    public Collection<PluginMethodHandle> getMethods() {
+    public Collection<com.getcapacitor.PluginMethodHandle> getMethods() {
         return this.pluginMethods.values();
     }
 
-    public Plugin load() throws PluginLoadException {
+    public Plugin load() throws com.getcapacitor.PluginLoadException {
         Plugin plugin = this.instance;
         if (plugin != null) {
             return plugin;
@@ -88,7 +90,7 @@ public class PluginHandle {
             this.instance = plugin2;
             return loadInstance(plugin2);
         } catch (Exception unused) {
-            throw new PluginLoadException("Unable to load plugin instance. Ensure plugin is publicly accessible");
+            throw new com.getcapacitor.PluginLoadException("Unable to load plugin instance. Ensure plugin is publicly accessible");
         }
     }
 
@@ -101,11 +103,11 @@ public class PluginHandle {
         return this.instance;
     }
 
-    public void invoke(String str, PluginCall pluginCall) throws PluginLoadException, InvalidPluginMethodException, InvocationTargetException, IllegalAccessException {
+    public void invoke(String str, PluginCall pluginCall) throws com.getcapacitor.PluginLoadException, InvalidPluginMethodException, InvocationTargetException, IllegalAccessException {
         if (this.instance == null) {
             load();
         }
-        PluginMethodHandle pluginMethodHandle = this.pluginMethods.get(str);
+        com.getcapacitor.PluginMethodHandle pluginMethodHandle = this.pluginMethods.get(str);
         if (pluginMethodHandle != null) {
             pluginMethodHandle.getMethod().invoke(this.instance, new Object[]{pluginCall});
             return;
@@ -115,9 +117,9 @@ public class PluginHandle {
 
     private void indexMethods(Class<? extends Plugin> cls) {
         for (Method method : this.pluginClass.getMethods()) {
-            PluginMethod pluginMethod = (PluginMethod) method.getAnnotation(PluginMethod.class);
+            com.getcapacitor.PluginMethod pluginMethod = (com.getcapacitor.PluginMethod) method.getAnnotation( com.getcapacitor.PluginMethod.class);
             if (pluginMethod != null) {
-                this.pluginMethods.put(method.getName(), new PluginMethodHandle(method, pluginMethod));
+                this.pluginMethods.put(method.getName(), new com.getcapacitor.PluginMethodHandle(method, pluginMethod));
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,6 +9,8 @@ import com.google.android.gms.common.GoogleApiAvailabilityLight;
 import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.internal.BaseImplementation;
+import com.google.android.gms.common.api.internal.zabf;
+import com.google.android.gms.common.api.internal.zabi;
 import com.google.android.gms.common.internal.ClientSettings;
 import com.google.android.gms.common.internal.IAccountAccessor;
 import com.google.android.gms.common.internal.Preconditions;
@@ -199,7 +201,7 @@ public final class zaaw implements zabf {
         return i != 0 ? "STEP_GETTING_REMOTE_SERVICE" : "STEP_SERVICE_BINDINGS_AND_SIGN_IN";
     }
 
-    static /* bridge */ /* synthetic */ Set zao(zaaw zaaw) {
+    public static /* bridge */ /* synthetic */ Set zao(zaaw zaaw) {
         ClientSettings clientSettings = zaaw.zar;
         if (clientSettings == null) {
             return Collections.emptySet();
@@ -215,7 +217,7 @@ public final class zaaw implements zabf {
         return hashSet;
     }
 
-    static /* bridge */ /* synthetic */ void zar(zaaw zaaw, zak zak2) {
+    public static /* bridge */ /* synthetic */ void zar(zaaw zaaw, zak zak2) {
         if (zaaw.zaG(0)) {
             ConnectionResult zaa2 = zak2.zaa();
             if (zaa2.isSuccess()) {

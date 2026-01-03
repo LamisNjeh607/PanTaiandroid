@@ -1,7 +1,10 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
+
+import com.example.pantaijava.com.getcapacitor.Plugin;
+
 import java.lang.reflect.Method;
 
 /* compiled from: D8$$SyntheticClass */

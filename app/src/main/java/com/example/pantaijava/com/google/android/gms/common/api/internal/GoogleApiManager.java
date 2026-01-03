@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.Application;
 import android.content.Context;
@@ -13,6 +13,11 @@ import com.google.android.gms.common.api.GoogleApi;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.BaseImplementation;
 import com.google.android.gms.common.api.internal.ListenerHolder;
+import com.google.android.gms.common.api.internal.zaae;
+import com.google.android.gms.common.api.internal.zabk;
+import com.google.android.gms.common.api.internal.zabq;
+import com.google.android.gms.common.api.internal.zace;
+import com.google.android.gms.common.api.internal.zach;
 import com.google.android.gms.common.internal.GmsClientSupervisor;
 import com.google.android.gms.common.internal.MethodInvocation;
 import com.google.android.gms.common.internal.Preconditions;
@@ -27,7 +32,7 @@ import com.google.android.gms.internal.base.zau;
 import com.google.android.gms.location.DeviceOrientationRequest;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -104,10 +109,9 @@ public class GoogleApiManager implements Handler.Callback {
         return new Status(connectionResult, "API: " + zaa2 + " is not available on this device. Connection failed with: " + valueOf);
     }
 
-    @ResultIgnorabilityUnspecified
     private final zabq zaG(GoogleApi googleApi) {
         Map map = this.zan;
-        ApiKey apiKey = googleApi.getApiKey();
+        com.google.android.gms.common.api.internal.ApiKey apiKey = googleApi.getApiKey();
         zabq zabq = (zabq) map.get(apiKey);
         if (zabq == null) {
             zabq = new zabq(this, googleApi);
@@ -193,14 +197,14 @@ public class GoogleApiManager implements Handler.Callback {
                         ApiKey apiKey = (ApiKey) it.next();
                         zabq zabq2 = (zabq) this.zan.get(apiKey);
                         if (zabq2 == null) {
-                            zal2.zac(apiKey, new ConnectionResult(13), (String) null);
+                            zal2.zac();
                             break;
                         } else if (zabq2.zaz()) {
                             zal2.zac(apiKey, ConnectionResult.RESULT_SUCCESS, zabq2.zaf().getEndpointPackageName());
                         } else {
                             ConnectionResult zad2 = zabq2.zad();
                             if (zad2 != null) {
-                                zal2.zac(apiKey, zad2, (String) null);
+                                zal2.zac();
                             } else {
                                 zabq2.zat(zal2);
                                 zabq2.zao();
@@ -408,12 +412,12 @@ public class GoogleApiManager implements Handler.Callback {
     }
 
     /* access modifiers changed from: package-private */
-    public final zabq zai(ApiKey apiKey) {
+    public final com.example.pantaijava.com.google.android.gms.common.api.internal.zabq zai(ApiKey apiKey) {
         return (zabq) this.zan.get(apiKey);
     }
 
     public final Task zam(Iterable iterable) {
-        zal zal2 = new zal(iterable);
+        zal zal2 = new zal();
         this.zar.sendMessage(this.zar.obtainMessage(2, zal2));
         return zal2.zaa();
     }

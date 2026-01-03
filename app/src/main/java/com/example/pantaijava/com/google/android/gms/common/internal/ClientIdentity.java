@@ -1,9 +1,10 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
+import com.google.android.gms.common.zaa;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public class ClientIdentity extends AbstractSafeParcelable {

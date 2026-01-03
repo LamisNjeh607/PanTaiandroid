@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 class InvalidPluginMethodException extends Exception {
     public InvalidPluginMethodException(String str) {

@@ -1,10 +1,11 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
+import com.google.android.gms.common.internal.zay;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zax extends AbstractSafeParcelable {
@@ -15,7 +16,7 @@ public final class zax extends AbstractSafeParcelable {
     @Deprecated
     private final Scope[] zad;
 
-    zax(int i, int i2, int i3, Scope[] scopeArr) {
+    public zax(int i, int i2, int i3, Scope[] scopeArr) {
         this.zaa = i;
         this.zab = i2;
         this.zac = i3;

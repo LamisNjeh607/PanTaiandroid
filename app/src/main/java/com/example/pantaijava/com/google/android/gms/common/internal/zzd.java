@@ -1,8 +1,11 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
+
+import com.google.android.gms.common.internal.zzk;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public final class zzd extends zzac {
@@ -22,6 +25,11 @@ public final class zzd extends zzac {
 
     public final void zzb(int i, Bundle bundle) {
         Log.wtf("GmsClient", "received deprecated onAccountValidationComplete callback, ignoring", new Exception());
+    }
+
+    @Override
+    public void zzc(int i, IBinder iBinder, zzk zzk) throws RemoteException {
+
     }
 
     public final void zzc(int i, IBinder iBinder, zzk zzk) {

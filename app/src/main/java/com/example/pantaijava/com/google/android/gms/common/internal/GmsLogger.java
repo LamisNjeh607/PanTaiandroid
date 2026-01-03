@@ -1,6 +1,8 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.util.Log;
+
+import com.google.android.gms.common.internal.Preconditions;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public final class GmsLogger {

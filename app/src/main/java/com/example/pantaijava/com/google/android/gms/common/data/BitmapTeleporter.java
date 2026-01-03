@@ -1,4 +1,4 @@
-package com.google.android.gms.common.data;
+package com.example.pantaijava.com.google.android.gms.common.data;
 
 import android.graphics.Bitmap;
 import android.os.Parcel;
@@ -9,6 +9,8 @@ import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
+import com.google.android.gms.common.zaa;
+
 import java.io.BufferedOutputStream;
 import java.io.Closeable;
 import java.io.DataInputStream;

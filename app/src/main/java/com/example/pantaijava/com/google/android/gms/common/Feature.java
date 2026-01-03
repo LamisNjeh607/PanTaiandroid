@@ -9,7 +9,7 @@ import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public class Feature extends AbstractSafeParcelable {
     public static final Parcelable.Creator<Feature> CREATOR = new zzc();
-    private final String zza;
+    public final String zza;
     @Deprecated
     private final int zzb;
     private final long zzc;

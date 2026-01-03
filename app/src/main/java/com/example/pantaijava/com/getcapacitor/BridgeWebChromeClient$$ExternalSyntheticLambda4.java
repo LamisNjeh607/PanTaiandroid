@@ -1,7 +1,7 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.webkit.GeolocationPermissions;
-import com.getcapacitor.BridgeWebChromeClient;
+
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class BridgeWebChromeClient$$ExternalSyntheticLambda4 implements BridgeWebChromeClient.PermissionListener {

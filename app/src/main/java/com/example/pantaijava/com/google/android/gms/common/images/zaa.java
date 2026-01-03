@@ -1,4 +1,4 @@
-package com.google.android.gms.common.images;
+package com.example.pantaijava.com.google.android.gms.common.images;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

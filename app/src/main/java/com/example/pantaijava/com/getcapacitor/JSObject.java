@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -35,6 +35,7 @@ public class JSObject extends JSONObject {
             return !super.isNull(str) ? super.getString(str) : str2;
         } catch (JSONException unused) {
         }
+        return str;
     }
 
     public Integer getInteger(String str) {

@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Context;
 import android.os.Build;
@@ -68,7 +68,7 @@ public class CapacitorWebView extends WebView {
                 }
             }
             if (equals || z) {
-                ViewCompat.setOnApplyWindowInsetsListener(this, new CapacitorWebView$$ExternalSyntheticLambda0());
+                ViewCompat.setOnApplyWindowInsetsListener(this, new com.getcapacitor.CapacitorWebView$$ExternalSyntheticLambda0());
             }
         }
     }

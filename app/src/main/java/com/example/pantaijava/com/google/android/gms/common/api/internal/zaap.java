@@ -1,6 +1,10 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.internal.zaau;
+import com.google.android.gms.common.api.internal.zaav;
+import com.google.android.gms.common.api.internal.zaaw;
+
 import java.util.ArrayList;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */

@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,11 +10,10 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import com.getcapacitor.annotation.ActivityCallback;
-import com.getcapacitor.annotation.CapacitorPlugin;
-import com.getcapacitor.annotation.Permission;
-import com.getcapacitor.annotation.PermissionCallback;
-import com.getcapacitor.util.PermissionHelper;
+
+import com.example.pantaijava.com.getcapacitor.annotation.ActivityCallback;
+import com.example.pantaijava.com.getcapacitor.annotation.PermissionCallback;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -33,13 +32,13 @@ public class Plugin {
     private final Map<String, ActivityResultLauncher<Intent>> activityLaunchers = new HashMap();
     /* access modifiers changed from: protected */
     public Bridge bridge;
-    private final Map<String, List<PluginCall>> eventListeners = new HashMap();
-    protected PluginHandle handle;
+    private final Map<String, List<com.getcapacitor.PluginCall>> eventListeners = new HashMap();
+    protected com.getcapacitor.PluginHandle handle;
     private String lastPluginCallId;
     private final Map<String, ActivityResultLauncher<String[]>> permissionLaunchers = new HashMap();
     private final Map<String, List<JSObject>> retainedEventArguments = new HashMap();
     @Deprecated
-    protected PluginCall savedLastCall;
+    protected com.getcapacitor.PluginCall savedLastCall;
 
     /* access modifiers changed from: protected */
     @Deprecated
@@ -96,10 +95,10 @@ public class Plugin {
             arrayList.addAll(Arrays.asList(cls.getDeclaredMethods()));
         }
         for (Method method : arrayList) {
-            if (method.isAnnotationPresent(ActivityCallback.class)) {
-                this.activityLaunchers.put(method.getName(), this.bridge.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new Plugin$$ExternalSyntheticLambda0(this, method)));
-            } else if (method.isAnnotationPresent(PermissionCallback.class)) {
-                this.permissionLaunchers.put(method.getName(), this.bridge.registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new Plugin$$ExternalSyntheticLambda1(this, method)));
+            if (method.isAnnotationPresent( ActivityCallback.class)) {
+                this.activityLaunchers.put(method.getName(), this.bridge.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new com.getcapacitor.Plugin$$ExternalSyntheticLambda0(this, method)));
+            } else if (method.isAnnotationPresent( PermissionCallback.class)) {
+                this.permissionLaunchers.put(method.getName(), this.bridge.registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new com.getcapacitor.Plugin$$ExternalSyntheticLambda1(this, method)));
             }
         }
     }
@@ -121,7 +120,7 @@ public class Plugin {
     /* access modifiers changed from: private */
     /* renamed from: triggerActivityCallback */
     public void lambda$initializeActivityLaunchers$0(Method method, ActivityResult activityResult) {
-        PluginCall savedCall = this.bridge.getSavedCall(this.lastPluginCallId);
+        com.getcapacitor.PluginCall savedCall = this.bridge.getSavedCall(this.lastPluginCallId);
         if (savedCall == null) {
             savedCall = this.bridge.getPluginCallForLastActivity();
         }

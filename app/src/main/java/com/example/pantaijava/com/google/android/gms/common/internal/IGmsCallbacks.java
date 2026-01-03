@@ -1,9 +1,11 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.RemoteException;
+
+import com.google.android.gms.common.internal.zzk;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public interface IGmsCallbacks extends IInterface {

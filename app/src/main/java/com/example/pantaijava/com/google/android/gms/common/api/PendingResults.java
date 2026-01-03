@@ -1,6 +1,12 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.os.Looper;
+
+import com.example.pantaijava.com.google.android.gms.common.api.internal.zaf;
+import com.example.pantaijava.com.google.android.gms.common.api.internal.zag;
+import com.example.pantaijava.com.google.android.gms.common.api.internal.zah;
+import com.google.android.gms.common.api.Result;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.OptionalPendingResultImpl;
 import com.google.android.gms.common.api.internal.StatusPendingResult;
 import com.google.android.gms.common.internal.Preconditions;

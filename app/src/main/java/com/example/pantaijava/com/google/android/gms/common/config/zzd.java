@@ -1,4 +1,4 @@
-package com.google.android.gms.common.config;
+package com.example.pantaijava.com.google.android.gms.common.config;
 
 import com.google.android.gms.common.internal.Preconditions;
 

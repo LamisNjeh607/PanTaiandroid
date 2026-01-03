@@ -1,9 +1,10 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.Activity;
 import androidx.collection.ArraySet;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.internal.zap;
 import com.google.android.gms.common.internal.Preconditions;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */

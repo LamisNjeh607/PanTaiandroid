@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -10,11 +10,12 @@ import android.text.method.TransformationMethod;
 import android.util.AttributeSet;
 import android.widget.Button;
 import androidx.core.graphics.drawable.DrawableCompat;
-import com.google.android.gms.base.R;
+
+import com.example.pantaijava.R;
 import com.google.android.gms.common.util.DeviceProperties;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-public final class zaaa extends Button {
+public final class zaaa extends androidx.appcompat.widget.AppCompatButton {
     public zaaa(Context context, AttributeSet attributeSet) {
         super(context, (AttributeSet) null, 16842824);
     }

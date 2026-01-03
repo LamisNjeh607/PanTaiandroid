@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.os.Looper;
 import android.os.Message;
@@ -12,10 +12,15 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.ResultTransform;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.TransformedResult;
+import com.google.android.gms.common.api.internal.zada;
+import com.google.android.gms.common.api.internal.zadb;
+import com.google.android.gms.common.api.internal.zar;
 import com.google.android.gms.common.internal.ICancelToken;
 import com.google.android.gms.common.internal.Preconditions;
+import com.google.android.gms.common.internal.zas;
+import com.google.android.gms.common.server.response.zaq;
 import com.google.android.gms.internal.base.zau;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
@@ -117,7 +122,7 @@ public abstract class BasePendingResult<R extends Result> extends PendingResult<
         }
     }
 
-    @ResultIgnorabilityUnspecified
+
     public final R await() {
         Preconditions.checkNotMainThread("await must not be called on the UI thread");
         boolean z = true;
@@ -366,8 +371,8 @@ public abstract class BasePendingResult<R extends Result> extends PendingResult<
         this.zac = new WeakReference((Object) null);
     }
 
-    @ResultIgnorabilityUnspecified
-    public final R await(long j, TimeUnit timeUnit) {
+
+    public final Result await(long j, TimeUnit timeUnit) {
         if (j > 0) {
             Preconditions.checkNotMainThread("await must not be called on the UI thread when time is greater than zero.");
         }

@@ -1,9 +1,11 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.text.TextUtils;
 import androidx.collection.ArrayMap;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.GoogleApi;
+import com.google.android.gms.common.api.HasApiKey;
 import com.google.android.gms.common.api.internal.ApiKey;
 import com.google.android.gms.common.internal.Preconditions;
 import java.util.ArrayList;

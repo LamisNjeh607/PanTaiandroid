@@ -1,10 +1,11 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import com.google.android.gms.common.Feature;
+import com.google.android.gms.common.api.internal.zabr;
 import com.google.android.gms.common.internal.Objects;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zabs {
+public final class zabs {
     /* access modifiers changed from: private */
     public final ApiKey zaa;
     /* access modifiers changed from: private */

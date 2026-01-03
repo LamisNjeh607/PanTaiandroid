@@ -1,4 +1,4 @@
-package com.google.android.gms.common.logging;
+package com.example.pantaijava.com.google.android.gms.common.logging;
 
 import android.util.Log;
 import com.google.android.gms.common.internal.GmsLogger;

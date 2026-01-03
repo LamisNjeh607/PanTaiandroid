@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -15,6 +15,12 @@ import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.Result;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.BaseImplementation;
+import com.google.android.gms.common.api.internal.zabi;
+import com.google.android.gms.common.api.internal.zabx;
+import com.google.android.gms.common.api.internal.zabz;
+import com.google.android.gms.common.api.internal.zaca;
+import com.google.android.gms.common.api.internal.zada;
+import com.google.android.gms.common.api.internal.zadc;
 import com.google.android.gms.common.internal.ClientSettings;
 import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.service.Common;
@@ -22,7 +28,7 @@ import com.google.android.gms.common.internal.zaj;
 import com.google.android.gms.common.internal.zak;
 import com.google.android.gms.common.util.ClientLibraryUtils;
 import com.google.android.gms.location.DeviceOrientationRequest;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -40,15 +46,15 @@ import java.util.concurrent.locks.Lock;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zabe extends GoogleApiClient implements zabz {
-    final Queue zaa = new LinkedList();
+    public final Queue zaa = new LinkedList();
     zabx zab;
-    final Map zac;
-    Set zad;
+    public final Map zac;
+    public Set zad;
     final ClientSettings zae;
     final Map zaf;
     final Api.AbstractClientBuilder zag;
-    Set zah;
-    final zadc zai;
+    public Set zah;
+    public final zadc zai;
     private final Lock zaj;
     private final zak zak;
     private zaca zal = null;
@@ -122,7 +128,7 @@ public final class zabe extends GoogleApiClient implements zabz {
         return i != 1 ? i != 2 ? i != 3 ? "UNKNOWN" : "SIGN_IN_MODE_NONE" : "SIGN_IN_MODE_OPTIONAL" : "SIGN_IN_MODE_REQUIRED";
     }
 
-    static /* bridge */ /* synthetic */ void zai(zabe zabe) {
+    public static /* bridge */ /* synthetic */ void zai(zabe zabe) {
         zabe.zaj.lock();
         try {
             if (zabe.zap) {
@@ -133,7 +139,7 @@ public final class zabe extends GoogleApiClient implements zabz {
         }
     }
 
-    static /* bridge */ /* synthetic */ void zaj(zabe zabe) {
+    public static /* bridge */ /* synthetic */ void zaj(zabe zabe) {
         zabe.zaj.lock();
         try {
             if (zabe.zak()) {

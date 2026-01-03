@@ -1,6 +1,9 @@
-package com.google.android.gms.common.data;
+package com.example.pantaijava.com.google.android.gms.common.data;
 
 import android.os.Bundle;
+
+import com.google.android.gms.common.data.Freezable;
+
 import java.util.ArrayList;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */

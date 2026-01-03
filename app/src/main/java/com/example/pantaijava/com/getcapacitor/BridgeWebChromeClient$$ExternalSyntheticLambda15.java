@@ -1,8 +1,8 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.webkit.ValueCallback;
 import androidx.activity.result.ActivityResult;
-import com.getcapacitor.BridgeWebChromeClient;
+
 
 /* compiled from: D8$$SyntheticClass */
 public final /* synthetic */ class BridgeWebChromeClient$$ExternalSyntheticLambda15 implements BridgeWebChromeClient.ActivityResultListener {

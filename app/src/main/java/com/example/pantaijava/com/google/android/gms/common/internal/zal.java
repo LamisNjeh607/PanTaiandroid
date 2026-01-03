@@ -1,11 +1,11 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.content.Context;
 import android.util.SparseIntArray;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.GoogleApiAvailabilityLight;
 import com.google.android.gms.common.api.Api;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zal {

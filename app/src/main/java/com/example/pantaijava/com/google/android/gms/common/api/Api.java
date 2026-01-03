@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.accounts.Account;
 import android.content.Context;
@@ -9,12 +9,15 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.common.Feature;
 import com.google.android.gms.common.api.Api.ApiOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.common.api.internal.ConnectionCallbacks;
 import com.google.android.gms.common.api.internal.OnConnectionFailedListener;
 import com.google.android.gms.common.internal.BaseGmsClient;
 import com.google.android.gms.common.internal.ClientSettings;
 import com.google.android.gms.common.internal.IAccountAccessor;
 import com.google.android.gms.common.internal.Preconditions;
+import com.google.android.gms.common.zaa;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.Collections;
@@ -23,7 +26,7 @@ import java.util.Set;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class Api<O extends ApiOptions> {
-    private final AbstractClientBuilder zaa;
+    private static AbstractClientBuilder zaa;
     private final ClientKey zab;
     private final String zac;
 

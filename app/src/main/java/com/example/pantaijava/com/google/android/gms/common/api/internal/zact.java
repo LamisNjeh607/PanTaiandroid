@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,10 +18,10 @@ import java.util.Set;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zact extends zac implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
-    private static final Api.AbstractClientBuilder zaa = zad.zac;
+    private final Api.AbstractClientBuilder zaa = zad.zac;
     private final Context zab;
     private final Handler zac;
-    private final Api.AbstractClientBuilder zad;
+    private Api.AbstractClientBuilder zad;
     private final Set zae;
     private final ClientSettings zaf;
     private zae zag;
@@ -37,7 +37,7 @@ public final class zact extends zac implements GoogleApiClient.ConnectionCallbac
         this.zad = abstractClientBuilder;
     }
 
-    static /* bridge */ /* synthetic */ void zad(zact zact, zak zak) {
+    public static /* bridge */ /* synthetic */ void zad(zact zact, zak zak) {
         ConnectionResult zaa2 = zak.zaa();
         if (zaa2.isSuccess()) {
             zav zav = (zav) Preconditions.checkNotNull(zak.zab());
@@ -83,7 +83,7 @@ public final class zact extends zac implements GoogleApiClient.ConnectionCallbac
         Context context = this.zab;
         Handler handler = this.zac;
         ClientSettings clientSettings = this.zaf;
-        this.zag = abstractClientBuilder.buildClient(context, handler.getLooper(), clientSettings, clientSettings.zaa(), (GoogleApiClient.ConnectionCallbacks) this, (GoogleApiClient.OnConnectionFailedListener) this);
+        this.zag = (zae) abstractClientBuilder.buildClient(context, handler.getLooper(), clientSettings, clientSettings.zaa(), (GoogleApiClient.ConnectionCallbacks) this, (GoogleApiClient.OnConnectionFailedListener) this);
         this.zah = zacs;
         Set set = this.zae;
         if (set == null || set.isEmpty()) {

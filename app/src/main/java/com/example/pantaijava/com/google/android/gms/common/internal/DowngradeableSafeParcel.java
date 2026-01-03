@@ -1,5 +1,6 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
+import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */

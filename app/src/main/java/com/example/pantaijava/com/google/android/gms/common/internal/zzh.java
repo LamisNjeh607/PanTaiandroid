@@ -1,7 +1,9 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.google.android.gms.internal.common.zzi;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 final class zzh implements Parcelable.Creator {

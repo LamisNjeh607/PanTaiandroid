@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.accounts.Account;
 import android.app.Activity;
@@ -11,6 +11,10 @@ import androidx.fragment.app.FragmentActivity;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.Result;
+import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.BaseImplementation;
 import com.google.android.gms.common.api.internal.LifecycleActivity;
 import com.google.android.gms.common.api.internal.ListenerHolder;
@@ -22,7 +26,6 @@ import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.zab;
 import com.google.android.gms.signin.SignInOptions;
 import com.google.android.gms.signin.zad;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -75,10 +78,10 @@ public abstract class GoogleApiClient {
         return set;
     }
 
-    @ResultIgnorabilityUnspecified
+
     public abstract ConnectionResult blockingConnect();
 
-    @ResultIgnorabilityUnspecified
+
     public abstract ConnectionResult blockingConnect(long j, TimeUnit timeUnit);
 
     public abstract PendingResult<Status> clearDefaultAccountAndReconnect();
@@ -93,12 +96,12 @@ public abstract class GoogleApiClient {
 
     public abstract void dump(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr);
 
-    @ResultIgnorabilityUnspecified
+
     public <A extends Api.AnyClient, R extends Result, T extends BaseImplementation.ApiMethodImpl<R, A>> T enqueue(T t) {
         throw new UnsupportedOperationException();
     }
 
-    @ResultIgnorabilityUnspecified
+
     public <A extends Api.AnyClient, T extends BaseImplementation.ApiMethodImpl<? extends Result, A>> T execute(T t) {
         throw new UnsupportedOperationException();
     }

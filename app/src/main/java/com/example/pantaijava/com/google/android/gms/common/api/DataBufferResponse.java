@@ -1,13 +1,15 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.os.Bundle;
+
+import com.google.android.gms.common.api.Response;
 import com.google.android.gms.common.api.Result;
 import com.google.android.gms.common.data.AbstractDataBuffer;
 import com.google.android.gms.common.data.DataBuffer;
 import java.util.Iterator;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-public class DataBufferResponse<T, R extends AbstractDataBuffer<T> & Result> extends Response<R> implements DataBuffer<T> {
+public class DataBufferResponse<T, R extends AbstractDataBuffer<T> & Result> extends Response<R> implements DataBuffer<Object> {
     public DataBufferResponse() {
     }
 
@@ -15,7 +17,7 @@ public class DataBufferResponse<T, R extends AbstractDataBuffer<T> & Result> ext
         ((AbstractDataBuffer) getResult()).close();
     }
 
-    public final T get(int i) {
+    public final Object get(int i) {
         return ((AbstractDataBuffer) getResult()).get(i);
     }
 
@@ -31,7 +33,7 @@ public class DataBufferResponse<T, R extends AbstractDataBuffer<T> & Result> ext
         return ((AbstractDataBuffer) getResult()).isClosed();
     }
 
-    public final Iterator<T> iterator() {
+    public final Iterator<Object> iterator() {
         return ((AbstractDataBuffer) getResult()).iterator();
     }
 
@@ -39,7 +41,7 @@ public class DataBufferResponse<T, R extends AbstractDataBuffer<T> & Result> ext
         ((AbstractDataBuffer) getResult()).release();
     }
 
-    public final Iterator<T> singleRefIterator() {
+    public final Iterator<Object> singleRefIterator() {
         return ((AbstractDataBuffer) getResult()).singleRefIterator();
     }
 

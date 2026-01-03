@@ -1,7 +1,17 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.common.api.BatchResult;
+import com.google.android.gms.common.api.BatchResultToken;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.Result;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.BasePendingResult;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+import com.google.android.gms.common.api.internal.zab;
+import com.google.android.gms.common.api.internal.zac;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +29,7 @@ public final class Batch extends BasePendingResult<BatchResult> {
     public final Object zai = new Object();
 
     /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-    public static final class Builder {
+    public final class Builder {
         private final List zaa = new ArrayList();
         private final GoogleApiClient zab;
 
@@ -27,7 +37,7 @@ public final class Batch extends BasePendingResult<BatchResult> {
             this.zab = googleApiClient;
         }
 
-        @ResultIgnorabilityUnspecified
+
         public <R extends Result> BatchResultToken<R> add(PendingResult<R> pendingResult) {
             BatchResultToken<R> batchResultToken = new BatchResultToken<>(this.zaa.size());
             this.zaa.add(pendingResult);
@@ -54,6 +64,12 @@ public final class Batch extends BasePendingResult<BatchResult> {
             return;
         }
         setResult(new BatchResult(Status.RESULT_SUCCESS, pendingResultArr));
+    }
+
+    @NonNull
+    @Override
+    protected BatchResult createFailedResult(@NonNull Status status) {
+        return null;
     }
 
     public void cancel() {

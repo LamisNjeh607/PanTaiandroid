@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.os.RemoteException;
 import com.google.android.gms.common.Feature;
@@ -7,11 +7,11 @@ import com.google.android.gms.common.api.internal.TaskApiCall;
 import com.google.android.gms.tasks.TaskCompletionSource;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zacv extends TaskApiCall {
+public final class zacv extends TaskApiCall {
     final /* synthetic */ TaskApiCall.Builder zaa;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    zacv(TaskApiCall.Builder builder, Feature[] featureArr, boolean z, int i) {
+    public zacv(TaskApiCall.Builder builder, Feature[] featureArr, boolean z, int i) {
         super(featureArr, z, i);
         this.zaa = builder;
     }

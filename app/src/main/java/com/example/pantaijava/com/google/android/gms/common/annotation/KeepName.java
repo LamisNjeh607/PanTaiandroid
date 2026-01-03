@@ -1,4 +1,4 @@
-package com.google.android.gms.common.annotation;
+package com.example.pantaijava.com.google.android.gms.common.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

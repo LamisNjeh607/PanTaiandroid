@@ -1,16 +1,19 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.PendingIntent;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.internal.zaau;
+import com.google.android.gms.common.api.internal.zaav;
+import com.google.android.gms.common.api.internal.zaaw;
 import com.google.android.gms.common.internal.BaseGmsClient;
 import com.google.android.gms.common.internal.zal;
 import java.util.ArrayList;
 import java.util.Map;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zaao extends zaav {
-    final /* synthetic */ zaaw zaa;
+public final class zaao extends zaav {
+    public final /* synthetic */ zaaw zaa;
     private final Map zac;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */

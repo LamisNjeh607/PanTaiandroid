@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal.service;
+package com.example.pantaijava.com.google.android.gms.common.internal.service;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Result;

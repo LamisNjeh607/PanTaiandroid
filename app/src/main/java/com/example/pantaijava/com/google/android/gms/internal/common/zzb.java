@@ -12,6 +12,9 @@ public class zzb extends Binder implements IInterface {
         attachInterface(this, str);
     }
 
+    public zzb() {
+    }
+
     public final IBinder asBinder() {
         return this;
     }

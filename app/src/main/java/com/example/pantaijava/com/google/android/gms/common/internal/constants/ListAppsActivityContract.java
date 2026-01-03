@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal.constants;
+package com.example.pantaijava.com.google.android.gms.common.internal.constants;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public interface ListAppsActivityContract {

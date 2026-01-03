@@ -1,6 +1,9 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.os.Looper;
+
+import androidx.annotation.NonNull;
+
 import com.google.android.gms.common.api.Result;
 import com.google.android.gms.common.api.internal.BasePendingResult;
 
@@ -19,5 +22,11 @@ final class zaf<R extends Result> extends BasePendingResult<R> {
             return this.zae;
         }
         throw new UnsupportedOperationException("Creating failed results is not supported");
+    }
+
+    @NonNull
+    @Override
+    protected R createFailedResult(@NonNull com.google.android.gms.common.api.Status status) {
+        return null;
     }
 }

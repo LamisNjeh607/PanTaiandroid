@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.content.Intent;
 public interface LifecycleFragment {
     void addCallback(String str, LifecycleCallback lifecycleCallback);
 
-    <T extends LifecycleCallback> T getCallbackOrNull(String str, Class<T> cls);
+    <T extends LifecycleCallback> T getCallbackOrNull(String str, Class<zaae> cls);
 
     Activity getLifecycleActivity();
 

@@ -1,11 +1,15 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import com.google.android.gms.common.api.Result;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.ResultTransform;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.TransformedResult;
+
 import java.util.concurrent.TimeUnit;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-public abstract class PendingResult<R extends Result> {
+public abstract class  PendingResult<R extends Result> {
 
     /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
     public interface StatusListener {
@@ -16,10 +20,10 @@ public abstract class PendingResult<R extends Result> {
         throw new UnsupportedOperationException();
     }
 
-    @ResultIgnorabilityUnspecified
+
     public abstract R await();
 
-    @ResultIgnorabilityUnspecified
+
     public abstract R await(long j, TimeUnit timeUnit);
 
     public abstract void cancel();

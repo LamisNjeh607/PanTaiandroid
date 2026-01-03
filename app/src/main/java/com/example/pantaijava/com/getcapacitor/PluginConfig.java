@@ -1,12 +1,14 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
-import com.getcapacitor.util.JSONUtils;
+
+import com.example.pantaijava.com.getcapacitor.util.JSONUtils;
+
 import org.json.JSONObject;
 
 public class PluginConfig {
     private final JSONObject config;
 
-    PluginConfig(JSONObject jSONObject) {
+    public PluginConfig(JSONObject jSONObject) {
         this.config = jSONObject;
     }
 

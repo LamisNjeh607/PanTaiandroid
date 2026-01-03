@@ -1,7 +1,8 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.util.Log;
 import com.google.android.gms.common.api.Result;
+import com.google.android.gms.common.api.Status;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public abstract class ResultCallbacks<R extends Result> implements ResultCallback<R> {

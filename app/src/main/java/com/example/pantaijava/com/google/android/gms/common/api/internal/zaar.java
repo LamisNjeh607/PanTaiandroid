@@ -1,11 +1,12 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
+import com.google.android.gms.common.api.internal.zaaw;
 import com.google.android.gms.signin.internal.zac;
 import com.google.android.gms.signin.internal.zak;
 import java.lang.ref.WeakReference;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zaar extends zac {
+public final class zaar extends zac {
     private final WeakReference zaa;
 
     zaar(zaaw zaaw) {

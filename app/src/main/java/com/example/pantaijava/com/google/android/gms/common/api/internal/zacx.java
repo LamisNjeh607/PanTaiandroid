@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.Status;
@@ -6,8 +6,8 @@ import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.Task;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zacx implements Continuation {
-    zacx() {
+public final class zacx implements Continuation {
+    public zacx() {
     }
 
     public final /* bridge */ /* synthetic */ Object then(Task task) throws Exception {

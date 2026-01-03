@@ -1,6 +1,7 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.accounts.Account;
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,23 @@ import com.google.android.gms.common.Feature;
 import com.google.android.gms.common.GoogleApiAvailabilityLight;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.api.internal.zzd;
+import com.google.android.gms.common.internal.ConnectionTelemetryConfiguration;
+import com.google.android.gms.common.internal.GetServiceRequest;
+import com.google.android.gms.common.internal.GmsClientSupervisor;
+import com.google.android.gms.common.internal.IAccountAccessor;
+import com.google.android.gms.common.internal.IGmsServiceBroker;
+import com.google.android.gms.common.internal.Preconditions;
+import com.google.android.gms.common.internal.RootTelemetryConfigManager;
+import com.google.android.gms.common.internal.RootTelemetryConfiguration;
+import com.google.android.gms.common.internal.zzc;
+import com.google.android.gms.common.internal.zze;
+import com.google.android.gms.common.internal.zzf;
+import com.google.android.gms.common.internal.zzk;
+import com.google.android.gms.common.internal.zzo;
+import com.google.android.gms.common.internal.zzv;
+import com.google.android.gms.common.zzb;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -30,7 +48,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
-public abstract class BaseGmsClient<T extends IInterface> {
+public abstract class BaseGmsClient<T extends IInterface> extends com.google.android.gms.common.internal.BaseGmsClient {
     public static final int CONNECT_STATE_CONNECTED = 4;
     public static final int CONNECT_STATE_DISCONNECTED = 1;
     public static final int CONNECT_STATE_DISCONNECTING = 5;
@@ -277,7 +295,7 @@ public abstract class BaseGmsClient<T extends IInterface> {
     }
 
     /* access modifiers changed from: protected */
-    public abstract T createServiceInterface(IBinder iBinder);
+    public abstract IInterface createServiceInterface(IBinder iBinder);
 
     public void disconnect() {
         this.zzd.incrementAndGet();
@@ -470,7 +488,7 @@ public abstract class BaseGmsClient<T extends IInterface> {
             synchronized (this.zzq) {
                 IGmsServiceBroker iGmsServiceBroker = this.zzr;
                 if (iGmsServiceBroker != null) {
-                    iGmsServiceBroker.getService(new zzd(this, this.zzd.get()), getServiceRequest3);
+                    iGmsServiceBroker.getService(new zzd(), getServiceRequest3);
                 } else {
                     Log.w("GmsClient", "mServiceBroker is null, client disconnected");
                 }
@@ -560,11 +578,13 @@ public abstract class BaseGmsClient<T extends IInterface> {
     }
 
     /* access modifiers changed from: protected */
-    public void onConnectedLocked(T t) {
+    public void onConnectedLocked(IInterface t) {
+        super.onConnectedLocked( t );
         this.zzh = System.currentTimeMillis();
     }
 
     /* access modifiers changed from: protected */
+    @SuppressLint("MissingSuperCall")
     public void onConnectionFailed(ConnectionResult connectionResult) {
         this.zzi = connectionResult.getErrorCode();
         this.zzj = System.currentTimeMillis();
@@ -572,6 +592,7 @@ public abstract class BaseGmsClient<T extends IInterface> {
 
     /* access modifiers changed from: protected */
     public void onConnectionSuspended(int i) {
+        super.onConnectionSuspended( i );
         this.zzf = i;
         this.zzg = System.currentTimeMillis();
     }
@@ -670,6 +691,7 @@ public abstract class BaseGmsClient<T extends IInterface> {
     }
 
     protected BaseGmsClient(Context context, Looper looper, GmsClientSupervisor gmsClientSupervisor, GoogleApiAvailabilityLight googleApiAvailabilityLight, int i, BaseConnectionCallbacks baseConnectionCallbacks, BaseOnConnectionFailedListener baseOnConnectionFailedListener, String str) {
+        super();
         this.zzk = null;
         this.zzp = new Object();
         this.zzq = new Object();
@@ -687,7 +709,7 @@ public abstract class BaseGmsClient<T extends IInterface> {
         this.zzn = gmsClientSupervisor;
         Preconditions.checkNotNull(googleApiAvailabilityLight, "API availability must not be null");
         this.zzo = googleApiAvailabilityLight;
-        this.zzb = new zzb(this, looper);
+        this.zzb = new zzb();
         this.zzy = i;
         this.zzw = baseConnectionCallbacks;
         this.zzx = baseOnConnectionFailedListener;

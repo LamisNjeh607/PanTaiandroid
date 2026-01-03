@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.os.SystemClock;
 import com.google.android.gms.common.ConnectionResult;
@@ -14,7 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-final class zacd implements OnCompleteListener {
+public final class zacd implements OnCompleteListener {
     private final GoogleApiManager zaa;
     private final int zab;
     private final ApiKey zac;
@@ -29,7 +29,7 @@ final class zacd implements OnCompleteListener {
         this.zae = j2;
     }
 
-    static zacd zaa(GoogleApiManager googleApiManager, int i, ApiKey apiKey) {
+    public static zacd zaa(GoogleApiManager googleApiManager, int i, ApiKey apiKey) {
         boolean z;
         if (!googleApiManager.zaD()) {
             return null;

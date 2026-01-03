@@ -1,5 +1,6 @@
-package com.google.android.gms.common.data;
+package com.example.pantaijava.com.google.android.gms.common.data;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.CharArrayBuffer;
 import android.database.CursorIndexOutOfBoundsException;
@@ -8,6 +9,11 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
+
+import com.example.pantaijava.com.google.android.gms.common.api.internal.zaf;
+import com.example.pantaijava.com.google.android.gms.common.api.zad;
+import com.google.android.gms.common.api.internal.zab;
+import com.google.android.gms.common.api.internal.zac;
 import com.google.android.gms.common.internal.Asserts;
 import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -18,8 +24,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
+@SuppressLint("VisibleForTests")
 public final class DataHolder extends AbstractSafeParcelable implements Closeable {
     public static final Parcelable.Creator<DataHolder> CREATOR = new zaf();
+    @SuppressLint("VisibleForTests")
     private static final Builder zaf = new zab(new String[0], (String) null);
     final int zaa;
     Bundle zab;
@@ -89,7 +97,7 @@ public final class DataHolder extends AbstractSafeParcelable implements Closeabl
         zad();
     }
 
-    public static Builder builder(String[] strArr) {
+    public Builder builder(String[] strArr) {
         return new Builder(strArr, (String) null, (zac) null);
     }
 

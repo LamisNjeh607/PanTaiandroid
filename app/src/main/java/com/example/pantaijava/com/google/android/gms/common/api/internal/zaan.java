@@ -1,7 +1,10 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.PendingIntent;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.internal.zaao;
+import com.google.android.gms.common.api.internal.zabf;
+import com.google.android.gms.common.api.internal.zabg;
 import com.google.android.gms.common.internal.BaseGmsClient;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */

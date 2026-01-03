@@ -1,4 +1,4 @@
-package com.google.android.gms.actions;
+package com.example.pantaijava.com.google.android.gms.actions;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public class ItemListIntents {

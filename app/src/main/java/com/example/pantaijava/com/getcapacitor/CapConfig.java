@@ -1,8 +1,10 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import com.getcapacitor.util.JSONUtils;
+
+import com.example.pantaijava.com.getcapacitor.util.JSONUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -33,7 +35,7 @@ public class CapConfig {
     private int minHuaweiWebViewVersion;
     private int minWebViewVersion;
     private String overriddenUserAgentString;
-    private Map<String, PluginConfig> pluginsConfiguration;
+    private Map<String, com.getcapacitor.PluginConfig> pluginsConfiguration;
     private boolean resolveServiceWorkerRequests;
     private String serverUrl;
     private String startPath;
@@ -89,7 +91,7 @@ public class CapConfig {
     public static CapConfig loadDefault(Context context) {
         CapConfig capConfig = new CapConfig();
         if (context == null) {
-            Logger.error("Capacitor Config could not be created from file. Context must not be null.");
+            com.getcapacitor.Logger.error("Capacitor Config could not be created from file. Context must not be null.");
             return capConfig;
         }
         capConfig.loadConfigFromAssets(context.getAssets(), (String) null);
@@ -100,7 +102,7 @@ public class CapConfig {
     public static CapConfig loadFromAssets(Context context, String str) {
         CapConfig capConfig = new CapConfig();
         if (context == null) {
-            Logger.error("Capacitor Config could not be created from file. Context must not be null.");
+            com.getcapacitor.Logger.error("Capacitor Config could not be created from file. Context must not be null.");
             return capConfig;
         }
         capConfig.loadConfigFromAssets(context.getAssets(), str);
@@ -111,7 +113,7 @@ public class CapConfig {
     public static CapConfig loadFromFile(Context context, String str) {
         CapConfig capConfig = new CapConfig();
         if (context == null) {
-            Logger.error("Capacitor Config could not be created from file. Context must not be null.");
+            com.getcapacitor.Logger.error("Capacitor Config could not be created from file. Context must not be null.");
             return capConfig;
         }
         capConfig.loadConfigFromFile(str);
@@ -171,9 +173,9 @@ public class CapConfig {
         try {
             this.configJSON = new JSONObject(FileUtils.readFileFromAssets(assetManager, str + "capacitor.config.json"));
         } catch (IOException e) {
-            Logger.error("Unable to load capacitor.config.json. Run npx cap copy first", e);
+            com.getcapacitor.Logger.error("Unable to load capacitor.config.json. Run npx cap copy first", e);
         } catch (JSONException e2) {
-            Logger.error("Unable to parse capacitor.config.json. Make sure it's valid json", e2);
+            com.getcapacitor.Logger.error("Unable to parse capacitor.config.json. Make sure it's valid json", e2);
         }
     }
 
@@ -186,9 +188,9 @@ public class CapConfig {
         try {
             this.configJSON = new JSONObject(FileUtils.readFileFromDisk(new File(str + "capacitor.config.json")));
         } catch (JSONException e) {
-            Logger.error("Unable to parse capacitor.config.json. Make sure it's valid json", e);
+            com.getcapacitor.Logger.error("Unable to parse capacitor.config.json. Make sure it's valid json", e);
         } catch (IOException e2) {
-            Logger.error("Unable to load capacitor.config.json.", e2);
+            com.getcapacitor.Logger.error("Unable to load capacitor.config.json.", e2);
         }
     }
 
@@ -238,11 +240,11 @@ public class CapConfig {
 
     private boolean validateScheme(String str) {
         if (Arrays.asList(new String[]{"file", "ftp", "ftps", "ws", "wss", "about", "blob", "data"}).contains(str)) {
-            Logger.warn(str + " is not an allowed scheme.  Defaulting to https.");
+            com.getcapacitor.Logger.warn(str + " is not an allowed scheme.  Defaulting to https.");
             return false;
         }
         if (!str.equals("http") && !str.equals("https")) {
-            Logger.warn("Using a non-standard scheme: " + str + " for Android. This is known to cause issues as of Android Webview 117.");
+            com.getcapacitor.Logger.warn("Using a non-standard scheme: " + str + " for Android. This is known to cause issues as of Android Webview 117.");
         }
         return true;
     }
@@ -328,7 +330,7 @@ public class CapConfig {
         if (i >= 55) {
             return i;
         }
-        Logger.warn("Specified minimum webview version is too low, defaulting to 55");
+        com.getcapacitor.Logger.warn("Specified minimum webview version is too low, defaulting to 55");
         return 55;
     }
 
@@ -337,13 +339,13 @@ public class CapConfig {
         if (i >= 10) {
             return i;
         }
-        Logger.warn("Specified minimum Huawei webview version is too low, defaulting to 10");
+        com.getcapacitor.Logger.warn("Specified minimum Huawei webview version is too low, defaulting to 10");
         return 10;
     }
 
-    public PluginConfig getPluginConfiguration(String str) {
-        PluginConfig pluginConfig = this.pluginsConfiguration.get(str);
-        return pluginConfig == null ? new PluginConfig(new JSONObject()) : pluginConfig;
+    public com.getcapacitor.PluginConfig getPluginConfiguration(String str) {
+        com.getcapacitor.PluginConfig pluginConfig = this.pluginsConfiguration.get(str);
+        return pluginConfig == null ? new com.getcapacitor.PluginConfig(new JSONObject()) : pluginConfig;
     }
 
     @Deprecated
@@ -386,7 +388,7 @@ public class CapConfig {
     }
 
     /* access modifiers changed from: private */
-    public static Map<String, PluginConfig> deserializePluginsConfig(JSONObject jSONObject) {
+    public static Map<String, com.getcapacitor.PluginConfig> deserializePluginsConfig(JSONObject jSONObject) {
         HashMap hashMap = new HashMap();
         if (jSONObject == null) {
             return hashMap;
@@ -395,7 +397,7 @@ public class CapConfig {
         while (keys.hasNext()) {
             String next = keys.next();
             try {
-                hashMap.put(next, new PluginConfig(jSONObject.getJSONObject(next)));
+                hashMap.put(next, new com.getcapacitor.PluginConfig(jSONObject.getJSONObject(next)));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -436,7 +438,7 @@ public class CapConfig {
         /* access modifiers changed from: private */
         public String overriddenUserAgentString;
         /* access modifiers changed from: private */
-        public Map<String, PluginConfig> pluginsConfiguration = new HashMap();
+        public Map<String, com.getcapacitor.PluginConfig> pluginsConfiguration = new HashMap();
         /* access modifiers changed from: private */
         public boolean resolveServiceWorkerRequests = true;
         /* access modifiers changed from: private */

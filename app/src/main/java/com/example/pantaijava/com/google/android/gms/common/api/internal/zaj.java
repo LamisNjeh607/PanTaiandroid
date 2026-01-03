@@ -1,8 +1,9 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.util.Log;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.internal.zak;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 final class zaj implements GoogleApiClient.OnConnectionFailedListener {

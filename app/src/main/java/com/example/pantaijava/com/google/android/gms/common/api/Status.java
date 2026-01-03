@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api;
+package com.example.pantaijava.com.google.android.gms.common.api;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -15,7 +15,7 @@ import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
 import com.google.errorprone.annotations.CheckReturnValue;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public final class Status extends AbstractSafeParcelable implements Result, ReflectedParcelable {
@@ -71,7 +71,7 @@ public final class Status extends AbstractSafeParcelable implements Result, Refl
         return this;
     }
 
-    @ResultIgnorabilityUnspecified
+
     public int getStatusCode() {
         return this.zzb;
     }

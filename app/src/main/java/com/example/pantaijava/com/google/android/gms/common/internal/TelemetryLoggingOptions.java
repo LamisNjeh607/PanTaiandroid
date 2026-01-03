@@ -1,7 +1,9 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.os.Bundle;
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.internal.zaac;
+import com.google.android.gms.common.internal.zaad;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public class TelemetryLoggingOptions implements Api.ApiOptions.Optional {

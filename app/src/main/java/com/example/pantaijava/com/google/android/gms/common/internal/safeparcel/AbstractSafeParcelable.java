@@ -1,4 +1,6 @@
-package com.google.android.gms.common.internal.safeparcel;
+package com.example.pantaijava.com.google.android.gms.common.internal.safeparcel;
+
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
 public abstract class AbstractSafeParcelable implements SafeParcelable {

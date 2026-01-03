@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.accounts.Account;
 import android.os.Parcel;
@@ -6,6 +6,7 @@ import android.os.Parcelable;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
+import com.google.android.gms.common.internal.zau;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public final class zat extends AbstractSafeParcelable {

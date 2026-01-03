@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.content.Context;
 import android.net.Uri;
@@ -6,8 +6,7 @@ import android.util.Base64;
 import android.webkit.CookieManager;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
-import com.getcapacitor.plugin.util.CapacitorHttpUrlConnection;
-import com.getcapacitor.plugin.util.HttpRequestHandler;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -254,7 +253,7 @@ public class WebViewLocalServer {
         String str2 = null;
         for (Map.Entry next2 : build.getHeaderFields().entrySet()) {
             StringBuilder sb = new StringBuilder();
-            for (String append : (List) next2.getValue()) {
+            for (Object append : (List) next2.getValue()) {
                 sb.append(append);
                 sb.append(", ");
             }

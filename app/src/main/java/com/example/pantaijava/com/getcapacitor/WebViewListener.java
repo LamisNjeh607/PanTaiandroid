@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import android.webkit.RenderProcessGoneDetail;
 import android.webkit.WebView;

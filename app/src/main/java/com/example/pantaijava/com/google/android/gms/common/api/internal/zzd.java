@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -54,6 +54,10 @@ public final class zzd extends Fragment implements LifecycleFragment {
             return;
         }
         throw new IllegalArgumentException("LifecycleCallback with tag " + str + " already added to this fragment.");
+    }
+
+    public <T extends LifecycleCallback> T getCallbackOrNull(String str, Class<zaae> cls) {
+        return null;
     }
 
     public final void dump(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {

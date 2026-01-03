@@ -1,7 +1,7 @@
-package com.google.android.gms.common.data;
+package com.example.pantaijava.com.google.android.gms.common.data;
 
 import com.google.android.gms.common.internal.Preconditions;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
 import java.util.ArrayList;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
@@ -16,7 +16,8 @@ public abstract class EntityBuffer<T> extends AbstractDataBuffer<T> {
     private final void zab() {
         synchronized (this) {
             if (!this.zaa) {
-                int count = ((DataHolder) Preconditions.checkNotNull(this.mDataHolder)).getCount();
+                int count;
+                count = ((DataHolder) Preconditions.checkNotNull(this.mDataHolder)).getCount();
                 ArrayList arrayList = new ArrayList();
                 this.zab = arrayList;
                 if (count > 0) {
@@ -43,7 +44,7 @@ public abstract class EntityBuffer<T> extends AbstractDataBuffer<T> {
         }
     }
 
-    @ResultIgnorabilityUnspecified
+
     public final T get(int i) {
         int i2;
         int i3;

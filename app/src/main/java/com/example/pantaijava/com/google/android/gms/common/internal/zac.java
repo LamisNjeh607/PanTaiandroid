@@ -1,4 +1,4 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -7,7 +7,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import androidx.collection.SimpleArrayMap;
 import androidx.core.os.ConfigurationCompat;
-import com.google.android.gms.base.R;
+
+import com.example.pantaijava.R;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.util.DeviceProperties;
 import com.google.android.gms.common.wrappers.Wrappers;
@@ -31,7 +32,7 @@ public final class zac {
     public static String zab(Context context, int i) {
         Resources resources = context.getResources();
         if (i == 1) {
-            return resources.getString(R.string.common_google_play_services_install_button);
+            return resources.getString( R.string.common_google_play_services_install_button);
         }
         if (i == 2) {
             return resources.getString(R.string.common_google_play_services_update_button);

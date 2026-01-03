@@ -1,9 +1,10 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.os.DeadObjectException;
 import android.util.Log;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.BaseImplementation;
+import com.google.android.gms.common.api.internal.zai;
 import com.google.android.gms.common.internal.Preconditions;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
@@ -31,6 +32,16 @@ public final class zae extends zai {
         } catch (IllegalStateException e) {
             Log.w("ApiCallRunner", "Exception reporting failure", e);
         }
+    }
+
+    @Override
+    public void zaf(com.google.android.gms.common.api.internal.zabq zabq) throws DeadObjectException {
+
+    }
+
+    @Override
+    public void zag(com.google.android.gms.common.api.internal.zaad zaad, boolean z) {
+
     }
 
     public final void zaf(zabq zabq) throws DeadObjectException {

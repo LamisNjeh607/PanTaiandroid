@@ -1,4 +1,4 @@
-package com.google.android.gms.auth.api.signin.internal;
+package com.example.pantaijava.com.google.android.gms.auth.api.signin.internal;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 public class HashAccumulator {

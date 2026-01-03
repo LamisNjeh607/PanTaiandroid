@@ -1,4 +1,4 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
 import android.app.PendingIntent;
 import android.content.DialogInterface;
@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import androidx.lifecycle.LifecycleKt$$ExternalSyntheticBackportWithForwarding0;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.internal.service.zao;
 import com.google.android.gms.internal.base.zau;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -19,7 +19,7 @@ public abstract class zap extends LifecycleCallback implements DialogInterface.O
     protected final GoogleApiAvailability zac;
     private final Handler zad = new zau(Looper.getMainLooper());
 
-    zap(LifecycleFragment lifecycleFragment, GoogleApiAvailability googleApiAvailability) {
+    public zap(LifecycleFragment lifecycleFragment, GoogleApiAvailability googleApiAvailability) {
         super(lifecycleFragment);
         this.zac = googleApiAvailability;
     }

@@ -1,11 +1,14 @@
-package com.google.android.gms.common.internal;
+package com.example.pantaijava.com.google.android.gms.common.internal;
 
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.ServiceConnection;
 import android.os.HandlerThread;
 import android.os.Looper;
-import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+
+import com.google.android.gms.common.internal.zzo;
+import com.google.android.gms.common.zzs;
+
 import java.util.concurrent.Executor;
 
 /* compiled from: com.google.android.gms:play-services-basement@@18.3.0 */
@@ -20,7 +23,7 @@ public abstract class GmsClientSupervisor {
         return 4225;
     }
 
-    public static GmsClientSupervisor getInstance(Context context) {
+    public static zzs getInstance(Context context) {
         Looper looper;
         synchronized (zzb) {
             if (zzc == null) {
@@ -96,7 +99,7 @@ public abstract class GmsClientSupervisor {
         zza(new zzo(str, 4225, false), serviceConnection, str2);
     }
 
-    @ResultIgnorabilityUnspecified
+
     public boolean bindService(String str, ServiceConnection serviceConnection, String str2) {
         return zzc(new zzo(str, 4225, false), serviceConnection, str2, (Executor) null);
     }

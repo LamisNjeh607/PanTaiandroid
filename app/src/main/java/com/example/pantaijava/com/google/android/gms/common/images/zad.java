@@ -1,4 +1,4 @@
-package com.google.android.gms.common.images;
+package com.example.pantaijava.com.google.android.gms.common.images;
 
 import android.net.Uri;
 import com.google.android.gms.common.internal.Objects;

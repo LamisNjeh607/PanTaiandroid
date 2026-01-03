@@ -1,4 +1,6 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
+
+import static ads_mobile_sdk.dp.th;
 
 import android.content.res.AssetManager;
 import java.io.BufferedReader;

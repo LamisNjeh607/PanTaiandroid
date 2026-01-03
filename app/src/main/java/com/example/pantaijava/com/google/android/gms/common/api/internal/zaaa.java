@@ -1,5 +1,6 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.os.Bundle;
@@ -11,9 +12,17 @@ import com.google.android.gms.common.GoogleApiAvailabilityLight;
 import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.common.api.internal.BaseImplementation;
+import com.google.android.gms.common.api.internal.zabe;
+import com.google.android.gms.common.api.internal.zabi;
+import com.google.android.gms.common.api.internal.zaca;
+import com.google.android.gms.common.api.internal.zat;
 import com.google.android.gms.common.internal.ClientSettings;
 import com.google.android.gms.common.internal.Objects;
 import com.google.android.gms.common.internal.Preconditions;
+import com.google.android.gms.common.internal.zaw;
+import com.google.android.gms.common.internal.zax;
+import com.google.android.gms.common.internal.zay;
+import com.google.android.gms.common.internal.zaz;
 import com.google.android.gms.internal.base.zap;
 import com.google.android.gms.internal.base.zau;
 import java.io.FileDescriptor;
@@ -63,19 +72,19 @@ final class zaaa implements zaca {
         zabi zabi = r3;
         zabi zabi2 = new zabi(context2, zabe2, lock2, looper2, googleApiAvailabilityLight2, map2, (ClientSettings) null, map4, (Api.AbstractClientBuilder) null, arrayList2, new zax(this, (zaw) null));
         this.zad = zabi;
-        this.zae = new zabi(context2, zabe2, lock2, looper2, googleApiAvailabilityLight2, map, clientSettings, map3, abstractClientBuilder, arrayList, new zaz(this, (zay) null));
+        this.zae = new zabi(context2, zabe2, lock2, looper2, googleApiAvailabilityLight2, map, clientSettings, map3, abstractClientBuilder, arrayList, new zaz());
         ArrayMap arrayMap = new ArrayMap();
-        for (Api.AnyClientKey put : map2.keySet()) {
+        for (Object put : map2.keySet()) {
             arrayMap.put(put, this.zad);
         }
-        for (Api.AnyClientKey put2 : map.keySet()) {
+        for (Object put2 : map.keySet()) {
             arrayMap.put(put2, this.zae);
         }
         this.zaf = Collections.unmodifiableMap(arrayMap);
     }
 
     private final void zaB() {
-        for (SignInConnectionListener onComplete : this.zag) {
+        for (Object onComplete : this.zag) {
             onComplete.onComplete();
         }
         this.zag.clear();
@@ -197,6 +206,7 @@ final class zaaa implements zaca {
         }
     }
 
+    @SuppressLint("WrongConstant")
     private final PendingIntent zaz() {
         Api.Client client = this.zah;
         if (client == null) {

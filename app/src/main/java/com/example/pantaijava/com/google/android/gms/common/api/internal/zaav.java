@@ -1,10 +1,14 @@
-package com.google.android.gms.common.api.internal;
+package com.example.pantaijava.com.google.android.gms.common.api.internal;
+
+import com.google.android.gms.common.api.internal.zaau;
+import com.google.android.gms.common.api.internal.zaaw;
 
 /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
-abstract class zaav implements Runnable {
+public abstract class zaav implements Runnable {
     final /* synthetic */ zaaw zab;
 
-    /* synthetic */ zaav(zaaw zaaw, zaau zaau) {
+    /* synthetic */
+    public zaav(zaaw zaaw, zaau zaau) {
         this.zab = zaaw;
     }
 

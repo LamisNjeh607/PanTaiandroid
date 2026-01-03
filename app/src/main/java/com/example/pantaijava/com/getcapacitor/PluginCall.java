@@ -1,4 +1,4 @@
-package com.getcapacitor;
+package com.example.pantaijava.com.getcapacitor;
 
 import java.util.ArrayList;
 import org.json.JSONArray;
@@ -24,32 +24,32 @@ public class PluginCall {
         this.data = jSObject;
     }
 
-    public void successCallback(PluginResult pluginResult) {
+    public void successCallback(com.getcapacitor.PluginResult pluginResult) {
         if (!CALLBACK_ID_DANGLING.equals(this.callbackId)) {
-            this.msgHandler.sendResponseMessage(this, pluginResult, (PluginResult) null);
+            this.msgHandler.sendResponseMessage(this, pluginResult, (com.getcapacitor.PluginResult) null);
         }
     }
 
     public void resolve(JSObject jSObject) {
-        this.msgHandler.sendResponseMessage(this, new PluginResult(jSObject), (PluginResult) null);
+        this.msgHandler.sendResponseMessage(this, new com.getcapacitor.PluginResult(), (com.getcapacitor.PluginResult) null);
     }
 
     public void resolve(com.getcapacitor.JSObject jSObject) {
-        this.msgHandler.sendResponseMessage(this, (PluginResult) null, (PluginResult) null);
+        this.msgHandler.sendResponseMessage(this, (com.getcapacitor.PluginResult) null, (com.getcapacitor.PluginResult) null);
     }
 
     public void errorCallback(String str) {
-        PluginResult pluginResult = new PluginResult();
+        com.getcapacitor.PluginResult pluginResult = new com.getcapacitor.PluginResult();
         try {
             pluginResult.put("message", (Object) str);
         } catch (Exception e) {
             Logger.error(Logger.tags("Plugin"), e.toString(), (Throwable) null);
         }
-        this.msgHandler.sendResponseMessage(this, (PluginResult) null, pluginResult);
+        this.msgHandler.sendResponseMessage(this, (com.getcapacitor.PluginResult) null, pluginResult);
     }
 
     public void reject(String str, String str2, Exception exc, JSObject jSObject) {
-        PluginResult pluginResult = new PluginResult();
+        com.getcapacitor.PluginResult pluginResult = new com.getcapacitor.PluginResult();
         if (exc != null) {
             Logger.error(Logger.tags("Plugin"), str, exc);
         }
@@ -62,7 +62,7 @@ public class PluginCall {
         } catch (Exception e) {
             Logger.error(Logger.tags("Plugin"), e.getMessage(), e);
         }
-        this.msgHandler.sendResponseMessage(this, (PluginResult) null, pluginResult);
+        this.msgHandler.sendResponseMessage(this, (com.getcapacitor.PluginResult) null, pluginResult);
     }
 
     public void reject(String str, Exception exc, JSObject jSObject) {
